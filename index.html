@@ -61,8 +61,8 @@
 
         <div>Acreditado en: {{controller.data.datosPostulante.matriculaPrimerAno.acreditadoEn}}</div>
 
-        <div>... (por completar) ... </div>
-
+        <h3>Con esta información fuiste evaluado:</h3>
+        <div style="border:1px solid black; padding:5px;">{{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[0].etiqueta}}: {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[0].valor}} | {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[1].etiqueta}}: {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[1].valor}} | {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[2].etiqueta}}: {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[2].valor}} | {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[3].etiqueta}}: {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[3].valor}} | {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[4].etiqueta}}: {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[4].valor}}</div>
 
         <h2>Fuente de datos JSON (para efectos de desarrollo)</h2>
         <pre>{{controller.data | json}}</pre>
