@@ -62,8 +62,59 @@
         <div>Acreditado en: {{controller.data.datosPostulante.matriculaPrimerAno.acreditadoEn}}</div>
 
         <h3>Con esta información fuiste evaluado:</h3>
-        <div style="border:1px solid black; padding:5px;">{{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[0].etiqueta}}: {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[0].valor}} | {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[1].etiqueta}}: {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[1].valor}} | {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[2].etiqueta}}: {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[2].valor}} | {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[3].etiqueta}}: {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[3].valor}} | {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[4].etiqueta}}: {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[4].valor}}</div>
+        <div class="rectangulo"> 
+          {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[0].etiqueta}}: {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[0].valor}} |
+         {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[1].etiqueta}}: {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[1].valor}} | 
+         {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[2].etiqueta}}: {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[2].valor}} | 
+         {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[3].etiqueta}}: {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[3].valor}} |
+          {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[4].etiqueta}}: {{controller.data.datosPostulante.matriculaPrimerAno.datosEvaluacion[4].valor}}</div>
+        
+        <h3 ng-show="controller.data.datosPostulante.cursosSuperiores">Cursos Superiores</h3>
+        <div>Institucion: {{controller.data.datosPostulante.cursosSuperiores.institucion}}</div>
+        <div>Carrera: {{controller.data.datosPostulante.cursosSuperiores.carrera}}</div>
+        <div>Carrera: {{controller.data.datosPostulante.cursosSuperiores.acreditadoEn}}</div>
+        <h3>Con esta información fuiste evaluado:</h3>
+        <div class="rectangulo"> 
+        {{controller.data.datosPostulante.cursosSuperiores.datosEvaluacion[0].etiqueta}}: {{controller.data.datosPostulante.cursosSuperiores.datosEvaluacion[0].valor}} | 
+        {{controller.data.datosPostulante.cursosSuperiores.datosEvaluacion[1].etiqueta}}: {{controller.data.datosPostulante.cursosSuperiores.datosEvaluacion[1].valor}} |
+        {{controller.data.datosPostulante.cursosSuperiores.datosEvaluacion[2].etiqueta}}: {{controller.data.datosPostulante.cursosSuperiores.datosEvaluacion[2].valor}} |
+        {{controller.data.datosPostulante.cursosSuperiores.datosEvaluacion[3].etiqueta}}: {{controller.data.datosPostulante.cursosSuperiores.datosEvaluacion[3].valor}} | 
+        {{controller.data.datosPostulante.cursosSuperiores.datosEvaluacion[4].etiqueta}}: {{controller.data.datosPostulante.cursosSuperiores.datosEvaluacion[4].valor}} |
+        {{controller.data.datosPostulante.cursosSuperiores.datosEvaluacion[5].etiqueta}}: {{controller.data.datosPostulante.cursosSuperiores.datosEvaluacion[5].valor}}</div>
+        <h3 ng-show="controller.data.misBeneficios">Mis Beneficios (Postulados, En Proceso, Otorgados)    Beneficio Otorgado: {{controller.data.misBeneficios.montoOtorgado}}</h3>
+        <div>{{controller.data.misBeneficios.mensaje}}</div>
+        <div>{{controller.data.misBeneficios.categorias[0].nombre}} -> {{controller.data.misBeneficios.categorias[0].etapa}} -> Apelar Primer Año: {{controller.data.misBeneficios.categorias[0].urlApelacion}}</div>
 
+        <div class="table-responsive">
+          <table class="table">
+            <tr>
+              <td ng-repeat="(i, msg) in controller.data.misBeneficios.categorias[0].beneficios"> 
+               <!--Si esta asignado un icono sino el otro-->
+                <span style='color:green' ng-if="msg.estado == 'asignado'">
+                  <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
+                 </span>
+                <span style='color:red' ng-if="msg.estado == 'no asignado'">
+                  <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
+                </span>
+                  {{msg.sigla}}
+              </td>
+              </tr>
+              <tr>
+                
+                <td ng-repeat="(j, msg) in controller.data.misBeneficios.categorias[0].beneficios"> {{msg.monto}}</td>
+              </tr>
+
+         </table>
+        </div>
+        <div class="rectangulo">
+           <!--<div class="rectangulo">
+            {{controller.data.misBeneficios.categorias[0].beneficios[0].sigla}} |
+            {{controller.data.misBeneficios.categorias[0].beneficios[1].sigla}} |
+            {{controller.data.misBeneficios.categorias[0].beneficios[2].sigla}} |
+            {{controller.data.misBeneficios.categorias[0].beneficios[3].sigla}} |
+            {{controller.data.misBeneficios.categorias[0].beneficios[4].sigla}}
+           </div>-->
+        </div>
         <h2>Fuente de datos JSON (para efectos de desarrollo)</h2>
         <pre>{{controller.data | json}}</pre>
       </div>
