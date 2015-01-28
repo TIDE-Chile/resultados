@@ -69,6 +69,26 @@ body {
   margin-top: 28px;
 }
 
+/*CLase para puntajes */
+.rectangulo{
+  width: 90%;
+  border:1px solid rgb(146, 146, 146);; 
+  padding:5px;
+  margin: 5px;
+}
+#complementarias.rectangulo
+{
+background-color: rgb(145, 228, 251);
+}
+#primerano.rectangulo
+{
+background-color: rgb(193, 208, 69);
+}
+
+#superiores.rectangulo
+{
+background-color: rgb(193, 208, 69);
+}
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   /* Remove the padding we set earlier */
