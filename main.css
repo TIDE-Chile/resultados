@@ -70,7 +70,8 @@ body {
 }
 
 /*CLase para puntajes */
-.rectangulo{
+.rectangulo
+{
   width: 90%;
   border:1px solid rgb(146, 146, 146);; 
   padding:5px;
@@ -88,6 +89,21 @@ background-color: rgb(193, 208, 69);
 #superiores.rectangulo
 {
 background-color: rgb(193, 208, 69);
+}
+
+/* barra naranja header*/
+.barranaranja
+{
+  padding:1px;
+  background-color:rgb(255, 197, 129);
+}
+
+#custom-accord .panel-heading{
+
+color: #333;
+background-color: rgb(226, 238, 121);
+border-color: #ddd;
+
 }
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
