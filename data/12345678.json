@@ -76,6 +76,7 @@
 		"mensaje":"La asignación de beneficios corresponde a la validación realizada por el MINEDUC del cumplimiento de los requisitos académicos y socioeconómicos establecidos para cada beneficio.",
 		"categorias":[
 			{
+				"id":"primerano",
 				"nombre":"Primer Año",
 				"etapa":"asignación",
 				"urlApelacion":"http://mineduc.cl",
@@ -213,6 +214,7 @@
 				]
 			},
 			{
+				"id":"complementarias",
 				"nombre":"Becas Complementarias",
 				"etapa":"asignación",
 				"urlApelacion":"http://mineduc.cl",
@@ -326,6 +328,7 @@
 				]
 			},
 			{
+				"id":"superiores",
 				"nombre":"Cursos Superiores",
 				"etapa":"asignación",
 				"urlApelacion":"http://mineduc.cl",
