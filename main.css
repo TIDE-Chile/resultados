@@ -72,8 +72,8 @@ body {
 /*CLase para puntajes */
 .rectangulo
 {
-  width: 90%;
-  border:1px solid rgb(146, 146, 146);; 
+  width: 99%;
+  border:1px solid rgb(146, 146, 146); 
   padding:5px;
   margin: 5px;
 }
@@ -90,6 +90,23 @@ background-color: rgb(193, 208, 69);
 {
 background-color: rgb(193, 208, 69);
 }
+#datospostulante.rectangulo
+{
+  background-color:rgb(235, 235, 235);
+}
+
+.infoevaluacion
+{
+  border:1px solid rgb(146, 146, 146);margin:1px;text-align:center;
+}
+.infosuperior{
+background-color:rgb(0, 141, 177);color:white;
+}
+.infoinferior
+{
+  background-color:rgb(254, 248, 160);color:black;
+
+}
 
 /* barra naranja header*/
 .barranaranja
@@ -100,10 +117,15 @@ background-color: rgb(193, 208, 69);
 
 #custom-accord .panel-heading{
 
-color: #333;
+color: rgba(3, 48, 118, 1);
 background-color: rgb(226, 238, 121);
-border-color: #ddd;
+border-color:rgb(226, 238, 121);
 
+}
+
+#custom-accord .panel-body
+{
+ background-color: rgb(226, 238, 121); 
 }
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
