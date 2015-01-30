@@ -32,20 +32,21 @@
   <!-- Add your site or application content here -->
   <!-- container -->
 <div class="container" ng-controller="AppController as controller">
+<div class="head">
   <div class="row">
-      <div class="col-xs-6 col-md-2 col-lg-2">
+      <div class="col-xs-6 col-md-1 col-lg-2">
           <img width="116" height="104" explicit-width="100%" explicit-height="100%" min-width="16" min-height="16" src="./imagen/logo.png" class="logo" />
       </div>
-      <div class=" col-xs-12 col-md-7 col-lg-7"> <h1>Portal de Resultados Año 2015</h1>
-          <h3>Becas y Créditos para la Educación Superior</h3>
+      <div class=" col-xs-12 col-md-8 col-lg-7" > <h1>Portal de Resultados Año 2015</h1>
+          <p class="byc">Becas y Créditos para la Educación Superior</p>
       </div>
       <div class=" col-xs-12 col-md-3 col-lg-3"> 
-              <div style="text-align:right;">
-                <h5></head>Información Actualizada a:</h5> <h3 style="color:blue;">{{controller.data.fechaActualizacion}}</h3></div>
+              <div class="actualizada">
+                <h5>Información Actualizada a:</h5> <p class="byc">{{controller.data.fechaActualizacion}}</p></div>
       </div>
   </div> <!-- row head-->
  
-      <div class="head">
+      
         <!--<img src="..." class="img-responsive" alt="Imagen responsive">-->
         
 
@@ -54,33 +55,37 @@
   <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align:right;">
               <div class="barranaranja">
-                <h3>RUT: <span style="color:blue;">{{controller.data.rut}}</span></h3>
+                <p class="rut">RUT: <span class="byc">{{controller.data.rut}}</span> <a style="font-size:15px;padding-left:10px;padding-right:10px;">Cerrar</a></p>
               </div>
         </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-          <h2>Información Destacada</h2>
-            <ul>
-              <li ng-repeat="(i, msg) in controller.data.mensajes">{{msg.contenido}}</li>
+    <!--div mayor--> 
+    <div class="divmayor">
+          <p class="subtitulo">Información Destacada</p>
+            <ul style="margin:15px;">
+              <li ng-repeat="(i, msg) in controller.data.mensajes">Mensaje General {{$index+1}}: {{msg.contenido}}</li>
             </ul>
-          <h2>Datos del Postulante (matrícula, acreditación)</h2>
-
-          
+          </div><!-- div mayor-->
+    <!--div mayor--> 
+    <div class="divmayor">
+            
+          <p class="subtitulo">Datos del Postulante (matrícula, acreditación)</p>
 
            <div class="rectangulo" id="datospostulante">
 
                 <div class="row">
                     
-                      <div class="col-xs-6 col-md-7 col-lg-7">
-                        <h4 ng-show="controller.data.datosPostulante.matriculaPrimerAno">Matrícula primer Año</h4>
-                          <div class=" col-xs-12 col-md-3 col-lg-4">Matriculado en:</div>
-                          <div class=" col-xs-12 col-md-9 col-lg-8">{{controller.data.datosPostulante.matriculaPrimerAno.institucion}}</div>
-                          <div class=" col-xs-12 col-md-3 col-lg-4">Carrera:</div>
-                          <div class=" col-xs-12 col-md-9 col-lg-8">{{controller.data.datosPostulante.matriculaPrimerAno.carrera}}</div>
-                           <div class=" col-xs-12 col-md-3 col-lg-4">Acreditado en:</div>
-                          <div class=" col-xs-12 col-md-9 col-lg-8">{{controller.data.datosPostulante.matriculaPrimerAno.acreditadoEn}}</div>
-                          <div class=" col-xs-12 col-md-3 col-lg-4">Fecha de Acreditación:</div>
-                          <div class=" col-xs-12 col-md-9 col-lg-8"> {{controller.data.datosPostulante.matriculaPrimerAno.fechaAcreditacion}}</div>
+                      <div class="col-xs-12 col-md-7 col-lg-7">
+                        <h4 ng-show="controller.data.datosPostulante.matriculaPrimerAno" class="cursos"> Primer Año</h4>
+                          <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Matriculado en:</h5></div>
+                          <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue">{{controller.data.datosPostulante.matriculaPrimerAno.institucion}}</b></h5></div>
+                          <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Carrera:</h5></div>
+                          <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue">{{controller.data.datosPostulante.matriculaPrimerAno.carrera}}</b></h5></div>
+                           <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Acreditado en:</h5></div>
+                          <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue">{{controller.data.datosPostulante.matriculaPrimerAno.acreditadoEn}}</b></h5></div>
+                          <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Fecha de Acreditación:</h5></div>
+                          <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue"> {{controller.data.datosPostulante.matriculaPrimerAno.fechaAcreditacion}}</b></h5></div>
 
                       </div>
                        <div class=" col-xs-12 col-md-5 col-lg-5"> 
@@ -103,212 +108,150 @@
                         </div>
                   </div><!--row -->
                      </div>
-          <h3 ng-show="controller.data.datosPostulante.cursosSuperiores">Cursos Superiores</h3>
-          <div>Institucion: {{controller.data.datosPostulante.cursosSuperiores.institucion}}</div>
-          <div>Carrera: {{controller.data.datosPostulante.cursosSuperiores.carrera}}</div>
-          <div>Acreditado en: {{controller.data.datosPostulante.cursosSuperiores.acreditadoEn}}</div>
-          <h3>Con esta información fuiste evaluado:</h3>
-          <div class="rectangulo"> 
-            <span ng-repeat="item in controller.data.datosPostulante.cursosSuperiores.datosEvaluacion">
-                {{item.etiqueta}}: {{item.valor}} <span ng-hide="$last"> | </span>
-            </span>
-          </div>
+            <!--curso superior -->
+                  <div class="rectangulo" id="datospostulante">
 
+                        <div class="row">
+                            
+                              <div class="col-xs-12 col-md-7 col-lg-7">
+                                <h4 ng-show="controller.data.datosPostulante.cursosSuperiores" class="cursos">Cursos Superiores</h4>
+                                  <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Matriculado en:</h5></div>
+                                  <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue">{{controller.data.datosPostulante.cursosSuperiores.institucion}}</b></h5></div>
+                                  <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Carrera:</h5></div>
+                                  <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue">{{controller.data.datosPostulante.cursosSuperiores.carrera}}</b></h5></div>
+                                   <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Acreditado en:</h5></div>
+                                  <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue">{{controller.data.datosPostulante.cursosSuperiores.acreditadoEn}}</b></h5></div>
+                                  <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Fecha de Acreditación:</h5></div>
+                                  <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue"> {{controller.data.datosPostulante.cursosSuperiores.fechaAcreditacion}}</b></h5></div>
 
-
-          <h3 ng-show="controller.data.misBeneficios">
-              Mis Beneficios (Postulados, En Proceso, Otorgados)    Beneficio Otorgado: {{controller.data.misBeneficios.montoOtorgado}}</h3>
-          <div>{{controller.data.misBeneficios.mensaje}}</div>
- 
- 
-        <!--prueba-->
-<!-- Mis Beneficios - Categorías -->
-<div ng-repeat="categoriaBeneficio in controller.data.misBeneficios.categorias" class="rectangulo" id="{{categoriaBeneficio.id}}"> 
-
-  <div>{{categoriaBeneficio.nombre}} -> {{categoriaBeneficio.etapa}} -> Apelar {{categoriaBeneficio.nombre}}: {{categoriaBeneficio.urlApelacion}}</div>
-
-  <!-- Detalle beneficios -->
-  <div class="table-responsive">
-    <table class="table">
-      <tr>
-        <td ng-repeat="beneficio in categoriaBeneficio.beneficios"> 
-           <!--Si esta asignado un icono sino el otro-->
-           <span style='color:green' ng-if="beneficio.estado == 'asignado'">
-            <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
-          </span>
-          <span style='color:red' ng-if="beneficio.estado == 'no asignado'">
-            <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
-          </span>
-          {{beneficio.sigla}}
-        </td>
-      </tr>
-      <tr>
-
-      <td ng-repeat="beneficio in categoriaBeneficio.beneficios"> {{beneficio.monto}}</td>
-      </tr>
-
-    </table>
-  </div><!-- Detalle beneficios -->
-
-  <!-- Mensajes -->
-  <div ng-repeat="mensaje in categoriaBeneficio.mensajes">
-    <b>{{mensaje.titulo}} {{$index+1}}: </b>{{mensaje.contenido}}
-  </div><!-- Mensajes -->
-
-</div><!-- Mis Beneficios - Categorías -->
-         <!--prueba-->
-
-      
-        <h2>Accordion Angular de Prueba</h2>
-        <div id="custom-accord">
-        <div ng-controller="AccordionDemoCtrl">
-              
-                <accordion close-others="oneAtATime">
-                    <accordion-group heading="Información Destacada" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
-                             <div class="table-responsive">
-                                <table class="table">
-                                    <tr>
-                                      <td ng-repeat="(i, msg) in controller.data.misBeneficios.categorias[0].beneficios"> 
-                                       <!--Si esta asignado un icono sino el otro-->
-                                        <span style='color:green' ng-if="msg.estado == 'asignado'">
-                                          <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
-                                         </span>
-                                        <span style='color:red' ng-if="msg.estado == 'no asignado'">
-                                          <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
-                                        </span>
-                                          {{msg.sigla}}
-                                      </td>
-                                      </tr>
-                                      <tr>
-                                        
-                                        <td ng-repeat="(j, msg) in controller.data.misBeneficios.categorias[0].beneficios"> {{msg.monto}}</td>
-                                      </tr>
-
-                                </table>
                               </div>
-                    </accordion-group>
+                               <div class=" col-xs-12 col-md-5 col-lg-5"> 
+                                  <h5>Con esta información fuiste evaluado:</h5>
+                                  <div class="rectangulo"> 
+                                    <div class="row">
+                          
+                                      <span ng-repeat="item in controller.data.datosPostulante.cursosSuperiores.datosEvaluacion">
+                                          <div class="col-xs-6 col-md-4 col-lg-4">  
+                                            <div class="infoevaluacion">
+                                              <div class="infosuperior">{{item.etiqueta}}:</div>
+                                              <div class="infoinferior">{{item.valor}}</div> 
+                                            </div> 
+                                              <!-- <span ng-hide="$last"> | </span>-->
+                                          </div>
+                                      </span>
+                                       
+                                    </div><!--row -->
+                                  </div>
+                                </div>
+                          </div><!--row -->
+                             </div>
+        </div><!-- div mayor-->
 
-                    <accordion-group heading="Datos del Postulante (matrícula, acreditación)">
-                        <div ng-repeat="datosPostulante in controller.data.datosPostulante | orderBy:controller.data.datosPostulante.fechaAcreditacion:reverse"> 
-         <h3 ng-show="datosPostulante">{{$index+1}}</h3>
-
-          <div>Matriculado en: {{datosPostulante.institucion}}</div>
-
-          <div>Carrera: {{datosPostulante.carrera}}</div>
-
-          <div>Acreditado en: {{datosPostulante.acreditadoEn}}</div>
-         
-          <div> Fecha de Acreditación: {{datosPostulante.fechaAcreditacion}}</div>
-          <h3>Con esta información fuiste evaluado:</h3>
-          <div class="rectangulo"> 
-            <span ng-repeat="item in datosPostulante.datosEvaluacion">{{item.etiqueta}}: {{item.valor}}<span ng-hide="$last"> | </span></span>
-          </div>
-        </div> <!--fin if datosPostulante-->
-                   </accordion-group>
-
-                    <accordion-group is-open="status.open">
-                      <accordion-heading>
-                          Mis Beneficios (Postulados, En Proceso, Otorgados) <span style="text-align:right">Beneficio Otorgado: 1550000</span><i class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i> 
-                      </accordion-heading>
-                      
-                          <div class="rectangulo" id="primerano">  
-          <div>{{controller.data.misBeneficios.categorias[0].nombre}} -> {{controller.data.misBeneficios.categorias[0].etapa}} -> Apelar Primer Año: {{controller.data.misBeneficios.categorias[0].urlApelacion}}</div>
-
-          <div class="table-responsive">
-          <table class="table">
-            <tr>
-              <td ng-repeat="(i, msg) in controller.data.misBeneficios.categorias[0].beneficios"> 
-               <!--Si esta asignado un icono sino el otro-->
-                <span style='color:green' ng-if="msg.estado == 'asignado'">
-                  <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
-                 </span>
-                <span style='color:red' ng-if="msg.estado == 'no asignado'">
-                  <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
-                </span>
-                  {{msg.sigla}}
-              </td>
-              </tr>
-              <tr>
-                
-                <td ng-repeat="(j, msg) in controller.data.misBeneficios.categorias[0].beneficios"> {{msg.monto}}</td>
-              </tr>
-
-          </table>
-          </div>
-          <div>
-            <b>
-              {{controller.data.misBeneficios.categorias[0].mensajes[0].titulo}} 1: </b>{{controller.data.misBeneficios.categorias[0].mensajes[0].contenido}}
-          </div>
-      </div> <!--misbeneficios -> primer año -->
-
-      <div class="rectangulo" id="complementarias">
-
-          <h3 ng-show="controller.data.misBeneficios.categorias">{{controller.data.misBeneficios.categorias[1].nombre}}</h3>
-              <div class="table-responsive">
-                  <table class="table">
-                    <tr>
-                      <td ng-repeat="(i, msg) in controller.data.misBeneficios.categorias[1].beneficios"> 
-                       <!--Si esta asignado un icono sino el otro-->
-                        <span style='color:green' ng-if="msg.estado == 'asignado'">
-                          <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
-                         </span>
-                        <span style='color:red' ng-if="msg.estado == 'no asignado'">
-                          <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
-                        </span>
-                          {{msg.sigla}}
-                      </td>
-                      </tr>
-                      <tr>
-                        
-                        <td ng-repeat="(j, msg) in controller.data.misBeneficios.categorias[1].beneficios"> {{msg.monto}}</td>
-                      </tr>
-
-                 </table>
-              </div>
-
-            <div >
-              <b>
-                 {{controller.data.misBeneficios.categorias[1].mensajes[0].titulo}} 2: </b>{{controller.data.misBeneficios.categorias[0].mensajes[0].contenido}}
+<!--div mayor -->
+    <div class="divmayor">
+      <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+           <div class="col-xs-12 col-md-8 col-lg-8">
+                 <p class="subtitulo" ng-show="controller.data.misBeneficios">
+                      Mis Beneficios (Postulados, En Proceso, Otorgados)
+                 </p>
             </div>
+            <div class="col-xs-12 col-md-4 col-lg-4">
+                  <p class="botorgado">Beneficio Otorgado: <spam style="color:red;">${{controller.data.misBeneficios.montoOtorgado}}</spam></p>
+            </div>
+        
+         </div>
 
-      </div> <!-- misbeneficios -> complementarias -->
-      <div class="rectangulo" id="superiores">
-               <h3 ng-show="controller.data.misBeneficios.categorias">{{controller.data.misBeneficios.categorias[2].nombre}}</h3>
-                <div class="table-responsive">
-                  <table class="table">
-                    <tr>
-                      <td ng-repeat="(i, msg) in controller.data.misBeneficios.categorias[2].beneficios"> 
-                       <!--Si esta asignado un icono sino el otro-->
-                        <span style='color:green' ng-if="msg.estado == 'asignado'">
-                          <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
-                         </span>
-                        <span style='color:red' ng-if="msg.estado == 'no asignado'">
-                          <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
-                        </span>
-                          {{msg.sigla}}
-                      </td>
-                      </tr>
-                      <tr>
-                        
-                        <td ng-repeat="(j, msg) in controller.data.misBeneficios.categorias[1].beneficios"> {{msg.monto}}</td>
-                      </tr>
+      </div>
+        <div style="margin:5px;">{{controller.data.misBeneficios.mensaje}}</div>
+             <!--prueba-->
+              <!-- Mis Beneficios - Categorías -->
+              <div ng-repeat="categoriaBeneficio in controller.data.misBeneficios.categorias" class="rectangulo" id="{{categoriaBeneficio.id}}"> 
 
-                 </table>
-              </div>
+                <div class="row">
+                  <div class=""> 
+                            <div class="col-xs-12 col-md-12 col-lg-12 margen">
+                             
+                                    <div class="col-xs-12 col-md-4 col-lg-2">
+                                      <b class="cursos">{{categoriaBeneficio.nombre}}</b>
+                                    </div>
 
-      </div>  <!-- misbeneficios -> cursos superiores -->
-                    </accordion-group>
-                 </accordion>
-              </div>
-          </div><!--custom-accord -->
+                                       <!--{{categoriaBeneficio.etapa}} 
+
+                                  
+                                        Apelar {{categoriaBeneficio.nombre}}: {{categoriaBeneficio.urlApelacion}}-->
+                                   <div class="col-xs-12 col-md-8 col-lg-6 margen">
+                                        <div class="btn-toolbar" role="toolbar">
+
+                                                  <div class="btn-group">
+                                                      <button type="button" class="btn btn-default">Postulación</button>
+
+                                                  </div>
+                                                   <div class="btn-group">
+                                                      <button type="button" class="btn btn-default">Preselección</button>
+                                                  </div>
+                                                   <div class="btn-group">
+                                                      <button type="button" class="btn">Asignación</button>
+                                                  </div>
+                                                   <div class="btn-group">
+                                                      <button type="button" class="btn btn-default">Apelación</button>
+                                                  </div>          
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-12 col-lg-4 margen2">
+                                      <button type="button" class="btn btn-default md">Apelar {{categoriaBeneficio.nombre}}</button>
+                                    </div>
+
+                              </div>
+                              </div>
+                    </div>
+
+                  <div class="row">
+                            <div class="col-xs-12 col-md-12 col-lg-12">
+                             
+                            <div  ng-repeat="beneficio in categoriaBeneficio.beneficios" > 
+                              <div class="col-xs-4 col-md-2 col-lg-1 beneficiosrectangulo" id="{{categoriaBeneficio.id}}">
+                             <!--Si esta asignado un icono sino el otro-->
+                                  <div style="text-align:left;">
+                                        <span style='color:green' ng-if="beneficio.estado == 'asignado'">
+                                        <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
+                                       </span>
+                                      <span style='color:red' ng-if="beneficio.estado == 'no asignado'">
+                                        <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
+                                      </span>
+                                </div>
+                                 <div> {{beneficio.sigla}}</div>
+                                  <div style="height:20px;">{{beneficio.monto}}</div>
+                              </div>
+                            </div>
+                          </div>
+                    </div><!--row-->
+                  <!-- Detalle beneficios -->
+
+                <!-- Mensajes -->
+                <div ng-repeat="mensaje in categoriaBeneficio.mensajes">
+                 <b>{{mensaje.titulo}} {{$index+1}}: </b>{{mensaje.contenido}} 
+                </div><!-- Mensajes <span ng-hide="$last">-->
+
+              </div><!-- Mis Beneficios - Categorías -->
+          <!--prueba-->
+      </div> <!--div mayor-->
+
        <!--<pre>{{controller.data | json}}</pre>-->
     </div><!-- col-xs-12 col-sm-12 col-md-12 col-lg-12 -->
   </div><!-- row -->
-
+          
+              
+                          
 
 
     <div class="footer">
-      <p>Resultados de Becas y Créditos</p>
+        <p>Ministerio de Educación de Chile, Alameda 1371 Santiago, Chile. Teléfono 6006002626</p>
+        <p>Declaración de Privacidad</p>
+          <div class="pie">
+            <img width="170" height="16" explicit-width="100%" explicit-height="100%" min-width="16" min-height="16" src="./imagen/pielogo.png" class="" />
+          </div>
+
     </div>
 </div><!-- container -->
 

@@ -36,11 +36,73 @@ body {
 
 /* Custom page footer */
 .footer {
+  text-align:center;
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
 
+.pie{
+text-align:right;
+
+}
+.logo{
+position:relative;
+top:19px;
+left:12px;
+z-index: 1;
+}
+
+.cursos{
+color:rgba(230, 22, 16, 1);
+margin:15px;
+}
+.colorblue{
+color:rgba(3, 48, 118, 1);
+
+}
+.actualizada
+{
+text-align:right;
+margin-top:15px;
+
+}
+.byc
+{
+  color: rgba(12, 89, 207, 1);
+  font-size: 24px;
+}
+.subtitulo
+{
+  
+  color: rgba(3, 48, 118, 1);
+  font-size: 24px;
+}
+.rut
+{
+  font-size: 20px;
+  margin:5px;
+}
+
+.margen{
+   margin-bottom:15px;
+}
+.margen2{
+  
+  text-align:right;
+   margin-bottom:15px;
+}
+.md{
+  background-color: #D5D0D0;
+  border: 2px solid #000000;
+}
+.botorgado
+{
+  margin:5px;
+font-size: 20px;
+color:black;
+text-align:right;
+}
 /* Customize container */
 @media (min-width: 768px) {
   .container {
@@ -68,7 +130,13 @@ body {
 .marketing p + h4 {
   margin-top: 28px;
 }
+.divmayor{
+  margin-top:10px;
+  margin-bottom:10px;
+  padding: 15px;
+  background-color: rgb(226, 238, 121); 
 
+}
 /*CLase para puntajes */
 .rectangulo
 {
@@ -97,17 +165,49 @@ background-color: rgb(193, 208, 69);
 
 .infoevaluacion
 {
-  border:1px solid rgb(146, 146, 146);margin:1px;text-align:center;
+  border:1px solid rgb(146, 146, 146);
+  margin:2px;
+  text-align:center;
+  border-radius: 5px;
 }
 .infosuperior{
+padding-top: 2px;
+padding-bottom: 7px;
 background-color:rgb(0, 141, 177);color:white;
 }
 .infoinferior
 {
   background-color:rgb(254, 248, 160);color:black;
-
+font-size: 24px;
+border-radius: 5px;
 }
 
+.beneficiosrectangulo
+{
+  /*height:65px;*/
+  border:2px solid rgb(146, 146, 146);
+  margin:4px;
+  text-align:center;
+  border-radius: 5px;
+  padding:0 5px 1px 5px;
+
+}
+#primerano.beneficiosrectangulo
+{
+
+  background-color:rgb(201, 241, 253);
+}
+#complementarias.beneficiosrectangulo
+{
+
+  background-color:rgb(254, 248, 160);
+}
+
+#superiores.beneficiosrectangulo
+{
+
+  background-color:rgb(254, 198, 61);
+}
 /* barra naranja header*/
 .barranaranja
 {
@@ -115,14 +215,15 @@ background-color:rgb(0, 141, 177);color:white;
   background-color:rgb(255, 197, 129);
 }
 
-#custom-accord .panel-heading{
-
+/*accordion*/
+#custom-accord .panel-heading
+{
 color: rgba(3, 48, 118, 1);
 background-color: rgb(226, 238, 121);
 border-color:rgb(226, 238, 121);
 
 }
-
+/*accordion*/
 #custom-accord .panel-body
 {
  background-color: rgb(226, 238, 121); 
