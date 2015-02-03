@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="main.css">
   <!-- endbuild -->
   <script src="./bower_components/modernizr/modernizr.js"></script>
-
+  <script src="scriptpopover.js"></script>
 </head>
 <body ng-app="tideApp">
     <!--[if lt IE 7]>
@@ -34,10 +34,10 @@
 <div class="container" ng-controller="AppController as controller">
 <div class="head">
   <div class="row">
-      <div class="col-xs-6 col-md-1 col-lg-2">
+      <div class="col-xs-6 col-md-2 col-lg-2">
           <img width="116" height="104" explicit-width="100%" explicit-height="100%" min-width="16" min-height="16" src="./imagen/logo.png" class="logo" />
       </div>
-      <div class=" col-xs-12 col-md-8 col-lg-7" > <h1>Portal de Resultados Año 2015</h1>
+      <div class=" col-xs-12 col-md-7 col-lg-7" > <h1>Portal de Resultados Año 2015</h1>
           <p class="byc">Becas y Créditos para la Educación Superior</p>
       </div>
       <div class=" col-xs-12 col-md-3 col-lg-3"> 
@@ -61,12 +61,27 @@
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
     <!--div mayor--> 
+
     <div class="divmayor">
+
           <p class="subtitulo">Información Destacada</p>
             <ul style="margin:15px;">
               <li ng-repeat="(i, msg) in controller.data.mensajes">Mensaje General {{$index+1}}: {{msg.contenido}}</li>
             </ul>
-          </div><!-- div mayor-->
+            <!-- boton de prueba con datos de json pero que luego mostrar datos con un ng-repeat -->
+            <button type="button"  data-original-title="{{controller.data.misBeneficios.categorias[0].beneficios[0].nombre}} ({{controller.data.misBeneficios.categorias[0].beneficios[0].sigla}}) - Detalle del Beneficio <button type='button' class='close'>×</button>" class="btn btn-primary my-popover">Boton PopOver</button>
+           <div id="content" class="hidden">
+                         <p>
+                             Usted ha sido beneficado(a) con la Beca Vocación de Profesor y ha obtenido el siguiente monto anual de acuerdo al arancel de referencia:
+                          </p>
+                                  
+                        <div style="border:1px solid red;padding:3px;">
+                          Monto Obtenido:$1.100.000
+                                      
+                        </div>
+                       <p>Pincha aquí para ver los pasos a seguir</p>
+          </div>
+    </div><!-- div mayor-->
     <!--div mayor--> 
     <div class="divmayor">
             
@@ -86,6 +101,7 @@
                           <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue">{{controller.data.datosPostulante.matriculaPrimerAno.acreditadoEn}}</b></h5></div>
                           <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Fecha de Acreditación:</h5></div>
                           <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue"> {{controller.data.datosPostulante.matriculaPrimerAno.fechaAcreditacion}}</b></h5></div>
+
 
                       </div>
                        <div class=" col-xs-12 col-md-5 col-lg-5"> 
@@ -200,7 +216,9 @@
                                     </div>
                                     <div class="col-xs-12 col-md-12 col-lg-4 margen2">
                                       <button type="button" class="btn btn-default md">Apelar {{categoriaBeneficio.nombre}}</button>
+                                    
                                     </div>
+
 
                               </div>
                               </div>
@@ -208,6 +226,9 @@
 
                   <div class="row">
                             <div class="col-xs-12 col-md-12 col-lg-12">
+
+                                          
+
                              
                             <div  ng-repeat="beneficio in categoriaBeneficio.beneficios" > 
                               <div class="col-xs-4 col-md-2 col-lg-1 beneficiosrectangulo" id="{{categoriaBeneficio.id}}">
@@ -224,7 +245,10 @@
                                   <div style="height:20px;">{{beneficio.monto}}</div>
                               </div>
                             </div>
+                            
                           </div>
+                          
+                        
                     </div><!--row-->
                   <!-- Detalle beneficios -->
 
@@ -235,6 +259,9 @@
 
               </div><!-- Mis Beneficios - Categorías -->
           <!--prueba-->
+         <div>Call Center:
+600 600 2626 
+</div> 
       </div> <!--div mayor-->
 
        <!--<pre>{{controller.data | json}}</pre>-->
@@ -285,6 +312,7 @@
     <script src="app.js"></script>
     <script src="controller.js"></script>
     <script src="controller2.js"></script>
+     <script src="scriptpopover.js"></script>
     <script src="service.js"></script>
     <script src="directive.js"></script>
     <!-- endbuild -->
