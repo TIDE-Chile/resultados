@@ -1,0 +1,292 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Resultados</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css({.tmp,app}) styles/main.css -->
+  <link rel="stylesheet" href="main.css">
+  <!-- endbuild -->
+  <script src="./bower_components/modernizr/modernizr.js"></script>
+
+</head>
+<body ng-app="tideApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+  <div id="browser_warning">
+      <h3 class="text-muted">Su navegador no soporta algunas funciones modernas que son necesarias para el funcionamiento de esta página.  Le sugerimos actualizar el navegador o probar con uno diferente.</h3>
+  </div>
+
+  <!-- Add your site or application content here -->
+  <!-- container -->
+<div class="container" ng-controller="AppController as controller">
+<div class="head">
+  <div class="row">
+      <div class="col-xs-6 col-md-1 col-lg-2">
+          <img width="116" height="104" explicit-width="100%" explicit-height="100%" min-width="16" min-height="16" src="./imagen/logo.png" class="logo" />
+      </div>
+      <div class=" col-xs-12 col-md-8 col-lg-7" > <h1>Portal de Resultados Año 2015</h1>
+          <p class="byc">Becas y Créditos para la Educación Superior</p>
+      </div>
+      <div class=" col-xs-12 col-md-3 col-lg-3"> 
+              <div class="actualizada">
+                <h5>Información Actualizada a:</h5> <p class="byc">{{controller.datav2.fechaActualizacion}}</p></div>
+      </div>
+  </div> <!-- row head-->
+ 
+      
+        <!--<img src="..." class="img-responsive" alt="Imagen responsive">-->
+        
+
+      </div><!-- head -->
+
+  <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align:right;">
+              <div class="barranaranja">
+                <p class="rut">RUT: <span class="byc">{{controller.datav2.rut}}</span> <a style="font-size:15px;padding-left:10px;padding-right:10px;">Cerrar</a></p>
+              </div>
+        </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+    <!--div mayor--> 
+    <div class="divmayor">
+          <p class="subtitulo">Información Destacada</p>
+            <ul style="margin:15px;">
+              <li ng-repeat="(i, msg) in controller.datav2.mensajes">Mensaje General {{$index+1}}: {{msg.contenido}}</li>
+            </ul>
+          </div><!-- div mayor-->
+    <!--div mayor--> 
+    <div class="divmayor">
+            
+          <p class="subtitulo">Datos del Postulante (matrícula, acreditación)</p>
+
+           <div class="rectangulo" id="datospostulante">
+
+                <div class="row">
+                    
+                      <div class="col-xs-12 col-md-7 col-lg-7">
+                        <h4 ng-show="controller.datav2.datosPostulante.matriculaPrimerAno" class="cursos"> Primer Año</h4>
+                          <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Matriculado en:</h5></div>
+                          <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue">{{controller.datav2.datosPostulante.matriculaPrimerAno.institucion}}</b></h5></div>
+                          <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Carrera:</h5></div>
+                          <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue">{{controller.datav2.datosPostulante.matriculaPrimerAno.carrera}}</b></h5></div>
+                           <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Acreditado en:</h5></div>
+                          <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue">{{controller.datav2.datosPostulante.matriculaPrimerAno.acreditadoEn}}</b></h5></div>
+                          <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Fecha de Acreditación:</h5></div>
+                          <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue"> {{controller.datav2.datosPostulante.matriculaPrimerAno.fechaAcreditacion}}</b></h5></div>
+
+                      </div>
+                       <div class=" col-xs-12 col-md-5 col-lg-5"> 
+                          <h5>Con esta información fuiste evaluado:</h5>
+                          <div class="rectangulo"> 
+                            <div class="row">
+                  
+                              <span ng-repeat="item in controller.datav2.datosPostulante.matriculaPrimerAno.datosEvaluacion">
+                                  <div class="col-xs-6 col-md-4 col-lg-4">  
+                                    <div class="infoevaluacion">
+                                      <div class="infosuperior">{{item.etiqueta}}:</div>
+                                      <div class="infoinferior">{{item.valor}}</div> 
+                                    </div> 
+                                      <!-- <span ng-hide="$last"> | </span>-->
+                                  </div>
+                              </span>
+                               
+                            </div><!--row -->
+                          </div>
+                        </div>
+                  </div><!--row -->
+                     </div>
+            <!--curso superior -->
+                  <div class="rectangulo" id="datospostulante">
+
+                        <div class="row">
+                            
+                              <div class="col-xs-12 col-md-7 col-lg-7">
+                                <h4 ng-show="controller.datav2.datosPostulante.cursosSuperiores" class="cursos">Cursos Superiores</h4>
+                                  <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Matriculado en:</h5></div>
+                                  <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue">{{controller.datav2.datosPostulante.cursosSuperiores.institucion}}</b></h5></div>
+                                  <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Carrera:</h5></div>
+                                  <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue">{{controller.datav2.datosPostulante.cursosSuperiores.carrera}}</b></h5></div>
+                                   <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Acreditado en:</h5></div>
+                                  <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue">{{controller.datav2.datosPostulante.cursosSuperiores.acreditadoEn}}</b></h5></div>
+                                  <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Fecha de Acreditación:</h5></div>
+                                  <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue"> {{controller.datav2.datosPostulante.cursosSuperiores.fechaAcreditacion}}</b></h5></div>
+
+                              </div>
+                               <div class=" col-xs-12 col-md-5 col-lg-5"> 
+                                  <h5>Con esta información fuiste evaluado:</h5>
+                                  <div class="rectangulo"> 
+                                    <div class="row">
+                          
+                                      <span ng-repeat="item in controller.datav2.datosPostulante.cursosSuperiores.datosEvaluacion">
+                                          <div class="col-xs-6 col-md-4 col-lg-4">  
+                                            <div class="infoevaluacion">
+                                              <div class="infosuperior">{{item.etiqueta}}:</div>
+                                              <div class="infoinferior">{{item.valor}}</div> 
+                                            </div> 
+                                              <!-- <span ng-hide="$last"> | </span>-->
+                                          </div>
+                                      </span>
+                                       
+                                    </div><!--row -->
+                                  </div>
+                                </div>
+                          </div><!--row -->
+                             </div>
+        </div><!-- div mayor-->
+
+<!--div mayor -->
+    <div class="divmayor">
+      <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+           <div class="col-xs-12 col-md-8 col-lg-8">
+                 <p class="subtitulo" ng-show="controller.datav2.misBeneficios">
+                      Mis Beneficios (Postulados, En Proceso, Otorgados)
+                 </p>
+            </div>
+            <div class="col-xs-12 col-md-4 col-lg-4">
+                  <p class="botorgado">Beneficio Otorgado: <spam style="color:red;">${{controller.datav2.misBeneficios.montoOtorgado}}</spam></p>
+            </div>
+        
+         </div>
+
+      </div>
+        <div style="margin:5px;">{{controller.datav2.misBeneficios.mensaje}}</div>
+             <!--prueba-->
+              <!-- Mis Beneficios - Categorías -->
+              <div ng-repeat="categoriaBeneficio in controller.datav2.misBeneficios.categorias" class="rectangulo" id="{{categoriaBeneficio.id}}"> 
+
+                <div class="row">
+                  <div class=""> 
+                            <div class="col-xs-12 col-md-12 col-lg-12 margen">
+                             
+                                    <div class="col-xs-12 col-md-4 col-lg-2">
+                                      <b class="cursos">{{categoriaBeneficio.nombre}}</b>
+                                    </div>
+
+                                       <!--{{categoriaBeneficio.etapa}} 
+
+                                  
+                                        Apelar {{categoriaBeneficio.nombre}}: {{categoriaBeneficio.urlApelacion}}-->
+                                   <div class="col-xs-12 col-md-8 col-lg-6 margen">
+                                        <div class="btn-toolbar" role="toolbar">
+
+                                                  <div class="btn-group">
+                                                      <button type="button" class="btn btn-default">Postulación</button>
+
+                                                  </div>
+                                                   <div class="btn-group">
+                                                      <button type="button" class="btn btn-default">Preselección</button>
+                                                  </div>
+                                                   <div class="btn-group">
+                                                      <button type="button" class="btn">Asignación</button>
+                                                  </div>
+                                                   <div class="btn-group">
+                                                      <button type="button" class="btn btn-default">Apelación</button>
+                                                  </div>          
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-12 col-lg-4 margen2">
+                                      <button type="button" class="btn btn-default md">Apelar {{categoriaBeneficio.nombre}}</button>
+                                    </div>
+
+                              </div>
+                              </div>
+                    </div>
+
+                  <div class="row">
+                            <div class="col-xs-12 col-md-12 col-lg-12">
+                             
+                            <div  ng-repeat="beneficio in categoriaBeneficio.beneficios" > 
+                              <div class="col-xs-4 col-md-2 col-lg-1 beneficiosrectangulo" id="{{categoriaBeneficio.id}}">
+                             <!--Si esta asignado un icono sino el otro-->
+                                  <div style="text-align:left;">
+                                        <span style='color:green' ng-if="beneficio.estado == 'asignado'">
+                                        <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
+                                       </span>
+                                      <span style='color:red' ng-if="beneficio.estado == 'no asignado'">
+                                        <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
+                                      </span>
+                                </div>
+                                 <div> {{beneficio.sigla}}</div>
+                                  <div style="height:20px;">{{beneficio.monto}}</div>
+                              </div>
+                            </div>
+                          </div>
+                    </div><!--row-->
+                  <!-- Detalle beneficios -->
+
+                <!-- Mensajes -->
+                <div ng-repeat="mensaje in categoriaBeneficio.mensajes">
+                 <b>{{mensaje.titulo}} {{$index+1}}: </b>{{mensaje.contenido}} 
+                </div><!-- Mensajes <span ng-hide="$last">-->
+
+              </div><!-- Mis Beneficios - Categorías -->
+          <!--prueba-->
+      </div> <!--div mayor-->
+
+       <!--<pre>{{controller.datav2 | json}}</pre>-->
+    </div><!-- col-xs-12 col-sm-12 col-md-12 col-lg-12 -->
+  </div><!-- row -->
+          
+              
+                          
+
+
+    <div class="footer">
+        <p>Ministerio de Educación de Chile, Alameda 1371 Santiago, Chile. Teléfono 6006002626</p>
+        <p>Declaración de Privacidad</p>
+          <div class="pie">
+            <img width="170" height="16" explicit-width="100%" explicit-height="100%" min-width="16" min-height="16" src="./imagen/pielogo.png" class="" />
+          </div>
+
+    </div>
+</div><!-- container -->
+
+     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+      var protocol = window.location.protocol == "file:"?"http:":"";
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script',protocol+'//www.google-analytics.com/analytics.js','ga');
+
+     ga('create', 'UA-57309660-1');
+     ga('send', 'pageview');
+   </script>
+
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+   
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="app.js"></script>
+    <script src="controller.js"></script>
+    <script src="controller2.js"></script>
+    <script src="service.js"></script>
+    <script src="directive.js"></script>
+    <!-- endbuild -->
+  </body>
+  </html>
