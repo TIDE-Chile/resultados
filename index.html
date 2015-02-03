@@ -18,7 +18,6 @@
   <link rel="stylesheet" href="main.css">
   <!-- endbuild -->
   <script src="./bower_components/modernizr/modernizr.js"></script>
-  <script src="scriptpopover.js"></script>
 </head>
 <body ng-app="tideApp">
     <!--[if lt IE 7]>
@@ -68,8 +67,6 @@
             <ul style="margin:15px;">
               <li ng-repeat="(i, msg) in controller.data.mensajes">Mensaje General {{$index+1}}: {{msg.contenido}}</li>
             </ul>
-            <!-- boton de prueba con datos de json pero que luego mostrar datos con un ng-repeat -->
-            <button type="button"  data-original-title="{{controller.data.misBeneficios.categorias[0].beneficios[0].nombre}} ({{controller.data.misBeneficios.categorias[0].beneficios[0].sigla}}) - Detalle del Beneficio <button type='button' class='close'>×</button>" class="btn btn-primary my-popover">Boton PopOver</button>
            <div id="content" class="hidden">
                          <p>
                              Usted ha sido beneficado(a) con la Beca Vocación de Profesor y ha obtenido el siguiente monto anual de acuerdo al arancel de referencia:
@@ -231,7 +228,7 @@
 
                              
                             <div  ng-repeat="beneficio in categoriaBeneficio.beneficios" > 
-                              <div class="col-xs-4 col-md-2 col-lg-1 beneficiosrectangulo" id="{{categoriaBeneficio.id}}">
+                              <div class="col-xs-4 col-md-2 col-lg-1 beneficiosrectangulo" id="{{categoriaBeneficio.id}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficioAsignado.html'">
                              <!--Si esta asignado un icono sino el otro-->
                                   <div style="text-align:left;">
                                         <span style='color:green' ng-if="beneficio.estado == 'asignado'">
@@ -312,7 +309,6 @@
     <script src="app.js"></script>
     <script src="controller.js"></script>
     <script src="controller2.js"></script>
-     <script src="scriptpopover.js"></script>
     <script src="service.js"></script>
     <script src="directive.js"></script>
     <!-- endbuild -->
