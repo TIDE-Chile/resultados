@@ -12,6 +12,7 @@
 	"datosPostulante": [
 		{
 			"identificador":"matriculaPrimerAno",
+			"nombre":"Primer Año",
 			"institucion":"UNIVERSIDAD DE LA FRONTERA",
 			"carrera":"PEDAGOGIA EN CASTELLANO Y COMUNICACION",
 			"acreditadoEn":"UNIVERSIDAD DE LA FRONTERA",
@@ -41,6 +42,7 @@
 		},
 		{
 			"identificador":"cursosSuperiores",
+			"nombre":"Cursos Superiores",
 			"institucion":"UNIVERSIDAD DE SANTIAGO",
 			"carrera":"PEDAGOGIA EN INGLÉS",
 			"acreditadoEn":"UNIVERSIDAD DE SANTIAGO",
