@@ -44,4 +44,15 @@ angular.module('tideApp')
     myself.errorMsg="Error al consultar los datos";
   })
 
+  // Obtener datos para v2 de JSON y no interferir con version actual
+  dataService.getData(this.rut+"v2")
+  .then(function(data) {
+    myself.datav2 = data;
+  })
+  .catch(function(error) {
+    myself.errorMsg="Error al consultar los datos";
+  })
+
+
+
 }]);
