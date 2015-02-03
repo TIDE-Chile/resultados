@@ -107,7 +107,7 @@
 								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 							}
 						],
-						"beneficios": [];
+						"beneficios": []
 					},
 					"preseleccion" : {
 						"mensajeTooltip":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015.",
