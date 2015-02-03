@@ -18,10 +18,23 @@
  *
  */
 angular.module('tideApp')
-.controller('AppController', ['$scope', 'DataService',function ($scope,dataService) {
+.controller('AppController', ['$scope','$modal','DataService',function ($scope, $modal, dataService) {
   var myself = this;
 
   this.rut = "12345678";
+
+  this.openModalBeneficioAsignado = function() {
+  	 var modalInstance = $modal.open({
+      templateUrl: 'templates/beneficio_asignado.html',
+      //controller: 'ModalInstanceCtrl',
+      size: 'sm',
+      resolve: {
+        items: function () {
+          return $scope.items;
+        }
+      }
+    });
+  }
 
   dataService.getData(this.rut)
   .then(function(data) {
