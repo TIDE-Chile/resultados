@@ -274,7 +274,6 @@
 									}
 								]
 							},
-							{},
 							{
 								"sigla":"BJGM",
 								"nombre":"Beca Juan Gómez Millas",
@@ -416,7 +415,6 @@
 									}
 								]
 							},
-							{},
 							{
 								"sigla":"BJGM",
 								"nombre":"Beca Juan Gómez Millas",
@@ -534,8 +532,8 @@
 				}
 			},
 			{
-				"id":"complementarias",
-				"nombre":"Primer Año",
+				"identificador":"complementarias",
+				"nombre":"Becas complementarias",
 				"etapaActual":"asignacion",
 				"urlApelacion":"http://mineduc.cl",
 				"mensajes": [
@@ -577,21 +575,8 @@
 						],
 						"beneficios": [
 							{
-								"sigla":"BVP",
-								"nombre":"Beca Vocacion de Profesor",
-								"estado":"cumpleRequisitos",
-								"monto":"",
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
-							},
-							{},
-							{
-								"sigla":"BJGM",
-								"nombre":"Beca Juan Gómez Millas",
+								"sigla":"BNA",
+								"nombre":"Beca BNA",
 								"estado":"cumpleRequisitos",
 								"monto":"",
 								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
@@ -602,18 +587,10 @@
 								]
 							},
 							{
-								"sigla":"BEA",
-								"nombre":"Beca Excelencia Académica",
-								"estado":"noCumpleRequisitos",
+								"sigla":"BAES",
+								"nombre":"Beca BAES",
+								"estado":"cumpleRequisitos",
 								"monto":"",
-								"motivos":[
-									{
-										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-									},
-									{
-										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-									}
-								],
 								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
 								"mensajes":[
 									{
@@ -622,68 +599,8 @@
 								]
 							},
 							{
-								"sigla":"BHPE",
-								"nombre":"Beca Hijos Profesionales de la Educación",
-								"estado":"noCumpleRequisitos",
-								"monto":"",
-								"motivos":[
-									{
-										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-									},
-									{
-										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-									}
-								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
-							},
-							{
-								"sigla":"BNM",
-								"nombre":"Beca Nuevo Milenio",
-								"estado":"noCumpleRequisitos",
-								"monto":"",
-								"motivos":[
-									{
-										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-									},
-									{
-										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-									}
-								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
-							},
-							{
-								"sigla":"BET",
-								"nombre":"Beca Excelencia Técnica",
-								"estado":"noCumpleRequisitos",
-								"monto":"",
-								"motivos":[
-									{
-										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-									},
-									{
-										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-									}
-								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
-							},
-							{
-								"sigla":"BART",
-								"nombre":"Beca ART",
+								"sigla":"BMES",
+								"nombre":"Beca BMES",
 								"estado":"noCumpleRequisitos",
 								"monto":"",
 								"motivos":[
@@ -719,8 +636,8 @@
 						],
 						"beneficios": [
 							{
-								"sigla":"BVP",
-								"nombre":"Beca Vocacion de Profesor",
+								"sigla":"BNA",
+								"nombre":"Beca BNA",
 								"estado":"asignado",
 								"monto":"1100000",
 								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
@@ -730,10 +647,9 @@
 									}
 								]
 							},
-							{},
 							{
-								"sigla":"BJGM",
-								"nombre":"Beca Juan Gómez Millas",
+								"sigla":"BAES",
+								"nombre":"Beca BAES",
 								"estado":"asignado",
 								"monto":"450000",
 								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
@@ -744,88 +660,8 @@
 								]
 							},
 							{
-								"sigla":"BEA",
-								"nombre":"Beca Excelencia Académica",
-								"estado":"noAsignado",
-								"monto":"",
-								"motivos":[
-									{
-										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-									},
-									{
-										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-									}
-								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
-							},
-							{
-								"sigla":"BHPE",
-								"nombre":"Beca Hijos Profesionales de la Educación",
-								"estado":"noAsignado",
-								"monto":"",
-								"motivos":[
-									{
-										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-									},
-									{
-										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-									}
-								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
-							},
-							{
-								"sigla":"BNM",
-								"nombre":"Beca Nuevo Milenio",
-								"estado":"noAsignado",
-								"monto":"",
-								"motivos":[
-									{
-										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-									},
-									{
-										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-									}
-								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
-							},
-							{
-								"sigla":"BET",
-								"nombre":"Beca Excelencia Técnica",
-								"estado":"noAsignado",
-								"monto":"",
-								"motivos":[
-									{
-										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-									},
-									{
-										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-									}
-								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
-							},
-							{
-								"sigla":"BART",
-								"nombre":"Beca ART",
+								"sigla":"BMES",
+								"nombre":"Beca BMES",
 								"estado":"noAsignado",
 								"monto":"",
 								"motivos":[
@@ -861,8 +697,8 @@
 						],
 						"beneficios": [
 							{
-								"sigla":"BVP",
-								"nombre":"Beca Vocacion de Profesor",
+								"sigla":"BNA",
+								"nombre":"Beca BNA",
 								"estado":"asignado",
 								"monto":"1100000",
 								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
@@ -872,10 +708,9 @@
 									}
 								]
 							},
-							{},
 							{
-								"sigla":"BJGM",
-								"nombre":"Beca Juan Gómez Millas",
+								"sigla":"BAES",
+								"nombre":"Beca BAES",
 								"estado":"asignado",
 								"monto":"450000",
 								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
@@ -886,88 +721,8 @@
 								]
 							},
 							{
-								"sigla":"BEA",
-								"nombre":"Beca Excelencia Académica",
-								"estado":"noAsignado",
-								"monto":"",
-								"motivos":[
-									{
-										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-									},
-									{
-										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-									}
-								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
-							},
-							{
-								"sigla":"BHPE",
-								"nombre":"Beca Hijos Profesionales de la Educación",
-								"estado":"noAsignado",
-								"monto":"",
-								"motivos":[
-									{
-										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-									},
-									{
-										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-									}
-								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
-							},
-							{
-								"sigla":"BNM",
-								"nombre":"Beca Nuevo Milenio",
-								"estado":"noAsignado",
-								"monto":"",
-								"motivos":[
-									{
-										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-									},
-									{
-										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-									}
-								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
-							},
-							{
-								"sigla":"BET",
-								"nombre":"Beca Excelencia Técnica",
-								"estado":"noAsignado",
-								"monto":"",
-								"motivos":[
-									{
-										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-									},
-									{
-										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-									}
-								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
-							},
-							{
-								"sigla":"BART",
-								"nombre":"Beca ART",
+								"sigla":"BMES",
+								"nombre":"Beca BMES",
 								"estado":"noAsignado",
 								"monto":"",
 								"motivos":[
@@ -990,8 +745,8 @@
 				}
 			},
 			{
-				"id":"superiores",
-				"nombre":"Primer Año",
+				"identificador":"superiores",
+				"nombre":"Cursos superiores",
 				"etapaActual":"asignacion",
 				"urlApelacion":"http://mineduc.cl",
 				"mensajes": [
@@ -1033,21 +788,8 @@
 						],
 						"beneficios": [
 							{
-								"sigla":"BVP",
-								"nombre":"Beca Vocacion de Profesor",
-								"estado":"cumple",
-								"monto":"",
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
-							},
-							{},
-							{
-								"sigla":"BJGM",
-								"nombre":"Beca Juan Gómez Millas",
+								"sigla":"BBICSA",
+								"nombre":"Beca BBICSA",
 								"estado":"cumple",
 								"monto":"",
 								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
@@ -1058,8 +800,20 @@
 								]
 							},
 							{
-								"sigla":"BEA",
-								"nombre":"Beca Excelencia Académica",
+								"sigla":"BHPESA",
+								"nombre":"Beca BHPESA",
+								"estado":"cumple",
+								"monto":"",
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BJGMSA",
+								"nombre":"Beca BJGMSA",
 								"estado":"noCumple",
 								"monto":"",
 								"motivos":[
@@ -1078,68 +832,8 @@
 								]
 							},
 							{
-								"sigla":"BHPE",
-								"nombre":"Beca Hijos Profesionales de la Educación",
-								"estado":"noCumple",
-								"monto":"",
-								"motivos":[
-									{
-										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-									},
-									{
-										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-									}
-								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
-							},
-							{
-								"sigla":"BNM",
-								"nombre":"Beca Nuevo Milenio",
-								"estado":"noCumple",
-								"monto":"",
-								"motivos":[
-									{
-										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-									},
-									{
-										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-									}
-								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
-							},
-							{
-								"sigla":"BET",
-								"nombre":"Beca Excelencia Técnica",
-								"estado":"noCumple",
-								"monto":"",
-								"motivos":[
-									{
-										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-									},
-									{
-										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-									}
-								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
-							},
-							{
-								"sigla":"BART",
-								"nombre":"Beca ART",
+								"sigla":"BNMSA",
+								"nombre":"Beca BNMSA",
 								"estado":"noCumple",
 								"monto":"",
 								"motivos":[
@@ -1175,8 +869,8 @@
 						],
 						"beneficios": [
 							{
-								"sigla":"BVP",
-								"nombre":"Beca Vocacion de Profesor",
+								"sigla":"BBICSA",
+								"nombre":"Beca BBICSA",
 								"estado":"asignado",
 								"monto":"1100000",
 								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
@@ -1186,10 +880,9 @@
 									}
 								]
 							},
-							{},
 							{
-								"sigla":"BJGM",
-								"nombre":"Beca Juan Gómez Millas",
+								"sigla":"BHPESA",
+								"nombre":"Beca BHPESA",
 								"estado":"asignado",
 								"monto":"450000",
 								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
@@ -1200,8 +893,8 @@
 								]
 							},
 							{
-								"sigla":"BEA",
-								"nombre":"Beca Excelencia Académica",
+								"sigla":"BJGMSA",
+								"nombre":"Beca BJGMSA",
 								"estado":"noAsignado",
 								"monto":"",
 								"motivos":[
@@ -1220,68 +913,8 @@
 								]
 							},
 							{
-								"sigla":"BHPE",
-								"nombre":"Beca Hijos Profesionales de la Educación",
-								"estado":"noAsignado",
-								"monto":"",
-								"motivos":[
-									{
-										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-									},
-									{
-										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-									}
-								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
-							},
-							{
-								"sigla":"BNM",
-								"nombre":"Beca Nuevo Milenio",
-								"estado":"noAsignado",
-								"monto":"",
-								"motivos":[
-									{
-										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-									},
-									{
-										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-									}
-								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
-							},
-							{
-								"sigla":"BET",
-								"nombre":"Beca Excelencia Técnica",
-								"estado":"noAsignado",
-								"monto":"",
-								"motivos":[
-									{
-										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-									},
-									{
-										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-									}
-								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
-							},
-							{
-								"sigla":"BART",
-								"nombre":"Beca ART",
+								"sigla":"BNMSA",
+								"nombre":"Beca BNMSA",
 								"estado":"noAsignado",
 								"monto":"",
 								"motivos":[
@@ -1317,8 +950,8 @@
 						],
 						"beneficios": [
 							{
-								"sigla":"BVP",
-								"nombre":"Beca Vocacion de Profesor",
+								"sigla":"BBICSA",
+								"nombre":"Beca BBICSA",
 								"estado":"asignado",
 								"monto":"1100000",
 								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
@@ -1328,10 +961,9 @@
 									}
 								]
 							},
-							{},
 							{
-								"sigla":"BJGM",
-								"nombre":"Beca Juan Gómez Millas",
+								"sigla":"BHPESA",
+								"nombre":"Beca BHPESA",
 								"estado":"asignado",
 								"monto":"450000",
 								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
@@ -1342,8 +974,8 @@
 								]
 							},
 							{
-								"sigla":"BEA",
-								"nombre":"Beca Excelencia Académica",
+								"sigla":"BJGMSA",
+								"nombre":"Beca BJGMSA",
 								"estado":"noAsignado",
 								"monto":"",
 								"motivos":[
@@ -1362,68 +994,8 @@
 								]
 							},
 							{
-								"sigla":"BHPE",
-								"nombre":"Beca Hijos Profesionales de la Educación",
-								"estado":"noAsignado",
-								"monto":"",
-								"motivos":[
-									{
-										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-									},
-									{
-										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-									}
-								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
-							},
-							{
-								"sigla":"BNM",
-								"nombre":"Beca Nuevo Milenio",
-								"estado":"noAsignado",
-								"monto":"",
-								"motivos":[
-									{
-										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-									},
-									{
-										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-									}
-								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
-							},
-							{
-								"sigla":"BET",
-								"nombre":"Beca Excelencia Técnica",
-								"estado":"noAsignado",
-								"monto":"",
-								"motivos":[
-									{
-										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-									},
-									{
-										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-									}
-								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
-							},
-							{
-								"sigla":"BART",
-								"nombre":"Beca ART",
+								"sigla":"BNMSA",
+								"nombre":"Beca BNMSA",
 								"estado":"noAsignado",
 								"monto":"",
 								"motivos":[
