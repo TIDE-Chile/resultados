@@ -22,10 +22,24 @@ angular.module('tideApp')
   var myself = this;
 
   this.rut = "12345678";
+this.estadoSeleccionado = {}
 
+
+this.estadoSeleccionado["primerano"] = "postulacion";
+this.estadoSeleccionado["superiores"] = "preseleccion";
+this.estadoSeleccionado["complementarias"] = "preseleccion";
+
+
+/*this.estados = {}
+
+this.estados[0]="postulacion";
+this.estados[1]="preseleccion";
+this.estados[2]="asignacion";
+this.estados[3]="apleacion";
+*/
   this.openModalBeneficioAsignado = function() {
-  	 var modalInstance = $modal.open({
-      templateUrl: 'templates/beneficio_asignado.html',
+     var modalInstance = $modal.open({
+      templateUrl: 'templates/beneficioAsignado.html',
       //controller: 'ModalInstanceCtrl',
       size: 'sm',
       resolve: {
