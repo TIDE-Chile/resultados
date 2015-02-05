@@ -1,0 +1,15 @@
+<div>
+	<div ng-show="beneficio.estado=='asignado'"> 
+		Usted ha sido beneficado(a) con la {{beneficio.nombre}} y ha obtenido el siguiente monto anual:
+		<div>Monto Obtenido {{beneficio.monto}}</div>
+	</div>
+	<div ng-show="beneficio.estado=='noAsignado'"> 
+		Beneficio no asignado
+	</div>
+	<div ng-show="beneficio.estado=='cumpleRequisitos'"> 
+		Cumple requisitos
+	</div>
+	<div ng-show="beneficio.estado=='noCumpleRequisitos'"> 
+		Cumple requisitos
+	</div>
+</div>

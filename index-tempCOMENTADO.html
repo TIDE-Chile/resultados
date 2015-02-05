@@ -144,9 +144,8 @@
 
      <!-- Mensaje -->
      <div style="margin:5px;">
-      {{controller.datav2.misBeneficios.mensaje}}
+      {{controller.datav2.misBeneficios.mensajes[0].contenido}}
      </div><!-- Mensaje -->
-
      <!-- Mis Beneficios - Categorías -->
      <div ng-repeat="categoriaBeneficio in controller.datav2.misBeneficios.categorias" class="rectangulo" id="{{categoriaBeneficio.identificador}}"> 
 
@@ -162,16 +161,16 @@
           <div class="col-xs-12 col-md-8 col-lg-6 margen">
            <div class="btn-toolbar" role="toolbar">
             <div class="btn-group">
-             <button type="button" class="btn btn-default">Postulación</button>
+             <button type="button" class="btn btn-default" ng-click="controller.estadoSeleccionado[categoriaBeneficio.identificador] = 'postulacion';">Postulación</button>
             </div>
             <div class="btn-group">
-             <button type="button" class="btn btn-default">Preselección</button>
+             <button type="button" ng-class="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'postulacion' ? 'btn btn-default active' : 'btn btn-default'" ng-click="controller.estadoSeleccionado[categoriaBeneficio.identificador] = 'preseleccion';">Preselección</button>
             </div>
             <div class="btn-group">
-               <button type="button" class="btn">Asignación</button>
+               <button type="button" class2="" ng-class="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'asignacion' ? 'btn btn-default active' : 'btn btn-default'" ng-click="controller.estadoSeleccionado[categoriaBeneficio.identificador] = 'asignacion';">Asignación</button>
             </div>
             <div class="btn-group">
-               <button type="button" class="btn btn-default">Apelación</button>
+               <button type="button" ng-class="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'apelacion' ? 'btn btn-default active' : 'btn btn-default'" ng-click="controller.estadoSeleccionado[categoriaBeneficio.identificador] = 'apelacion';">Apelación</button>
             </div>          
            </div>
           </div><!-- Linea de tiempo - etapas -->
@@ -185,8 +184,59 @@
 
       <div class="row">
 
-        <div class="col-xs-12 col-md-12 col-lg-12">
+        <!-- Etapa: Postulacion-->
+        <div class="col-xs-12 col-md-12 col-lg-12 postulacion"ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'postulacion'">
          <!--por ahora mostrare asignacion cuando funcione, bien veo las otras.-->
+
+         <!-- Beneficios -->
+         <div  ng-repeat="beneficio in categoriaBeneficio.etapas.postulacion.beneficios" > 
+
+          <!-- Recuadro beneficio -->
+          <div class="col-xs-4 col-md-2 col-lg-1 beneficiosrectangulo" id="{{categoriaBeneficio.identificador}}">
+           <!--Si esta asignado un icono sino el otro-->
+           <div style="text-align:left;">
+            <span style='color:green' ng-if="beneficio.estado == 'asignado'">
+             <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
+            </span>
+            <span style='color:red' ng-if="beneficio.estado == 'noAsignado'">
+              <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
+            </span>
+           </div>
+           
+           <div>{{beneficio.sigla}}</div>      
+           <div style="height:20px;">{{beneficio.monto}}</div>
+          </div><!-- Recuadro beneficio -->
+
+         </div>
+        </div>
+                
+        <!-- Etapa: Preseleccion-->
+        <div class="col-xs-12 col-md-12 col-lg-12 preseleccion" ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'preseleccion'">
+
+         <!-- Beneficios -->
+         <div  ng-repeat="beneficio in categoriaBeneficio.etapas.preseleccion.beneficios" > 
+
+          <!-- Recuadro beneficio -->
+          <div class="col-xs-4 col-md-2 col-lg-1 beneficiosrectangulo" id="{{categoriaBeneficio.identificador}}">
+           <!--Si esta asignado un icono sino el otro-->
+           <div style="text-align:left;">
+            <span style='color:green' ng-if="beneficio.estado == 'asignado'">
+             <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
+            </span>
+            <span style='color:red' ng-if="beneficio.estado == 'noAsignado'">
+              <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
+            </span>
+           </div>
+           
+           <div>{{beneficio.sigla}}</div>      
+           <div style="height:20px;">{{beneficio.monto}}</div>
+          </div><!-- Recuadro beneficio -->
+
+         </div>
+        </div>
+
+        <!-- Etapa: Asignacion-->
+        <div class="col-xs-12 col-md-12 col-lg-12 asignacion" ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'asignacion'">
 
          <!-- Beneficios -->
          <div  ng-repeat="beneficio in categoriaBeneficio.etapas.asignacion.beneficios" > 
@@ -209,6 +259,32 @@
 
          </div>
         </div>
+
+        <!-- Etapa: Apelacion-->
+        <div class="col-xs-12 col-md-12 col-lg-12 apelacion" ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'apelacion'">
+
+         <!-- Beneficios -->
+         <div  ng-repeat="beneficio in categoriaBeneficio.etapas.asignacion.beneficios" > 
+
+          <!-- Recuadro beneficio -->
+          <div class="col-xs-4 col-md-2 col-lg-1 beneficiosrectangulo" id="{{categoriaBeneficio.identificador}}">
+           <!--Si esta asignado un icono sino el otro-->
+           <div style="text-align:left;">
+            <span style='color:green' ng-if="beneficio.estado == 'asignado'">
+             <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
+            </span>
+            <span style='color:red' ng-if="beneficio.estado == 'noAsignado'">
+              <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
+            </span>
+           </div>
+           
+           <div>{{beneficio.sigla}}</div>      
+           <div style="height:20px;">{{beneficio.monto}}</div>
+          </div><!-- Recuadro beneficio -->
+
+         </div>
+        </div>
+
       </div><!--row-->
 
       <!-- Mensajes beneficios // REVISAR // -->

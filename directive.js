@@ -28,13 +28,24 @@ angular.module('tideApp')
             html: true,
         };
 
-        $http.get(scope.templateUrl)
-        .then(function(response) {
-          var template = $templateCache.put( 'templateBeneficio.html', response.data );
-          options.content= $compile($(template))(scope);
-          element.popover(options);
-        })
- 
+        // Obtener template desde archivo externo si se define atributo td-template-url
+        if (scope.templateUrl) {
+            $http.get(scope.templateUrl)
+            .then(function(response) {
+              var template = $templateCache.put( 'templateBeneficio.html', response.data );
+              options.content= $compile($(template))(scope);
+              element.popover(options);
+            }) 
+        } 
+
+        // Obtener template definida localmente con ngTemplate & id templateBeneficio.html
+        else {
+            var template = $templateCache.get( 'templateBeneficio.html');
+            options.content= $compile($(template))(scope);
+            element.popover(options);
+        }
+
+
       element.on('shown.bs.popover', function () {
         var popover = element.data('bs.popover');
         if (typeof popover !== "undefined") {

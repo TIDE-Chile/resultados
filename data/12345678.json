@@ -1,7 +1,7 @@
 {
 	"rut": "12345678-9",
 	"fechaActualizacion":"05/03/2015",
-	"mensajes" : [
+	"mensajesDestacados" : [
 		{
 			"contenido":"Los resultados consideran el puntaje promedio PSU (lenguaje y comunicación y matemáticas) con el cual se ingresa a la carrera, el que es informado por la institución de educación superior al Mineduc."
 		},
@@ -9,8 +9,10 @@
 			"contenido":"Estos resultados consideran la matrícula informada por las Instituciones de Educación Superior al Mineduc hasta el 02 de mayo de 2014, y las acreditaciones."
 		}
 	],
-	"datosPostulante":{
-		"matriculaPrimerAno": {
+	"datosPostulante": [
+		{
+			"identificador":"matriculaPrimerAno",
+			"nombre":"Primer Año",
 			"institucion":"UNIVERSIDAD DE LA FRONTERA",
 			"carrera":"PEDAGOGIA EN CASTELLANO Y COMUNICACION",
 			"acreditadoEn":"UNIVERSIDAD DE LA FRONTERA",
@@ -38,7 +40,9 @@
 				}
 			]
 		},
-		"cursosSuperiores": {
+		{
+			"identificador":"cursosSuperiores",
+			"nombre":"Cursos Superiores",
 			"institucion":"UNIVERSIDAD DE SANTIAGO",
 			"carrera":"PEDAGOGIA EN INGLÉS",
 			"acreditadoEn":"UNIVERSIDAD DE SANTIAGO",
@@ -70,15 +74,19 @@
 				}
 			]
 		}
-	},
+	],
 	"misBeneficios":{
 		"montoOtorgado":"1550000",
-		"mensaje":"La asignación de beneficios corresponde a la validación realizada por el MINEDUC del cumplimiento de los requisitos académicos y socioeconómicos establecidos para cada beneficio.",
+		"mensajes" : [
+			{
+				"contenido":"La asignación de beneficios corresponde a la validación realizada por el MINEDUC del cumplimiento de los requisitos académicos y socioeconómicos establecidos para cada beneficio."
+			}
+		],
 		"categorias":[
 			{
-				"id":"primerano",
+				"identificador":"primerano",
 				"nombre":"Primer Año",
-				"etapa":"asignación",
+				"etapaActual":"asignacion",
 				"urlApelacion":"http://mineduc.cl",
 				"mensajes": [
 					{	
@@ -86,137 +94,447 @@
 						"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 					}
 				],
-				"beneficios": [
-					{
-						"sigla":"BVP",
-						"nombre":"Beca Vocacion de Profesor",
-						"estado":"asignado",
-						"monto":"1100000",
-						"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-						"mensajes":[
-							{
-								"contenido":""
+				"etapas": {
+					"postulacion" : {
+						"mensajeTooltip":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015.",
+						"mensajesGenerales": [
+							{	
+								"titulo":"Mensaje General",
+								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 							}
-						]
-					},
-					{
-						"sigla":"BJGM",
-						"nombre":"Beca Juan Gómez Millas",
-						"estado":"asignado",
-						"monto":"450000",
-						"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-						"mensajes":[
-							{
-								"contenido":""
-							}
-						]
-					},
-					{
-						"sigla":"BEA",
-						"nombre":"Beca Excelencia Académica",
-						"estado":"no asignado",
-						"monto":"",
-						"motivos":[
-							{
-								"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-							},
-							{
-								"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+						],						
+						"mensajesEspeciales": [
+							{	
+								"titulo":"Mensaje Especial",
+								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 							}
 						],
-						"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-						"mensajes":[
+						"beneficios": []
+					},
+					"preseleccion" : {
+						"mensajeTooltip":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015.",
+						"mensajesGenerales": [
+							{	
+								"titulo":"Mensaje General",
+								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
+							}
+						],						
+						"mensajesEspeciales": [
+							{	
+								"titulo":"Mensaje Especial",
+								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
+							}
+						],
+						"beneficios": [
 							{
-								"contenido":""
+								"sigla":"BVP",
+								"nombre":"Beca Vocacion de Profesor",
+								"estado":"cumpleRequisitos",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BJGM",
+								"nombre":"Beca Juan Gómez Millas",
+								"estado":"cumpleRequisitos",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BEA",
+								"nombre":"Beca Excelencia Académica",
+								"estado":"noCumpleRequisitos",
+								"motivos":[
+									{
+										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BHPE",
+								"nombre":"Beca Hijos Profesionales de la Educación",
+								"estado":"noCumpleRequisitos",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BNM",
+								"nombre":"Beca Nuevo Milenio",
+								"estado":"noCumpleRequisitos",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BET",
+								"nombre":"Beca Excelencia Técnica",
+								"estado":"noCumpleRequisitos",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BART",
+								"nombre":"Beca ART",
+								"estado":"noCumpleRequisitos",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
 							}
 						]
 					},
-					{
-						"sigla":"BHPE",
-						"nombre":"Beca Hijos Profesionales de la Educación",
-						"estado":"no asignado",
-						"monto":"",
-						"motivos":[
-							{
-								"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-							},
-							{
-								"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+					"asignacion" : {
+						"mensajeTooltip":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015.",
+						"mensajesGenerales": [
+							{	
+								"titulo":"Mensaje General",
+								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
+							}
+						],						
+						"mensajesEspeciales": [
+							{	
+								"titulo":"Mensaje Especial",
+								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 							}
 						],
-						"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-						"mensajes":[
+						"beneficios": [
 							{
-								"contenido":""
+								"sigla":"BVP",
+								"nombre":"Beca Vocacion de Profesor",
+								"estado":"asignado",
+								"monto":"1100000",
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BJGM",
+								"nombre":"Beca Juan Gómez Millas",
+								"estado":"asignado",
+								"monto":"450000",
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BEA",
+								"nombre":"Beca Excelencia Académica",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BHPE",
+								"nombre":"Beca Hijos Profesionales de la Educación",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BNM",
+								"nombre":"Beca Nuevo Milenio",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BET",
+								"nombre":"Beca Excelencia Técnica",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BART",
+								"nombre":"Beca ART",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
 							}
 						]
 					},
-					{
-						"sigla":"BNM",
-						"nombre":"Beca Nuevo Milenio",
-						"estado":"no asignado",
-						"monto":"",
-						"motivos":[
-							{
-								"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-							},
-							{
-								"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+					"apelacion" : {
+						"mensajeTooltip":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015.",
+						"mensajesGenerales": [
+							{	
+								"titulo":"Mensaje General",
+								"contenido":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015."
+							}
+						],						
+						"mensajesEspeciales": [
+							{	
+								"titulo":"Mensaje Especial",
+								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 							}
 						],
-						"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-						"mensajes":[
+						"beneficios": [
 							{
-								"contenido":""
-							}
-						]
-					},
-					{
-						"sigla":"BET",
-						"nombre":"Beca Excelencia Técnica",
-						"estado":"no asignado",
-						"monto":"",
-						"motivos":[
-							{
-								"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+								"sigla":"BVP",
+								"nombre":"Beca Vocacion de Profesor",
+								"estado":"asignado",
+								"monto":"1100000",
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
 							},
 							{
-								"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-							}
-						],
-						"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-						"mensajes":[
-							{
-								"contenido":""
-							}
-						]
-					},
-					{
-						"sigla":"BART",
-						"nombre":"Beca ART",
-						"estado":"no asignado",
-						"monto":"",
-						"motivos":[
-							{
-								"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+								"sigla":"BJGM",
+								"nombre":"Beca Juan Gómez Millas",
+								"estado":"asignado",
+								"monto":"450000",
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
 							},
 							{
-								"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-							}
-						],
-						"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-						"mensajes":[
+								"sigla":"BEA",
+								"nombre":"Beca Excelencia Académica",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
 							{
-								"contenido":""
+								"sigla":"BHPE",
+								"nombre":"Beca Hijos Profesionales de la Educación",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BNM",
+								"nombre":"Beca Nuevo Milenio",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BET",
+								"nombre":"Beca Excelencia Técnica",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BART",
+								"nombre":"Beca ART",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
 							}
 						]
 					}
-				]
+				}
 			},
 			{
-				"id":"complementarias",
-				"nombre":"Becas Complementarias",
-				"etapa":"asignación",
+				"identificador":"complementarias",
+				"nombre":"Becas complementarias",
+				"etapaActual":"postulacion",
 				"urlApelacion":"http://mineduc.cl",
 				"mensajes": [
 					{	
@@ -224,113 +542,212 @@
 						"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 					}
 				],
-				"beneficios": [
-					{
-						"sigla":"BNA",
-						"nombre":"Beca NA",
-						"estado":"no asignado",
-						"monto":"",
-						"motivos":[
-							{
-								"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-							},
-							{
-								"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+				"etapas": {
+					"postulacion" : {
+						"mensajeTooltip":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015.",
+						"mensajesGenerales": [
+							{	
+								"titulo":"Mensaje General",
+								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
+							}
+						],						
+						"mensajesEspeciales": [
+							{	
+								"titulo":"Mensaje Especial",
+								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 							}
 						],
-						"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-						"mensajes":[
+						"beneficios": []
+					},
+					"preseleccion" : {
+						"mensajeTooltip":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015.",
+						"mensajesGenerales": [
+							{	
+								"titulo":"Mensaje General",
+								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
+							}
+						],						
+						"mensajesEspeciales": [
+							{	
+								"titulo":"Mensaje Especial",
+								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
+							}
+						],
+						"beneficios": [
 							{
-								"contenido":""
+								"sigla":"BNA",
+								"nombre":"Beca BNA",
+								"estado":"cumpleRequisitos",
+								"monto":"",
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BAES",
+								"nombre":"Beca BAES",
+								"estado":"cumpleRequisitos",
+								"monto":"",
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BMES",
+								"nombre":"Beca BMES",
+								"estado":"noCumpleRequisitos",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
 							}
 						]
 					},
-					{
-						"sigla":"BAES",
-						"nombre":"Beca AES",
-						"estado":"no asignado",
-						"monto":"",
-						"motivos":[
-							{
-								"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-							},
-							{
-								"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+					"asignacion" : {
+						"mensajeTooltip":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015.",
+						"mensajesGenerales": [
+							{	
+								"titulo":"Mensaje General",
+								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
+							}
+						],						
+						"mensajesEspeciales": [
+							{	
+								"titulo":"Mensaje Especial",
+								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 							}
 						],
-						"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-						"mensajes":[
+						"beneficios": [
 							{
-								"contenido":""
+								"sigla":"BNA",
+								"nombre":"Beca BNA",
+								"estado":"asignado",
+								"monto":"1100000",
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BAES",
+								"nombre":"Beca BAES",
+								"estado":"asignado",
+								"monto":"450000",
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BMES",
+								"nombre":"Beca BMES",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
 							}
 						]
 					},
-					{
-						"sigla":"BMES",
-						"nombre":"BMES",
-						"estado":"no asignado",
-						"monto":"",
-						"motivos":[
-							{
-								"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-							},
-							{
-								"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+					"apelacion" : {
+						"mensajeTooltip":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015.",
+						"mensajesGenerales": [
+							{	
+								"titulo":"Mensaje General",
+								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
+							}
+						],						
+						"mensajesEspeciales": [
+							{	
+								"titulo":"Mensaje Especial",
+								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 							}
 						],
-						"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-						"mensajes":[
+						"beneficios": [
 							{
-								"contenido":""
-							}
-						]
-					},
-					{
-						"sigla":"BET",
-						"nombre":"Beca Excelencia Técnica",
-						"estado":"no asignado",
-						"monto":"",
-						"motivos":[
-							{
-								"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+								"sigla":"BNA",
+								"nombre":"Beca BNA",
+								"estado":"asignado",
+								"monto":"1100000",
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
 							},
 							{
-								"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-							}
-						],
-						"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-						"mensajes":[
-							{
-								"contenido":""
-							}
-						]
-					},
-					{
-						"sigla":"BART",
-						"nombre":"Beca ART",
-						"estado":"no asignado",
-						"monto":"",
-						"motivos":[
-							{
-								"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+								"sigla":"BAES",
+								"nombre":"Beca BAES",
+								"estado":"asignado",
+								"monto":"450000",
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
 							},
 							{
-								"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-							}
-						],
-						"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-						"mensajes":[
-							{
-								"contenido":""
+								"sigla":"BMES",
+								"nombre":"Beca BMES",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
 							}
 						]
 					}
-				]
+				}
 			},
 			{
-				"id":"superiores",
-				"nombre":"Cursos Superiores",
-				"etapa":"asignación",
+				"identificador":"superiores",
+				"nombre":"Cursos superiores",
+				"etapaActual":"apelacion",
 				"urlApelacion":"http://mineduc.cl",
 				"mensajes": [
 					{	
@@ -338,90 +755,268 @@
 						"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 					}
 				],
-				"beneficios": [
-					{
-						"sigla":"BBICSA",
-						"nombre":"Beca BICSA",
-						"estado":"no asignado",
-						"monto":"",
-						"motivos":[
-							{
-								"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-							},
-							{
-								"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+				"etapas": {
+					"postulacion" : {
+						"mensajeTooltip":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015.",
+						"mensajesGenerales": [
+							{	
+								"titulo":"Mensaje General",
+								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
+							}
+						],						
+						"mensajesEspeciales": [
+							{	
+								"titulo":"Mensaje Especial",
+								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 							}
 						],
-						"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-						"mensajes":[
+						"beneficios": []
+					},
+					"preseleccion" : {
+						"mensajeTooltip":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015.",
+						"mensajesGenerales": [
+							{	
+								"titulo":"Mensaje General",
+								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
+							}
+						],						
+						"mensajesEspeciales": [
+							{	
+								"titulo":"Mensaje Especial",
+								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
+							}
+						],
+						"beneficios": [
 							{
-								"contenido":""
+								"sigla":"BBICSA",
+								"nombre":"Beca BBICSA",
+								"estado":"cumple",
+								"monto":"",
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BHPESA",
+								"nombre":"Beca BHPESA",
+								"estado":"cumple",
+								"monto":"",
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BJGMSA",
+								"nombre":"Beca BJGMSA",
+								"estado":"noCumple",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BNMSA",
+								"nombre":"Beca BNMSA",
+								"estado":"noCumple",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
 							}
 						]
 					},
-					{
-						"sigla":"BHPESA",
-						"nombre":"Beca HPESA",
-						"estado":"no asignado",
-						"monto":"",
-						"motivos":[
-							{
-								"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-							},
-							{
-								"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+					"asignacion" : {
+						"mensajeTooltip":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015.",
+						"mensajesGenerales": [
+							{	
+								"titulo":"Mensaje General",
+								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
+							}
+						],						
+						"mensajesEspeciales": [
+							{	
+								"titulo":"Mensaje Especial",
+								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 							}
 						],
-						"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-						"mensajes":[
+						"beneficios": [
 							{
-								"contenido":""
+								"sigla":"BBICSA",
+								"nombre":"Beca BBICSA",
+								"estado":"asignado",
+								"monto":"1100000",
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BHPESA",
+								"nombre":"Beca BHPESA",
+								"estado":"asignado",
+								"monto":"450000",
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BJGMSA",
+								"nombre":"Beca BJGMSA",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BNMSA",
+								"nombre":"Beca BNMSA",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
 							}
 						]
 					},
-					{
-						"sigla":"BJGMSA",
-						"nombre":"Beca BJGMSA",
-						"estado":"no asignado",
-						"monto":"",
-						"motivos":[
-							{
-								"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
-							},
-							{
-								"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+					"apelacion" : {
+						"mensajeTooltip":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015.",
+						"mensajesGenerales": [
+							{	
+								"titulo":"Mensaje General",
+								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
+							}
+						],						
+						"mensajesEspeciales": [
+							{	
+								"titulo":"Mensaje Especial",
+								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 							}
 						],
-						"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-						"mensajes":[
+						"beneficios": [
 							{
-								"contenido":""
-							}
-						]
-					},
-					{
-						"sigla":"BNMSA",
-						"nombre":"Beca NMSA",
-						"estado":"no asignado",
-						"monto":"",
-						"motivos":[
-							{
-								"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+								"sigla":"BBICSA",
+								"nombre":"Beca BBICSA",
+								"estado":"asignado",
+								"monto":"1100000",
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
 							},
 							{
-								"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
-							}
-						],
-						"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-						"mensajes":[
+								"sigla":"BHPESA",
+								"nombre":"Beca BHPESA",
+								"estado":"asignado",
+								"monto":"450000",
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
 							{
-								"contenido":""
+								"sigla":"BJGMSA",
+								"nombre":"Beca BJGMSA",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
+							},
+							{
+								"sigla":"BNMSA",
+								"nombre":"Beca BNMSA",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"mensajes":[
+									{
+										"contenido":""
+									}
+								]
 							}
 						]
 					}
-				]
+				}
 			}
-
 		]
 	}
 }

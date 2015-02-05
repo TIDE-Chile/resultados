@@ -22,21 +22,24 @@ angular.module('tideApp')
   var myself = this;
 
   this.rut = "12345678";
-this.estadoSeleccionado = {}
+  this.estadoSeleccionado = {}
 
 
-this.estadoSeleccionado["primerano"] = "postulacion";
-this.estadoSeleccionado["superiores"] = "preseleccion";
-this.estadoSeleccionado["complementarias"] = "preseleccion";
+ /*
+  * iniciaEpataSeleccionada
+  * Asigna valores iniciales para 
+  */
+  var iniciaEtapaSeleccionada = function(data) {
+    if (data && data.misBeneficios && data.misBeneficios.categorias) {
+      // Recorre cada una de las categorías en los datos
+      angular.forEach(data.misBeneficios.categorias, function(categoria) {
+        var idCategoria = categoria.identificador;
+        var etapaActual = categoria.etapaActual;
+        myself.estadoSeleccionado[idCategoria] = etapaActual;
+      })
+    }
+  }
 
-
-/*this.estados = {}
-
-this.estados[0]="postulacion";
-this.estados[1]="preseleccion";
-this.estados[2]="asignacion";
-this.estados[3]="apleacion";
-*/
   this.openModalBeneficioAsignado = function() {
      var modalInstance = $modal.open({
       templateUrl: 'templates/beneficioAsignado.html',
@@ -52,20 +55,13 @@ this.estados[3]="apleacion";
 
   dataService.getData(this.rut)
   .then(function(data) {
+    iniciaEtapaSeleccionada(data);
     myself.data = data;
   })
   .catch(function(error) {
     myself.errorMsg="Error al consultar los datos";
   })
 
-  // Obtener datos para v2 de JSON y no interferir con version actual
-  dataService.getData(this.rut+"v2")
-  .then(function(data) {
-    myself.datav2 = data;
-  })
-  .catch(function(error) {
-    myself.errorMsg="Error al consultar los datos";
-  })
 
 
 
