@@ -145,7 +145,7 @@ text-align:right;
   padding:5px;
   margin: 5px;
 }
-#complementarias.rectangulo
+/*#complementarias.rectangulo
 {
 background-color: rgb(145, 228, 251);
 }
@@ -157,7 +157,7 @@ background-color: rgb(193, 208, 69);
 #superiores.rectangulo
 {
 background-color: rgb(193, 208, 69);
-}
+}*/
 #datospostulante.rectangulo
 {
   background-color:rgb(235, 235, 235);
@@ -180,6 +180,16 @@ background-color:rgb(0, 141, 177);color:white;
   background-color:rgb(254, 248, 160);color:black;
 font-size: 24px;
 border-radius: 5px;
+}
+
+.recuadroBeneficio{
+  /*height:65px;*/
+  border:2px solid rgb(146, 146, 146);
+  margin:4px;
+  text-align:center;
+  border-radius: 5px;
+  padding:0 5px 1px 5px;
+
 }
 
 .beneficiosrectangulo
@@ -213,7 +223,9 @@ border-radius: 5px;
   padding:0 5px 1px 5px;
   background-color: rgb(214, 214, 214);
 }
-#primerano.beneficiosrectangulo
+
+
+/*#primerano.beneficiosrectangulo
 {
 
   background-color:rgb(201, 241, 253);
@@ -228,7 +240,8 @@ border-radius: 5px;
 {
 
   background-color:rgb(254, 198, 61);
-}
+}*/
+
 /* barra naranja header*/
 .barranaranja
 {

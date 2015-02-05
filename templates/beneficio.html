@@ -1,15 +1,23 @@
 <div>
 	<div ng-show="beneficio.estado=='asignado'"> 
-		Usted ha sido beneficado(a) con la {{beneficio.nombre}} y ha obtenido el siguiente monto anual:
-		<div>Monto Obtenido {{beneficio.monto}}</div>
+		Usted ha sido beneficado(a) con la <b>{{beneficio.nombre}}</b> y ha obtenido el siguiente monto anual:
+		<!--style convertir en clase cuando ya sea definitivo-->
+		<div style="text-aling:center;">
+				<div style="position:relative; left:10%; border:1px solid red; padding:5px; width:50%;">Monto Obtenido: <b>{{beneficio.monto}}</b></div>
+		</div>
+		<div>Pincha aquí para ver los pasos a seguir</div>
 	</div>
 	<div ng-show="beneficio.estado=='noAsignado'"> 
-		Beneficio no asignado
+		<div>Usted <b>no ha sido beneficiado</b> con esta beca. Los motivos son:  </div>
+		<div>1.- Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada,  </div>
+		<div>2.- Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del </div>
 	</div>
 	<div ng-show="beneficio.estado=='cumpleRequisitos'"> 
-		Cumple requisitos
+		Usted <b>cumple con los requisitos</b> para obtener esta beca, conforme a la información que posee el Mineduc.
 	</div>
 	<div ng-show="beneficio.estado=='noCumpleRequisitos'"> 
-		Cumple requisitos
+		<div>Usted <b>No cumple con los requisitos</b> para obtener esta beca, conforme a la información que posee el Mineduc. Las razones son:</div>
+		<div>1. Por no tener Puntaje Nacional o Regional.  </div>
+		<div>2. Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada</div>
 	</div>
 </div>
