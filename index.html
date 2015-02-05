@@ -186,13 +186,13 @@
       <div class="row">
 
         <!-- Etapa: Postulacion-->
-        <div class="col-xs-12 col-md-12 col-lg-12 postulacion"ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'postulacion'">
+        <div class="col-xs-12 col-md-12 col-lg-12 postulacion" ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'postulacion'">
          <!--por ahora mostrare asignacion cuando funcione, bien veo las otras.-->
 
          <!-- Beneficios -->
          <div  ng-repeat="beneficio in categoriaBeneficio.etapas.postulacion.beneficios" > 
 
-          <!-- Recuadro beneficio -->
+          <!-- ddRecuadro beneficio -->
           <div class="col-xs-4 col-md-2 col-lg-1 beneficiosrectangulo" id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'">
 
            <!--Si esta asignado un icono sino el otro-->
@@ -215,29 +215,59 @@
         <!-- Etapa: Preseleccion-->
         <div class="col-xs-12 col-md-12 col-lg-12 preseleccion" ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'preseleccion'">
 
-         <!-- Beneficios -->
-         <div  ng-repeat="beneficio in categoriaBeneficio.etapas.preseleccion.beneficios" > 
+          <!-- Beneficios -->
+          <div  ng-repeat="beneficio in categoriaBeneficio.etapas.preseleccion.beneficios" > 
+              <!-- Recuadro beneficio -->
+             <!--Inicio de Cumple en preseleccion-->
+              <div class="col-xs-4 col-md-2 col-lg-1 cambiarluegopreseleccionCumple " id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'" ng-if="beneficio.estado == 'cumpleRequisitos' || beneficio.estado == 'cumple'">
+               <!--Si esta asignado un icono sino el otro-->
+               <div style="text-align:left;">
+                <span style='color:green' ng-if="beneficio.estado == 'cumpleRequisitos' || beneficio.estado == 'cumple'">
+                 <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
+                </span>
+                <span style='color:red' ng-if="beneficio.estado == 'noCumpleRequisitos' || beneficio.estado == 'noCumple'">
+                  <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
+                </span>
+               </div>
+               
+               <div>{{beneficio.sigla}}</div>      
+               <div style="height:20px;">{{beneficio.monto}}</div>
+              </div><!-- Fin Cumple en preseleccion-->
+            <!--Inicio de No cumple en preseleccion-->
+                <div class="col-xs-4 col-md-2 col-lg-1 cambiarluegopreseleccionNocumple " id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'" ng-if="beneficio.estado == 'noCumpleRequisitos' || beneficio.estado == 'noCumple'">
+                    <!--Si esta asignado un icono sino el otro-->
+                   <div style="text-align:left;">
+                    <span style='color:green' ng-if="beneficio.estado == 'cumpleRequisitos' || beneficio.estado == 'cumple'">
+                     <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
+                    </span>
+                    <span style='color:red' ng-if="beneficio.estado == 'noCumpleRequisitos' || beneficio.estado == 'noCumple'">
+                      <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
+                    </span>
+                   </div>
+                   
+                   <div>{{beneficio.sigla}}</div>      
+                   <div style="height:20px;">{{beneficio.monto}}</div>
+                </div><!-- Fin No cumple en preseleccion-->
+          </div> 
 
-          <!-- Recuadro beneficio -->
-          <div class="col-xs-4 col-md-2 col-lg-1 beneficiosrectangulo" id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'">
-
-           <!--Si esta asignado un icono sino el otro-->
-           <div style="text-align:left;">
-            <span style='color:green' ng-if="beneficio.estado == 'asignado'">
-             <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
-            </span>
-            <span style='color:red' ng-if="beneficio.estado == 'noAsignado'">
-              <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
-            </span>
-           </div>
-           
-           <div>{{beneficio.sigla}}</div>      
-           <div style="height:20px;">{{beneficio.monto}}</div>
-          </div><!-- Recuadro beneficio -->
-
-         </div>
+           <div class="col-xs-12 col-md-12 col-lg-4">
+            <div class="col-xs-2 col-md-1 col-lg-2 cambiarluegopreseleccionCumple">
+              <div style="height:20px;"></div>
+            </div>  
+            <div class="col-xs-2 col-md-1 col-lg-8">
+              <p><b>Cumple</b> requisitos para este beneficio</p>
+            
+          </div><!-- Fin Cumple en preseleccion-->
+          </div> 
+               <div class="col-xs-12 col-md-12 col-lg-4">  
+                <div class="col-xs-2 col-md-1 col-lg-2 cambiarluegopreseleccionNocumple">
+                  <div style="height:20px;"></div>
+                </div>  
+                <div class="col-xs-2 col-md-1 col-lg-8">
+                  <p><b>No Cumple</b> requisitos para este beneficio</p>
+                </div> 
+              </div>
         </div>
-
         <!-- Etapa: Asignacion-->
         <div class="col-xs-12 col-md-12 col-lg-12 asignacion" ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'asignacion'">
 
