@@ -40,19 +40,6 @@ angular.module('tideApp')
     }
   }
 
-  this.openModalBeneficioAsignado = function() {
-     var modalInstance = $modal.open({
-      templateUrl: 'templates/beneficioAsignado.html',
-      //controller: 'ModalInstanceCtrl',
-      size: 'sm',
-      resolve: {
-        items: function () {
-          return $scope.items;
-        }
-      }
-    });
-  }
-
   dataService.getData(this.rut)
   .then(function(data) {
     iniciaEtapaSeleccionada(data);
