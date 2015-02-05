@@ -1,0 +1,76 @@
+.barraRUT
+{
+  background-color:#EE8600;
+}
+
+.bloqueInformacion
+{
+  background-color:#82B2D3;
+}
+
+/* Definir si se quiere especificar color del bloque de Información */s
+/*
+.bloqueInformacion.informacionDestacada
+{
+  background-color:#82B2D3;
+}
+
+.bloqueInformacion.datosPostulante
+{
+  background-color:#82B2D3;
+}
+
+.bloqueInformacion.misBeneficios
+{
+  background-color:#82B2D3;
+}
+*/
+
+.recuadroProceso
+{
+  background-color:#EBEBEB;
+}
+
+/* Definir si se quiere especificar color del bloque de Información */s
+/*
+.recuadroProceso.primerAno
+{
+  background-color:#EBEBEB;
+}
+
+.recuadroProceso.complementarias
+{
+  background-color:#EBEBEB;
+}
+
+.recuadroProceso.superiores
+{
+  background-color:#EBEBEB;
+}
+*/
+
+/* Definir los siguientes *
+.recuadroBeneficio
+{
+  background-color: ;
+}
+
+.recuadroBeneficio.asignado
+{
+  background-color:#EBEBEB;
+}
+
+.recuadroBeneficio.noAsignado
+{
+  background-color:#EBEBEB;
+}
+
+.recuadroBeneficio.cumpleRequisitos
+{
+  background-color:#EBEBEB;
+}
+
+.recuadroBeneficio.noCumpleRequisitos
+{
+  background-color:#EBEBEB;
+}

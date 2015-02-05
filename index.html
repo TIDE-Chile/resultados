@@ -20,6 +20,7 @@
    <!-- endbuild -->
    <!-- build:css({.tmp,app}) styles/main.css -->
    <link rel="stylesheet" href="main.css">
+   <link rel="stylesheet" href="colors.css">
    <!-- endbuild -->
    <script src="./bower_components/modernizr/modernizr.js"></script>
  </head>
@@ -58,7 +59,7 @@
 
     <!-- Identificación del estudiante (RUT) -->
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align:right;">
-     <div class="barranaranja">
+     <div class="barranaranja barraRUT">
       <p class="rut">RUT: <span class="byc">{{controller.data.rut}}</span> <a style="font-size:15px;padding-left:10px;padding-right:10px;">Cerrar</a></p>
      </div>
     </div><!-- Identificación del estudiante (RUT) -->
@@ -66,7 +67,7 @@
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
     <!-- Bloque 1 - Información destacada -->
-    <div class="divmayor">
+    <div class="divmayor bloqueInformacion">
      <p class="subtitulo">Información Destacada</p>
      <ul style="margin:15px;">
        <li ng-repeat="(i, msg) in controller.data.mensajesDestacados">Mensaje General {{$index+1}}: {{msg.contenido}}</li>
@@ -74,11 +75,11 @@
     </div><!-- Bloque 1 - Información destacada -->
     
     <!-- Bloque 2 - Datos del Postulante -->
-    <div class="divmayor">
+    <div class="divmayor bloqueInformacion">
      <p class="subtitulo">Datos del Postulante (matrícula, acreditación)</p>
 
      <!-- Recuadro matricula -->
-     <div class="rectangulo" id="datospostulante" ng-repeat="datospostulante in controller.data.datosPostulante">
+     <div class="rectangulo recuadroProceso" id="datospostulante" ng-repeat="datospostulante in controller.data.datosPostulante">
       <div class="row" >
                     
        <!-- Tabla de datos -->             
@@ -125,7 +126,7 @@
     </div><!-- Bloque 2 - Datos del Postulante -->
 
     <!-- Bloque 3 - Mis Beneficios -->
-    <div class="divmayor">
+    <div class="divmayor bloqueInformacion">
      <div class="row">
       <div class="col-xs-12 col-md-12 col-lg-12">
 
