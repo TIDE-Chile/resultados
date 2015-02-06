@@ -70,7 +70,7 @@
     <div class="divmayor bloqueInformacion">
      <p class="subtitulo">Información Destacada</p>
      <ul style="margin:15px;">
-       <li ng-repeat="(i, msg) in controller.data.mensajesDestacados">Mensaje General {{$index+1}}: {{msg.contenido}}</li>
+       <li ng-repeat="(i, msg) in controller.data.mensajesDestacados">Mensaje General {{$index+1}}: {{msg}}</li>
      </ul>
     </div><!-- Bloque 1 - Información destacada -->
     
@@ -145,7 +145,7 @@
 
      <!-- Mensaje -->
      <div style="margin:5px;">
-      {{controller.data.misBeneficios.mensajes[0].contenido}}
+      {{controller.data.misBeneficios.mensajeBeneficios}}
      </div><!-- Mensaje -->
      <!-- Mis Beneficios - Categorías -->
      <div ng-repeat="categoriaBeneficio in controller.data.misBeneficios.categorias" class="rectangulo recuadroProceso" id="{{categoriaBeneficio.identificador}}"> 
@@ -183,14 +183,17 @@
         </div>
       </div><!-- row -->
 
-      <div class="row">
+  <div class="row">
 
         <!-- Etapa: Postulacion-->
-        <div class="col-xs-12 col-md-12 col-lg-12 postulacion" ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'postulacion'">
-         <!--por ahora mostrare asignacion cuando funcione, bien veo las otras.-->
+    <div class="col-xs-12 col-md-12 col-lg-12 postulacion" ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'postulacion'">
+      <!-- Mensaje -->
+        <div style="padding:15px;">
+          <p style="font-size:16px;"><b>Mensaje general de la etapa de postulación: </b>{{categoriaBeneficio.etapas.postulacion.mensajesGenerales[0]}}</p>
+        </div><!-- Mensaje -->
 
          <!-- Beneficios -->
-         <div  ng-repeat="beneficio in categoriaBeneficio.etapas.postulacion.beneficios" > 
+        <div  ng-repeat="beneficio in categoriaBeneficio.etapas.postulacion.beneficios" > 
 
           <!-- ddRecuadro beneficio -->
           <div class="col-xs-4 col-md-2 col-lg-1 beneficiosrectangulo recuadroBeneficio" id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'">
@@ -210,14 +213,20 @@
           </div><!-- Recuadro beneficio -->
 
          </div>
-        </div>
-                
-        <!-- Etapa: Preseleccion-->
-        <div class="col-xs-12 col-md-12 col-lg-12 preseleccion" ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'preseleccion'">
+    
+    <!-- Mensajes Especiales postulacion -->
+    <div  class="col-xs-12 col-md-12 col-lg-12 MensajesEspeciales" ng-repeat="mensaje in categoriaBeneficio.etapas.postulacion.mensajesEspeciales">
+        <p><b>Mensaje Especial {{$index+1}}: </b>{{mensaje}}</p>
+      </div><!-- Mensajes --> 
+    </div>           
+    <!-- Etapa: Preseleccion-->
+    <div class="col-xs-12 col-md-12 col-lg-12 preseleccion" ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'preseleccion'">
 
-
+        <div style="padding:5px;">
+          <p>{{categoriaBeneficio.etapas.preseleccion.mensajeDefinicion}}</p>
+        </div><!-- Mensaje -->
           <!-- Beneficios -->
-          <div  ng-repeat="beneficio in categoriaBeneficio.etapas.preseleccion.beneficios" > 
+      <div  ng-repeat="beneficio in categoriaBeneficio.etapas.preseleccion.beneficios" > 
               <!-- Recuadro beneficio -->
              <!--Inicio de Cumple en preseleccion-->
               <div class="col-xs-4 col-md-2 col-lg-1 cambiarluegopreseleccionCumple " id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'" ng-if="beneficio.estado == 'cumpleRequisitos' || beneficio.estado == 'cumple'">
@@ -249,9 +258,9 @@
                    <div>{{beneficio.sigla}}</div>      
                    <div style="height:20px;">{{beneficio.monto}}</div>
                 </div><!-- Fin No cumple en preseleccion-->
-          </div> 
+      </div> 
 
-           <div class="col-xs-12 col-md-12 col-lg-4">
+          <div class="col-xs-12 col-md-12 col-lg-4">
             <div class="col-xs-2 col-md-1 col-lg-2 cambiarluegopreseleccionCumple">
               <div style="height:20px;"></div>
             </div>  
@@ -268,12 +277,18 @@
                   <p><b>No Cumple</b> requisitos para este beneficio</p>
                 </div> 
               </div>
-        </div>
-        <!-- Etapa: Asignacion-->
-        <div class="col-xs-12 col-md-12 col-lg-12 asignacion" ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'asignacion'">
-
+    <!-- Mensajes Especiales preseleccion -->
+    <div  class="col-xs-12 col-md-12 col-lg-12 MensajesEspeciales" ng-repeat="mensaje in categoriaBeneficio.etapas.preseleccion.mensajesEspeciales">
+        <p><b>Mensaje Especial {{$index+1}}: </b>{{mensaje}}</p>
+      </div><!-- Mensajes -->      
+    </div>
+  <!-- Etapa: Asignacion-->
+  <div class="col-xs-12 col-md-12 col-lg-12 asignacion" ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'asignacion'">
+           <div style="padding:5px;">
+          <p>{{categoriaBeneficio.etapas.asignacion.mensajeDefinicion}}</p>
+        </div><!-- Mensaje -->
          <!-- Beneficios -->
-         <div  ng-repeat="beneficio in categoriaBeneficio.etapas.asignacion.beneficios" > 
+        <div  ng-repeat="beneficio in categoriaBeneficio.etapas.asignacion.beneficios" > 
 
           <!-- Recuadro beneficio -->
           <div class="col-xs-4 col-md-2 col-lg-1 beneficiosrectangulo recuadroBeneficio" id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'">
@@ -293,11 +308,18 @@
           </div><!-- Recuadro beneficio -->
 
          </div>
-        </div>
+    <!-- Mensajes Especiales asignacion -->
+      <div  class="col-xs-12 col-md-12 col-lg-12 MensajesEspeciales" ng-repeat="mensaje in categoriaBeneficio.etapas.asignacion.mensajesEspeciales">
+        <p><b>Mensaje Especial {{$index+1}}: </b>{{mensaje}}</p>
+      </div><!-- Mensajes -->
+
+  </div>
 
         <!-- Etapa: Apelacion-->
         <div class="col-xs-12 col-md-12 col-lg-12 apelacion" ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'apelacion'">
-
+        <div style="padding:5px;">
+          <p>{{categoriaBeneficio.etapas.apelacion.mensajeDefinicion}}</p>
+        </div><!-- Mensaje -->
          <!-- Beneficios -->
         <div  ng-repeat="beneficio in categoriaBeneficio.etapas.asignacion.beneficios" > 
 
@@ -318,14 +340,14 @@
           </div><!-- Recuadro beneficio -->
 
          </div>
-        </div>
+        <!-- Mensajes Especiales Apelacion -->
+        <div  class="col-xs-12 col-md-12 col-lg-12 MensajesEspeciales" ng-repeat="mensaje in categoriaBeneficio.etapas.apelacion.mensajesEspeciales" >
+        <p><b>Mensaje Especial {{$index+1}}: </b>{{mensaje}}</p>
+        </div><!-- Mensajes -->
+
+        </div><!--Etapa: Apelacion -->
 
       </div><!--row-->
-
-      <!-- Mensajes beneficios // REVISAR // -->
-      <div ng-repeat="mensaje in categoriaBeneficio.mensajes">
-       <b>{{mensaje.titulo}} {{$index+1}}: </b>{{mensaje.contenido}} 
-      </div><!-- Mensajes -->
 
      </div><!-- Mis Beneficios - Categorías -->
 

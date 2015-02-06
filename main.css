@@ -182,6 +182,10 @@ font-size: 24px;
 border-radius: 5px;
 }
 
+.MensajesEspeciales
+{
+padding:15px 15px 0 15px;
+}
 .recuadroBeneficio{
   /*height:65px;*/
   border:2px solid rgb(146, 146, 146);
