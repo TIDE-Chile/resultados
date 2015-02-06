@@ -546,14 +546,14 @@
 				"mensajeProceso":"El proceso de Cursos Superiores ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan.",
 				"etapas": {
 					"postulacion" : {
-						"mensajeTooltip":"Mensaje tooltip apelación de Cursos Superiores ... ",
-						"mensajeDefinicion": "La apelación del beneficio corresponde a ...",			
+						"mensajeTooltip":"Mensaje tooltip postulación de Cursos Superiores ... ",
+						"mensajeDefinicion": "La postulación del beneficio corresponde a ...",			
 						"mensajesGenerales": [
-							"La etapa de apelación ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
+							"La etapa de postulación ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 						],						
 						"mensajesEspeciales": [
-								"Este es un mensaje especial de la etapa de apelación en Cursos Superiores ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan.",	
-								"Este es un segundo mensaje especial de la etapa de apelación en Cursos Superiores ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
+								"Este es un mensaje especial de la etapa de postulación en Cursos Superiores ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan.",	
+								"Este es un segundo mensaje especial de la etapa de postulación en Cursos Superiores ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 						],
 						"beneficios": []
 					},
