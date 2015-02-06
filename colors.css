@@ -32,7 +32,7 @@
 }
 
  
-Definir si se quiere especificar color del bloque de Información 
+/*Definir si se quiere especificar color del bloque de Información */
 
 #primerano.recuadroProceso
 {
@@ -97,3 +97,28 @@ Color de Los nombre de la Proceso/Cladificacion mis Beneficios ej (Primer Año, 
 color:rgba(230, 22, 16, 1);
 
 }
+
+/*
+Colores del Acordeon
+*/
+#custom-accord .panel {
+background-color: #82B2D3;
+}
+#custom-accord .panel-heading
+{
+color: rgba(3, 48, 118, 1);
+background-color: #82B2D3;
+border-color: rgb(226, 238, 121);
+
+}
+/*accordion*/
+#custom-accord .panel-body
+{
+ background-color:  #82B2D3;
+
+}
+
+
+
+
+

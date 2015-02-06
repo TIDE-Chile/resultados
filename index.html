@@ -24,7 +24,7 @@
    <!-- endbuild -->
    <script src="./bower_components/modernizr/modernizr.js"></script>
  </head>
- <body ng-app="tideApp">
+<body ng-app="tideApp">
   <!--[if lt IE 7]>
    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
@@ -36,324 +36,351 @@
   <!-- Contenedor principal -->
   <div class="container" ng-controller="AppController as controller">
    <!-- Encabezado -->
-  <div class="head">
-    <div class="row">
-     <div class="col-xs-6 col-md-2 col-lg-2">
-      <img width="116" height="104" explicit-width="100%" explicit-height="100%" min-width="16" min-height="16" src="./imagen/logo.png" class="logo" />
-     </div>
-     <div class=" col-xs-12 col-md-7 col-lg-7" > 
-      <h1>Portal de Resultados Año 2015</h1>
-      <p class="byc">Becas y Créditos para la Educación Superior</p>
-     </div>
-     <div class=" col-xs-12 col-md-3 col-lg-3"> 
-       <div class="actualizada">
-        <h5>Información Actualizada a:</h5> 
-        <p class="byc">{{controller.data.fechaActualizacion}}</p>
-       </div>
-     </div>
-    </div>
-  </div><!-- Encabezado -->
+      <div class="head">
+        <div class="row">
+         <div class="col-xs-6 col-md-2 col-lg-2">
+          <img width="116" height="104" explicit-width="100%" explicit-height="100%" min-width="16" min-height="16" src="./imagen/logo.png" class="logo" />
+         </div>
+         <div class=" col-xs-12 col-md-7 col-lg-7" > 
+          <h1>Portal de Resultados Año 2015</h1>
+          <p class="byc">Becas y Créditos para la Educación Superior</p>
+         </div>
+         <div class=" col-xs-12 col-md-3 col-lg-3"> 
+           <div class="actualizada">
+            <h5>Información Actualizada a:</h5> 
+            <p class="byc">{{controller.data.fechaActualizacion}}</p>
+           </div>
+         </div>
+        </div>
+      </div><!-- Encabezado -->
 
    <!-- Bloques de información -->
-   <div class="row">
-
-    <!-- Identificación del estudiante (RUT) -->
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align:right;">
-     <div class="barranaranja barraRUT">
-      <p class="rut">RUT: <span class="byc">{{controller.data.rut}}</span> <a style="font-size:15px;padding-left:10px;padding-right:10px;">Cerrar</a></p>
-     </div>
-    </div><!-- Identificación del estudiante (RUT) -->
-
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
-    <!-- Bloque 1 - Información destacada -->
-    <div class="divmayor bloqueInformacion">
-     <p class="subtitulo">Información Destacada</p>
-     <ul style="margin:15px;">
-       <li ng-repeat="(i, msg) in controller.data.mensajesDestacados">Mensaje General {{$index+1}}: {{msg}}</li>
-     </ul>
-    </div><!-- Bloque 1 - Información destacada -->
-    
-    <!-- Bloque 2 - Datos del Postulante -->
-    <div class="divmayor bloqueInformacion">
-     <p class="subtitulo">Datos del Postulante (matrícula, acreditación)</p>
-
-     <!-- Recuadro matricula -->
-     <div class="rectangulo recuadroProceso" id="datospostulante" ng-repeat="datospostulante in controller.data.datosPostulante">
-      <div class="row" >
-                    
-       <!-- Tabla de datos -->             
-      <div class="col-xs-12 col-md-7 col-lg-7">
-        <h4 ng-show="datospostulante" class="cursos"> {{datospostulante.nombre}}</h4>
-        
-        <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Matriculado en:</h5></div>
-        <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue">{{datospostulante.institucion}}</b></h5></div>
-
-        <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Carrera:</h5></div>
-        <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue">{{datospostulante.carrera}}</b></h5></div>
-                           
-        <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Acreditado en:</h5></div>
-        <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue">{{datospostulante.acreditadoEn}}</b></h5></div>
-                          
-        <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Fecha de Acreditación:</h5></div>
-        <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue"> {{datospostulante.fechaAcreditacion}}</b></h5></div>
-
-      </div><!-- Tabla de datos --> 
-                     
-       <!-- Recuadros evaluación -->  
-      <div class=" col-xs-12 col-md-5 col-lg-5"> 
-        <h5>Con esta información fuiste evaluado:</h5>
-        
-        <div class="rectangulo"> 
-         <div class="row">
-                  
-          <span ng-repeat="item in datospostulante.datosEvaluacion">
-           <div class="col-xs-6 col-md-4 col-lg-4"> 
-            <!-- Recuadro evaluacion --> 
-            <div class="infoevaluacion">
-              <div class="infosuperior">{{item.etiqueta}}:</div>
-              <div class="infoinferior">{{item.valor}}</div> 
-            </div> <!-- Recuadro evaluacion -->
-           </div>
-          </span>
-                               
-         </div><!--row -->
-        </div><!--rectangulo -->
-       </div><!-- Recuadros evaluación -->
-      </div><!--row -->
-     </div> <!-- Recuadro matricula -->
-            
-    </div><!-- Bloque 2 - Datos del Postulante -->
-
-    <!-- Bloque 3 - Mis Beneficios -->
-    <div class="divmayor bloqueInformacion">
-     <div class="row">
-      <div class="col-xs-12 col-md-12 col-lg-12">
-
-       <!-- Titulo bloque -->
-       <div class="col-xs-12 col-md-8 col-lg-8">
-         <p class="subtitulo" ng-show="controller.data.misBeneficios">Mis Beneficios (Postulados, En Proceso, Otorgados)</p>
-       </div><!-- Titulo bloque -->
-
-       <!-- Monto otorgado -->
-       <div class="col-xs-12 col-md-4 col-lg-4">
-         <p class="botorgado">Beneficio Otorgado: <spam style="color:red;">${{controller.data.misBeneficios.montoOtorgado}}</spam></p>
-       </div><!-- Monto otorgado -->
-      
-      </div>
-     </div><!-- row -->
-
-     <!-- Mensaje -->
-     <div style="margin:5px;">
-      {{controller.data.misBeneficios.mensajeBeneficios}}
-     </div><!-- Mensaje -->
-     <!-- Mis Beneficios - Categorías -->
-     <div ng-repeat="categoriaBeneficio in controller.data.misBeneficios.categorias" class="rectangulo recuadroProceso" id="{{categoriaBeneficio.identificador}}"> 
-
-      <div class="row">
-        <div class="col-xs-12 col-md-12 col-lg-12 margen">
-                        
-          <!-- Nombre categoría -->     
-          <div class="col-xs-12 col-md-4 col-lg-2">
-           <b class="cursos NombreProcesoBeneficios">{{categoriaBeneficio.nombre}}</b>
-          </div>
-
-          <!-- Linea de tiempo - etapas -->
-          <div class="col-xs-12 col-md-8 col-lg-6 margen">
-           <div class="btn-toolbar" role="toolbar">
-            <div class="btn-group">
-             <button type="button" ng-class="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'postulacion' ? 'btn btn-default active' : 'btn btn-default'" ng-click="controller.estadoSeleccionado[categoriaBeneficio.identificador] = 'postulacion';">Postulación</button>
-            </div>
-            <div class="btn-group">
-             <button type="button" ng-class="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'preseleccion' ? 'btn btn-default active' : 'btn btn-default'" ng-click="controller.estadoSeleccionado[categoriaBeneficio.identificador] = 'preseleccion';">Preselección</button>
-            </div>
-            <div class="btn-group">
-               <button type="button" class2="" ng-class="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'asignacion' ? 'btn btn-default active' : 'btn btn-default'" ng-click="controller.estadoSeleccionado[categoriaBeneficio.identificador] = 'asignacion';">Asignación</button>
-            </div>
-            <div class="btn-group">
-               <button type="button" ng-class="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'apelacion' ? 'btn btn-default active' : 'btn btn-default'" ng-click="controller.estadoSeleccionado[categoriaBeneficio.identificador] = 'apelacion';">Apelación</button>
-            </div>          
-           </div>
-          </div><!-- Linea de tiempo - etapas -->
-          
-          <!-- Apelación -->
-      <div class="col-xs-12 col-md-12 col-lg-4 margen2">
-           <button type="button" class="btn btn-default md">Apelar {{categoriaBeneficio.nombre}}</button>
-      </div>
-        </div>
-      </div><!-- row -->
-
   <div class="row">
 
-        <!-- Etapa: Postulacion-->
-    <div class="col-xs-12 col-md-12 col-lg-12 postulacion" ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'postulacion'">
-      <!-- Mensaje -->
-        <div style="padding:15px;">
-          <p style="font-size:16px;"><b>Mensaje general de la etapa de postulación: </b>{{categoriaBeneficio.etapas.postulacion.mensajesGenerales[0]}}</p>
-        </div><!-- Mensaje -->
-
-         <!-- Beneficios -->
-        <div  ng-repeat="beneficio in categoriaBeneficio.etapas.postulacion.beneficios" > 
-
-          <!-- ddRecuadro beneficio -->
-          <div class="col-xs-4 col-md-2 col-lg-1 beneficiosrectangulo recuadroBeneficio" id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'">
-
-           <!--Si esta asignado un icono sino el otro-->
-           <div style="text-align:left;">
-            <span style='color:green' ng-if="beneficio.estado == 'asignado'">
-             <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
-            </span>
-            <span style='color:red' ng-if="beneficio.estado == 'noAsignado'">
-              <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
-            </span>
-           </div>
-           
-           <div>{{beneficio.sigla}}</div>      
-           <div style="height:20px;">{{beneficio.monto}}</div>
-          </div><!-- Recuadro beneficio -->
-
+        <!-- Identificación del estudiante (RUT) -->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align:right;">
+         <div class="barranaranja barraRUT">
+          <p class="rut">RUT: <span class="byc">{{controller.data.rut}}</span> <a style="font-size:15px;padding-left:10px;padding-right:10px;">Cerrar</a></p>
          </div>
-    
-    <!-- Mensajes Especiales postulacion -->
-    <div  class="col-xs-12 col-md-12 col-lg-12 MensajesEspeciales" ng-repeat="mensaje in categoriaBeneficio.etapas.postulacion.mensajesEspeciales">
-        <p><b>Mensaje Especial {{$index+1}}: </b>{{mensaje}}</p>
-      </div><!-- Mensajes --> 
-    </div>           
-    <!-- Etapa: Preseleccion-->
-    <div class="col-xs-12 col-md-12 col-lg-12 preseleccion" ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'preseleccion'">
+        </div><!-- Identificación del estudiante (RUT) -->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <!--PARA COLORES DE ACCORDEON--> 
+        <div id="custom-accord">
+            <div ng-controller="AccordionDemoCtrl">
+                    <accordion close-others="oneAtATime">
+                      <!--Accordion: Informacion Destacada-->
+                      <accordion-group>
+                          <accordion-heading>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-12 col-lg-12">
+                                    <p class="subtitulo">Información Destacada</p>
+                                </div>
+                            </div>
+                          </accordion-heading>
+                            <!--Cuerpo de Informacion Destacada-->
+                                <!-- Bloque 1 - Información destacada -->
+                                <div class="divmayor bloqueInformacion">
+                                 <ul style="margin:15px;">
+                                   <li ng-repeat="(i, msg) in controller.data.mensajesDestacados">Mensaje General {{$index+1}}: {{msg}}</li>
+                                 </ul>
+                                </div><!-- Bloque 1 - Información destacada -->
+                      </accordion-group>
+                      <!--Accordion: Informacion Destacada-->
+                      <!--Accordion: Datos Postulante-->
+                      <accordion-group>
+                          <accordion-heading>
+                          <div class="row">
+                                <div class="col-xs-12 col-md-12 col-lg-12">
+                                    <p class="subtitulo">Datos del Postulante (matrícula, acreditación)</p>
+                                </div>
+                            </div>
+                          </accordion-heading>
+                            <!--Cuerpo de Datos Postulante-->
+                                          <!-- Bloque 2 - Datos del Postulante -->
+                                          <div class="divmayor bloqueInformacion">
+                                           <!-- Recuadro matricula -->
+                                           <div class="rectangulo recuadroProceso" id="datospostulante" ng-repeat="datospostulante in controller.data.datosPostulante">
+                                            <div class="row" >
+                                                          
+                                             <!-- Tabla de datos -->             
+                                            <div class="col-xs-12 col-md-7 col-lg-7">
+                                              <h4 ng-show="datospostulante" class="cursos"> {{datospostulante.nombre}}</h4>
+                                              
+                                              <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Matriculado en:</h5></div>
+                                              <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue">{{datospostulante.institucion}}</b></h5></div>
 
-        <div style="padding:5px;">
-          <p>{{categoriaBeneficio.etapas.preseleccion.mensajeDefinicion}}</p>
-        </div><!-- Mensaje -->
-          <!-- Beneficios -->
-      <div  ng-repeat="beneficio in categoriaBeneficio.etapas.preseleccion.beneficios" > 
-              <!-- Recuadro beneficio -->
-             <!--Inicio de Cumple en preseleccion-->
-              <div class="col-xs-4 col-md-2 col-lg-1 cambiarluegopreseleccionCumple " id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'" ng-if="beneficio.estado == 'cumpleRequisitos' || beneficio.estado == 'cumple'">
-               <!--Si esta asignado un icono sino el otro-->
-               <div style="text-align:left;">
-                <span style='color:green' ng-if="beneficio.estado == 'cumpleRequisitos' || beneficio.estado == 'cumple'">
-                 <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
-                </span>
-                <span style='color:red' ng-if="beneficio.estado == 'noCumpleRequisitos' || beneficio.estado == 'noCumple'">
-                  <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
-                </span>
-               </div>
-               
-               <div>{{beneficio.sigla}}</div>      
-               <div style="height:20px;">{{beneficio.monto}}</div>
-              </div><!-- Fin Cumple en preseleccion-->
-            <!--Inicio de No cumple en preseleccion-->
-                <div class="col-xs-4 col-md-2 col-lg-1 cambiarluegopreseleccionNocumple " id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'" ng-if="beneficio.estado == 'noCumpleRequisitos' || beneficio.estado == 'noCumple'">
-                    <!--Si esta asignado un icono sino el otro-->
-                   <div style="text-align:left;">
-                    <span style='color:green' ng-if="beneficio.estado == 'cumpleRequisitos' || beneficio.estado == 'cumple'">
-                     <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
-                    </span>
-                    <span style='color:red' ng-if="beneficio.estado == 'noCumpleRequisitos' || beneficio.estado == 'noCumple'">
-                      <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
-                    </span>
-                   </div>
-                   
-                   <div>{{beneficio.sigla}}</div>      
-                   <div style="height:20px;">{{beneficio.monto}}</div>
-                </div><!-- Fin No cumple en preseleccion-->
-      </div> 
+                                              <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Carrera:</h5></div>
+                                              <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue">{{datospostulante.carrera}}</b></h5></div>
+                                                                 
+                                              <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Acreditado en:</h5></div>
+                                              <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue">{{datospostulante.acreditadoEn}}</b></h5></div>
+                                                                
+                                              <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Fecha de Acreditación:</h5></div>
+                                              <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue"> {{datospostulante.fechaAcreditacion}}</b></h5></div>
 
-          <div class="col-xs-12 col-md-12 col-lg-4">
-            <div class="col-xs-2 col-md-1 col-lg-2 cambiarluegopreseleccionCumple">
-              <div style="height:20px;"></div>
-            </div>  
-            <div class="col-xs-8 col-md-6 col-lg-8">
-              <p><b>Cumple</b> requisitos para este beneficio</p>
-            
-          </div><!-- Fin Cumple en preseleccion-->
-          </div> 
-               <div class="col-xs-12 col-md-12 col-lg-4">  
-                <div class="col-xs-2 col-md-1 col-lg-2 cambiarluegopreseleccionNocumple">
-                  <div style="height:20px;"></div>
-                </div>  
-                <div class="col-xs-8 col-md-6 col-lg-8">
-                  <p><b>No Cumple</b> requisitos para este beneficio</p>
-                </div> 
-              </div>
-    <!-- Mensajes Especiales preseleccion -->
-    <div  class="col-xs-12 col-md-12 col-lg-12 MensajesEspeciales" ng-repeat="mensaje in categoriaBeneficio.etapas.preseleccion.mensajesEspeciales">
-        <p><b>Mensaje Especial {{$index+1}}: </b>{{mensaje}}</p>
-      </div><!-- Mensajes -->      
-    </div>
-  <!-- Etapa: Asignacion-->
-  <div class="col-xs-12 col-md-12 col-lg-12 asignacion" ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'asignacion'">
-           <div style="padding:5px;">
-          <p>{{categoriaBeneficio.etapas.asignacion.mensajeDefinicion}}</p>
-        </div><!-- Mensaje -->
-         <!-- Beneficios -->
-        <div  ng-repeat="beneficio in categoriaBeneficio.etapas.asignacion.beneficios" > 
+                                            </div><!-- Tabla de datos --> 
+                                                           
+                                             <!-- Recuadros evaluación -->  
+                                            <div class=" col-xs-12 col-md-5 col-lg-5"> 
+                                              <h5>Con esta información fuiste evaluado:</h5>
+                                              
+                                              <div class="rectangulo"> 
+                                               <div class="row">
+                                                        
+                                                <span ng-repeat="item in datospostulante.datosEvaluacion">
+                                                 <div class="col-xs-6 col-md-4 col-lg-4"> 
+                                                  <!-- Recuadro evaluacion --> 
+                                                  <div class="infoevaluacion">
+                                                    <div class="infosuperior">{{item.etiqueta}}:</div>
+                                                    <div class="infoinferior">{{item.valor}}</div> 
+                                                  </div> <!-- Recuadro evaluacion -->
+                                                 </div>
+                                                </span>
+                                                                     
+                                               </div><!--row -->
+                                              </div><!--rectangulo -->
+                                             </div><!-- Recuadros evaluación -->
+                                            </div><!--row -->
+                                           </div> <!-- Recuadro matricula -->
+                                                  
+                                          </div><!-- Bloque 2 - Datos del Postulante -->
+                      </accordion-group>
+                      <!--Accordion: Datos Postulante-->
+                      <!--Accordion: Mis Beneficios-->
+                      <accordion-group is-open="status.open">
+                          <accordion-heading>
+                                <div class="row">
+                                      <!--<div class="col-xs-12 col-md-12 col-lg-12">-->
 
-          <!-- Recuadro beneficio -->
-          <div class="col-xs-4 col-md-2 col-lg-1 beneficiosrectangulo recuadroBeneficio" id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'">
+                                       <!-- Titulo bloque -->
+                                       <div class="col-xs-12 col-md-8 col-lg-8">
+                                         <p class="subtitulo" ng-show="controller.data.misBeneficios">Mis Beneficios (Postulados, En Proceso, Otorgados)</p>
+                                       </div><!-- Titulo bloque -->
 
-           <!--Si esta asignado un icono sino el otro-->
-           <div style="text-align:left;">
-            <span style='color:green' ng-if="beneficio.estado == 'asignado'">
-             <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
-            </span>
-            <span style='color:red' ng-if="beneficio.estado == 'noAsignado'">
-              <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
-            </span>
-           </div>
-           
-           <div>{{beneficio.sigla}}</div>      
-           <div style="height:20px;">{{beneficio.monto}}</div>
-          </div><!-- Recuadro beneficio -->
+                                       <!-- Monto otorgado -->
+                                       <div class="col-xs-12 col-md-4 col-lg-4">
+                                         <p class="botorgado">Beneficio Otorgado: <spam style="color:red;">${{controller.data.misBeneficios.montoOtorgado}}</spam></p>
+                                       </div><!-- Monto otorgado -->
+                                      
+                                     <!--</div> por ahora no es necesario-->
+                                </div><!-- row -->
+                          </accordion-heading>
+                                   <!-- Bloque 3 - Mis Beneficios -->
+                                            <div class="divmayor bloqueInformacion">
+                                             <!-- Mensaje -->
+                                             <div>
+                                              {{controller.data.misBeneficios.mensajeBeneficios}}
+                                             </div><!-- Mensaje -->
+                                             <!-- Mis Beneficios - Categorías -->
+                                            <div ng-repeat="categoriaBeneficio in controller.data.misBeneficios.categorias" class="rectangulo recuadroProceso" id="{{categoriaBeneficio.identificador}}"> 
 
-         </div>
-    <!-- Mensajes Especiales asignacion -->
-      <div  class="col-xs-12 col-md-12 col-lg-12 MensajesEspeciales" ng-repeat="mensaje in categoriaBeneficio.etapas.asignacion.mensajesEspeciales">
-        <p><b>Mensaje Especial {{$index+1}}: </b>{{mensaje}}</p>
-      </div><!-- Mensajes -->
+                                              <div class="row">
+                                                <div class="col-xs-12 col-md-12 col-lg-12 margen">
+                                                                
+                                                  <!-- Nombre categoría -->     
+                                                  <div class="col-xs-12 col-md-4 col-lg-2">
+                                                   <b class="cursos NombreProcesoBeneficios">{{categoriaBeneficio.nombre}}</b>
+                                                  </div>
 
-  </div>
+                                                  <!-- Linea de tiempo - etapas -->
+                                                  <div class="col-xs-12 col-md-8 col-lg-6 margen">
+                                                   <div class="btn-toolbar" role="toolbar">
+                                                    <div class="btn-group">
+                                                     <button type="button" ng-class="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'postulacion' ? 'btn btn-default active' : 'btn btn-default'" ng-click="controller.estadoSeleccionado[categoriaBeneficio.identificador] = 'postulacion';">Postulación</button>
+                                                    </div>
+                                                    <div class="btn-group">
+                                                     <button type="button" ng-class="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'preseleccion' ? 'btn btn-default active' : 'btn btn-default'" ng-click="controller.estadoSeleccionado[categoriaBeneficio.identificador] = 'preseleccion';">Preselección</button>
+                                                    </div>
+                                                    <div class="btn-group">
+                                                       <button type="button" class2="" ng-class="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'asignacion' ? 'btn btn-default active' : 'btn btn-default'" ng-click="controller.estadoSeleccionado[categoriaBeneficio.identificador] = 'asignacion';">Asignación</button>
+                                                    </div>
+                                                    <div class="btn-group">
+                                                       <button type="button" ng-class="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'apelacion' ? 'btn btn-default active' : 'btn btn-default'" ng-click="controller.estadoSeleccionado[categoriaBeneficio.identificador] = 'apelacion';">Apelación</button>
+                                                    </div>          
+                                                   </div>
+                                                  </div><!-- Linea de tiempo - etapas -->
+                                                  
+                                                  <!-- Apelación -->
+                                              <div class="col-xs-12 col-md-12 col-lg-4 margen2">
+                                                   <button type="button" class="btn btn-default md">Apelar {{categoriaBeneficio.nombre}}</button>
+                                              </div>
+                                                </div>
+                                              </div><!-- row -->
 
-        <!-- Etapa: Apelacion-->
-        <div class="col-xs-12 col-md-12 col-lg-12 apelacion" ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'apelacion'">
-        <div style="padding:5px;">
-          <p>{{categoriaBeneficio.etapas.apelacion.mensajeDefinicion}}</p>
-        </div><!-- Mensaje -->
-         <!-- Beneficios -->
-        <div  ng-repeat="beneficio in categoriaBeneficio.etapas.asignacion.beneficios" > 
+                                          <div class="row">
 
-          <!-- Recuadro beneficio -->
-          <div class="col-xs-4 col-md-2 col-lg-1 beneficiosrectangulo recuadroBeneficio" id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'">
-           <!--Si esta asignado un icono sino el otro-->
-           <div style="text-align:left;">
-            <span style='color:green' ng-if="beneficio.estado == 'asignado'">
-             <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
-            </span>
-            <span style='color:red' ng-if="beneficio.estado == 'noAsignado'">
-              <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
-            </span>
-           </div>
-           
-           <div>{{beneficio.sigla}}</div>      
-           <div style="height:20px;">{{beneficio.monto}}</div>
-          </div><!-- Recuadro beneficio -->
+                                                <!-- Etapa: Postulacion-->
+                                            <div class="col-xs-12 col-md-12 col-lg-12 postulacion" ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'postulacion'">
+                                              <!-- Mensaje -->
+                                                <div style="padding:15px;">
+                                                  <p style="font-size:16px;"><b>Mensaje general de la etapa de postulación: </b>{{categoriaBeneficio.etapas.postulacion.mensajesGenerales[0]}}</p>
+                                                </div><!-- Mensaje -->
 
-         </div>
-        <!-- Mensajes Especiales Apelacion -->
-        <div  class="col-xs-12 col-md-12 col-lg-12 MensajesEspeciales" ng-repeat="mensaje in categoriaBeneficio.etapas.apelacion.mensajesEspeciales" >
-        <p><b>Mensaje Especial {{$index+1}}: </b>{{mensaje}}</p>
-        </div><!-- Mensajes -->
+                                                 <!-- Beneficios -->
+                                                <div  ng-repeat="beneficio in categoriaBeneficio.etapas.postulacion.beneficios" > 
 
-        </div><!--Etapa: Apelacion -->
+                                                  <!-- ddRecuadro beneficio -->
+                                                  <div class="col-xs-4 col-md-2 col-lg-1 beneficiosrectangulo recuadroBeneficio" id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'">
 
-      </div><!--row-->
+                                                   <!--Si esta asignado un icono sino el otro-->
+                                                   <div style="text-align:left;">
+                                                    <span style='color:green' ng-if="beneficio.estado == 'asignado'">
+                                                     <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
+                                                    </span>
+                                                    <span style='color:red' ng-if="beneficio.estado == 'noAsignado'">
+                                                      <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
+                                                    </span>
+                                                   </div>
+                                                   
+                                                   <div>{{beneficio.sigla}}</div>      
+                                                   <div style="height:20px;">{{beneficio.monto}}</div>
+                                                  </div><!-- Recuadro beneficio -->
 
-     </div><!-- Mis Beneficios - Categorías -->
+                                                 </div>
+                                            
+                                            <!-- Mensajes Especiales postulacion -->
+                                            <div  class="col-xs-12 col-md-12 col-lg-12 MensajesEspeciales" ng-repeat="mensaje in categoriaBeneficio.etapas.postulacion.mensajesEspeciales">
+                                                <p><b>Mensaje Especial {{$index+1}}: </b>{{mensaje}}</p>
+                                              </div><!-- Mensajes --> 
+                                            </div>           
+                                            <!-- Etapa: Preseleccion-->
+                                            <div class="col-xs-12 col-md-12 col-lg-12 preseleccion" ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'preseleccion'">
 
-    </div><!-- Bloque 3 - Mis Beneficios -->
+                                                <div style="padding:5px;">
+                                                  <p>{{categoriaBeneficio.etapas.preseleccion.mensajeDefinicion}}</p>
+                                                </div><!-- Mensaje -->
+                                                  <!-- Beneficios -->
+                                              <div  ng-repeat="beneficio in categoriaBeneficio.etapas.preseleccion.beneficios" > 
+                                                      <!-- Recuadro beneficio -->
+                                                     <!--Inicio de Cumple en preseleccion-->
+                                                      <div class="col-xs-4 col-md-2 col-lg-1 cambiarluegopreseleccionCumple " id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'" ng-if="beneficio.estado == 'cumpleRequisitos' || beneficio.estado == 'cumple'">
+                                                       <!--Si esta asignado un icono sino el otro-->
+                                                       <div style="text-align:left;">
+                                                        <span style='color:green' ng-if="beneficio.estado == 'cumpleRequisitos' || beneficio.estado == 'cumple'">
+                                                         <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
+                                                        </span>
+                                                        <span style='color:red' ng-if="beneficio.estado == 'noCumpleRequisitos' || beneficio.estado == 'noCumple'">
+                                                          <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
+                                                        </span>
+                                                       </div>
+                                                       
+                                                       <div>{{beneficio.sigla}}</div>      
+                                                       <div style="height:20px;">{{beneficio.monto}}</div>
+                                                      </div><!-- Fin Cumple en preseleccion-->
+                                                    <!--Inicio de No cumple en preseleccion-->
+                                                        <div class="col-xs-4 col-md-2 col-lg-1 cambiarluegopreseleccionNocumple " id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'" ng-if="beneficio.estado == 'noCumpleRequisitos' || beneficio.estado == 'noCumple'">
+                                                            <!--Si esta asignado un icono sino el otro-->
+                                                           <div style="text-align:left;">
+                                                            <span style='color:green' ng-if="beneficio.estado == 'cumpleRequisitos' || beneficio.estado == 'cumple'">
+                                                             <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
+                                                            </span>
+                                                            <span style='color:red' ng-if="beneficio.estado == 'noCumpleRequisitos' || beneficio.estado == 'noCumple'">
+                                                              <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
+                                                            </span>
+                                                           </div>
+                                                           
+                                                           <div>{{beneficio.sigla}}</div>      
+                                                           <div style="height:20px;">{{beneficio.monto}}</div>
+                                                        </div><!-- Fin No cumple en preseleccion-->
+                                            </div> 
 
-    </div><!-- col-xs-12 col-sm-12 col-md-12 col-lg-12 -->
+                                                  <div class="col-xs-12 col-md-12 col-lg-4">
+                                                    <div class="col-xs-2 col-md-1 col-lg-2 cambiarluegopreseleccionCumple">
+                                                      <div style="height:20px;"></div>
+                                                    </div>  
+                                                    <div class="col-xs-8 col-md-6 col-lg-8">
+                                                      <p><b>Cumple</b> requisitos para este beneficio</p>
+                                                    
+                                                  </div><!-- Fin Cumple en preseleccion-->
+                                                  </div> 
+                                                       <div class="col-xs-12 col-md-12 col-lg-4">  
+                                                        <div class="col-xs-2 col-md-1 col-lg-2 cambiarluegopreseleccionNocumple">
+                                                          <div style="height:20px;"></div>
+                                                        </div>  
+                                                        <div class="col-xs-8 col-md-6 col-lg-8">
+                                                          <p><b>No Cumple</b> requisitos para este beneficio</p>
+                                                        </div> 
+                                                      </div>
+                                            <!-- Mensajes Especiales preseleccion -->
+                                          <div  class="col-xs-12 col-md-12 col-lg-12 MensajesEspeciales" ng-repeat="mensaje in categoriaBeneficio.etapas.preseleccion.mensajesEspeciales">
+                                                <p><b>Mensaje Especial {{$index+1}}: </b>{{mensaje}}</p>
+                                            </div><!-- Mensajes -->      
+                                          </div>
+                                          <!-- Etapa: Asignacion-->
+                                          <div class="col-xs-12 col-md-12 col-lg-12 asignacion" ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'asignacion'">
+                                                   <div style="padding:5px;">
+                                                  <p>{{categoriaBeneficio.etapas.asignacion.mensajeDefinicion}}</p>
+                                                </div><!-- Mensaje -->
+                                                 <!-- Beneficios -->
+                                                <div  ng-repeat="beneficio in categoriaBeneficio.etapas.asignacion.beneficios" > 
+
+                                                  <!-- Recuadro beneficio -->
+                                                  <div class="col-xs-4 col-md-2 col-lg-1 beneficiosrectangulo recuadroBeneficio" id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'">
+
+                                                   <!--Si esta asignado un icono sino el otro-->
+                                                   <div style="text-align:left;">
+                                                    <span style='color:green' ng-if="beneficio.estado == 'asignado'">
+                                                     <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
+                                                    </span>
+                                                    <span style='color:red' ng-if="beneficio.estado == 'noAsignado'">
+                                                      <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
+                                                    </span>
+                                                   </div>
+                                                   
+                                                   <div>{{beneficio.sigla}}</div>      
+                                                   <div style="height:20px;">{{beneficio.monto}}</div>
+                                                  </div><!-- Recuadro beneficio -->
+
+                                                 </div>
+                                            <!-- Mensajes Especiales asignacion -->
+                                              <div  class="col-xs-12 col-md-12 col-lg-12 MensajesEspeciales" ng-repeat="mensaje in categoriaBeneficio.etapas.asignacion.mensajesEspeciales">
+                                                <p><b>Mensaje Especial {{$index+1}}: </b>{{mensaje}}</p>
+                                              </div><!-- Mensajes -->
+
+                                        </div>
+                                                <!-- Etapa: Apelacion-->
+                                              <div class="col-xs-12 col-md-12 col-lg-12 apelacion" ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'apelacion'">
+                                                <div style="padding:5px;">
+                                                  <p>{{categoriaBeneficio.etapas.apelacion.mensajeDefinicion}}</p>
+                                                </div><!-- Mensaje -->
+                                                 <!-- Beneficios -->
+                                                <div  ng-repeat="beneficio in categoriaBeneficio.etapas.asignacion.beneficios" > 
+
+                                                  <!-- Recuadro beneficio -->
+                                                  <div class="col-xs-4 col-md-2 col-lg-1 beneficiosrectangulo recuadroBeneficio" id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'">
+                                                   <!--Si esta asignado un icono sino el otro-->
+                                                   <div style="text-align:left;">
+                                                    <span style='color:green' ng-if="beneficio.estado == 'asignado'">
+                                                     <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
+                                                    </span>
+                                                    <span style='color:red' ng-if="beneficio.estado == 'noAsignado'">
+                                                      <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
+                                                    </span>
+                                                   </div>
+                                                   
+                                                   <div>{{beneficio.sigla}}</div>      
+                                                   <div style="height:20px;">{{beneficio.monto}}</div>
+                                                  </div><!-- Recuadro beneficio -->
+
+                                                 </div>
+                                                <!-- Mensajes Especiales Apelacion -->
+                                                <div  class="col-xs-12 col-md-12 col-lg-12 MensajesEspeciales" ng-repeat="mensaje in categoriaBeneficio.etapas.apelacion.mensajesEspeciales" >
+                                                <p><b>Mensaje Especial {{$index+1}}: </b>{{mensaje}}</p>
+                                                </div><!-- Mensajes -->
+
+                                                </div><!--Etapa: Apelacion -->
+
+                                              </div><!--row-->
+
+                                             </div><!-- Mis Beneficios - Categorías -->
+
+                                            </div><!-- Bloque 3 - Mis Beneficios -->
+                      </accordion-group>
+                      <!--Accordion: Mis Beneficios-->
+                    </accordion>
+            </div>
+        </div> <!--PARA COLORES DE ACCORDEON-->    
+        </div><!-- col-xs-12 col-sm-12 col-md-12 col-lg-12 -->
    </div><!-- Bloques de informción -->
           
               
@@ -399,6 +426,7 @@
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
   <script src="app.js"></script>
   <script src="controller.js"></script>
+  <script src="controllerAccordion.js"></script>
   <script src="service.js"></script>
   <script src="directive.js"></script>
   <!-- endbuild -->
