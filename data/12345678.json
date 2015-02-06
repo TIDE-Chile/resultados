@@ -106,12 +106,14 @@
 							{
 								"sigla":"BVP",
 								"nombre":"Beca Vocacion de Profesor",
-								"estado":"cumpleRequisitos"
+								"estado":"cumpleRequisitos",
+								"pasos":""
 							},
 							{
 								"sigla":"BJGM",
 								"nombre":"Beca Juan Gómez Millas",
-								"estado":"cumpleRequisitos"
+								"estado":"cumpleRequisitos",
+								"pasos":""
 							},
 							{
 								"sigla":"BEA",
@@ -125,7 +127,7 @@
 										"descripcion":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
+								"pasos":""
 							},
 							{
 								"sigla":"BHPE",
@@ -140,7 +142,7 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
+								"pasos":""
 							},
 							{
 								"sigla":"BNM",
@@ -155,7 +157,7 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
+								"pasos":""
 							},
 							{
 								"sigla":"BET",
@@ -170,7 +172,7 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
+								"pasos":""
 							},
 							{
 								"sigla":"BART",
@@ -185,8 +187,8 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
-							}
+								"pasos":""
+							},
 						]
 					},
 					"asignacion" : {
