@@ -79,7 +79,7 @@
 		"montoOtorgado":"1550000",
 		"mensajes" : [
 			{
-				"contenido":"La asignación de beneficios corresponde a la validación realizada por el MINEDUC del cumplimiento de los requisitos académicos y socioeconómicos establecidos para cada beneficio."
+				"contenido":"La información corresponde a la validación realizada por el MINEDUC del cumplimiento de los requisitos académicos y socioeconómicos establecidos para cada beneficio."
 			}
 		],
 		"categorias":[
@@ -88,63 +88,38 @@
 				"nombre":"Primer Año",
 				"etapaActual":"asignacion",
 				"urlApelacion":"http://mineduc.cl",
-				"mensajes": [
-					{	
-						"titulo":"Mensaje Especial",
-						"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-					}
-				],
+				"mensajeProceso":"El proceso de Primer Año ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan.",
 				"etapas": {
 					"postulacion" : {
-						"mensajeTooltip":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015.",
+						"mensajeTooltip":"Mensaje tooltip postulación primer año ... ",
+						"mensajeDefinicion": "La postulación del beneficio corresponde a ...",			
 						"mensajesGenerales": [
-							{	
-								"titulo":"Mensaje General",
-								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-							}
+							"La etapa de postulación ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 						],						
 						"mensajesEspeciales": [
-							{	
-								"titulo":"Mensaje Especial",
-								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-							}
+								"Este es un mensaje especial de la etapa de postulación en Primer Año ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan.",
+								"Este es un segundo mensaje especial de la etapa de postulación en Primer Año ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 						],
 						"beneficios": []
 					},
 					"preseleccion" : {
-						"mensajeTooltip":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015.",
-						"mensajesGenerales": [
-							{	
-								"titulo":"Mensaje General",
-								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-							}
-						],						
+						"mensajeTooltip":"Mensaje tooltip preselección primer año ... ",
+						"mensajeDefinicion": "La preselección del beneficio corresponde a ...",			
+						"mensajesGenerales": [],						
 						"mensajesEspeciales": [
-							{	
-								"titulo":"Mensaje Especial",
-								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-							}
+								"Este es un mensaje especial de la etapa de preselección en Primer Año ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan.",
+								"Este es un segundo mensaje especial de la etapa de preselección en Primer Año ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 						],
 						"beneficios": [
 							{
 								"sigla":"BVP",
 								"nombre":"Beca Vocacion de Profesor",
-								"estado":"cumpleRequisitos",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"estado":"cumpleRequisitos"
 							},
 							{
 								"sigla":"BJGM",
 								"nombre":"Beca Juan Gómez Millas",
-								"estado":"cumpleRequisitos",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"estado":"cumpleRequisitos"
 							},
 							{
 								"sigla":"BEA",
@@ -152,18 +127,13 @@
 								"estado":"noCumpleRequisitos",
 								"motivos":[
 									{
-										"contenido":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+										"descripcion":  "Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
 									},
 									{
-										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+										"descripcion":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BHPE",
@@ -178,12 +148,7 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BNM",
@@ -198,12 +163,7 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BET",
@@ -218,12 +178,7 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BART",
@@ -238,53 +193,32 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							}
 						]
 					},
 					"asignacion" : {
-						"mensajeTooltip":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015.",
-						"mensajesGenerales": [
-							{	
-								"titulo":"Mensaje General",
-								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-							}
-						],						
+						"mensajeTooltip":"Mensaje tooltip asignación primer año ... ",
+						"mensajeDefinicion": "La asignación del beneficio corresponde a ...",			
+						"mensajesGenerales": [],						
 						"mensajesEspeciales": [
-							{	
-								"titulo":"Mensaje Especial",
-								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-							}
-						],
+								"Este es un mensaje especial de la etapa de asignación en Primer Año ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan.",
+								"Este es un segundo mensaje especial de la etapa de asignación en Primer Año ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
+						],						
 						"beneficios": [
 							{
 								"sigla":"BVP",
 								"nombre":"Beca Vocacion de Profesor",
 								"estado":"asignado",
 								"monto":"1100000",
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BJGM",
 								"nombre":"Beca Juan Gómez Millas",
 								"estado":"asignado",
 								"monto":"450000",
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BEA",
@@ -299,12 +233,7 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BHPE",
@@ -319,12 +248,7 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BNM",
@@ -339,12 +263,7 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BET",
@@ -359,12 +278,7 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BART",
@@ -379,28 +293,19 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							}
 						]
 					},
 					"apelacion" : {
-						"mensajeTooltip":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015.",
+					"mensajeTooltip":"Mensaje tooltip apelación primer año ... ",
+						"mensajeDefinicion": "La apelación del beneficio corresponde a ...",			
 						"mensajesGenerales": [
-							{	
-								"titulo":"Mensaje General",
-								"contenido":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015."
-							}
+							"La etapa de apelación ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 						],						
 						"mensajesEspeciales": [
-							{	
-								"titulo":"Mensaje Especial",
-								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-							}
+							"Este es un mensaje especial de la etapa de apelación en Primer Año ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan.",
+							"Este es un segundo mensaje especial de la etapa de apelación en Primer Año ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 						],
 						"beneficios": [
 							{
@@ -408,24 +313,14 @@
 								"nombre":"Beca Vocacion de Profesor",
 								"estado":"asignado",
 								"monto":"1100000",
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BJGM",
 								"nombre":"Beca Juan Gómez Millas",
 								"estado":"asignado",
 								"monto":"450000",
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BEA",
@@ -440,12 +335,7 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BHPE",
@@ -460,12 +350,7 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BNM",
@@ -480,12 +365,7 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BET",
@@ -500,12 +380,7 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BART",
@@ -520,12 +395,7 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							}
 						]
 					}
@@ -536,42 +406,27 @@
 				"nombre":"Becas complementarias",
 				"etapaActual":"postulacion",
 				"urlApelacion":"http://mineduc.cl",
-				"mensajes": [
-					{	
-						"titulo":"Mensaje Especial",
-						"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-					}
-				],
+				"mensajeProceso":"El proceso de Becas Complementarias ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan.",
 				"etapas": {
 					"postulacion" : {
-						"mensajeTooltip":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015.",
+						"mensajeTooltip":"Mensaje tooltip postulación de Becas Complementarias ... ",
+						"mensajeDefinicion": "La postulación del beneficio corresponde a ...",			
 						"mensajesGenerales": [
-							{	
-								"titulo":"Mensaje General",
-								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-							}
+							"La etapa de postulación ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 						],						
 						"mensajesEspeciales": [
-							{	
-								"titulo":"Mensaje Especial",
-								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-							}
+								"Este es un mensaje especial de la etapa de postulación en Becas Complementarias ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan.",	
+								"Este es un segundo mensaje especial de la etapa de postulación en Becas Complementarias ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 						],
 						"beneficios": []
 					},
 					"preseleccion" : {
-						"mensajeTooltip":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015.",
-						"mensajesGenerales": [
-							{	
-								"titulo":"Mensaje General",
-								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-							}
-						],						
+						"mensajeTooltip":"Mensaje tooltip preselección de Becas Complementarias ... ",
+						"mensajeDefinicion": "La preselección del beneficio corresponde a ...",			
+						"mensajesGenerales": [],						
 						"mensajesEspeciales": [
-							{	
-								"titulo":"Mensaje Especial",
-								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-							}
+								"Este es un mensaje especial de la etapa de preselección en Becas Complementarias ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan.",	
+								"Este es un segundo mensaje especial de la etapa de preselección en Becas Complementarias ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 						],
 						"beneficios": [
 							{
@@ -579,24 +434,14 @@
 								"nombre":"Beca BNA",
 								"estado":"cumpleRequisitos",
 								"monto":"",
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BAES",
 								"nombre":"Beca BAES",
 								"estado":"cumpleRequisitos",
 								"monto":"",
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BMES",
@@ -611,28 +456,17 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							}
 						]
 					},
 					"asignacion" : {
-						"mensajeTooltip":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015.",
-						"mensajesGenerales": [
-							{	
-								"titulo":"Mensaje General",
-								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-							}
-						],						
+						"mensajeTooltip":"Mensaje tooltip asignación de Becas Complementarias ... ",
+						"mensajeDefinicion": "La asignación del beneficio corresponde a ...",			
+						"mensajesGenerales": [],						
 						"mensajesEspeciales": [
-							{	
-								"titulo":"Mensaje Especial",
-								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-							}
+								"Este es un mensaje especial de la etapa de asignación en Becas Complementarias ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan.",	
+								"Este es un segundo mensaje especial de la etapa de asignación en Becas Complementarias ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 						],
 						"beneficios": [
 							{
@@ -640,24 +474,14 @@
 								"nombre":"Beca BNA",
 								"estado":"asignado",
 								"monto":"1100000",
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BAES",
 								"nombre":"Beca BAES",
 								"estado":"asignado",
 								"monto":"450000",
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BMES",
@@ -672,28 +496,19 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							}
 						]
 					},
 					"apelacion" : {
-						"mensajeTooltip":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015.",
+						"mensajeTooltip":"Mensaje tooltip apelación de Becas Complementarias ... ",
+						"mensajeDefinicion": "La apelación del beneficio corresponde a ...",			
 						"mensajesGenerales": [
-							{	
-								"titulo":"Mensaje General",
-								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-							}
-						],						
+							"La etapa de postulación ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
+						],				
 						"mensajesEspeciales": [
-							{	
-								"titulo":"Mensaje Especial",
-								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-							}
+								"Este es un mensaje especial de la etapa de apelación en Becas Complementarias ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan.",	
+								"Este es un segundo mensaje especial de la etapa de apelación en Becas Complementarias ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 						],
 						"beneficios": [
 							{
@@ -701,24 +516,14 @@
 								"nombre":"Beca BNA",
 								"estado":"asignado",
 								"monto":"1100000",
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BAES",
 								"nombre":"Beca BAES",
 								"estado":"asignado",
 								"monto":"450000",
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BMES",
@@ -733,12 +538,7 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							}
 						]
 					}
@@ -749,42 +549,28 @@
 				"nombre":"Cursos superiores",
 				"etapaActual":"apelacion",
 				"urlApelacion":"http://mineduc.cl",
-				"mensajes": [
-					{	
-						"titulo":"Mensaje Especial",
-						"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-					}
-				],
+				"mensajeProceso":"El proceso de Cursos Superiores ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan.",
 				"etapas": {
 					"postulacion" : {
-						"mensajeTooltip":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015.",
+						"mensajeTooltip":"Mensaje tooltip apelación de Cursos Superiores ... ",
+						"mensajeDefinicion": "La apelación del beneficio corresponde a ...",			
 						"mensajesGenerales": [
-							{	
-								"titulo":"Mensaje General",
-								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-							}
+							"La etapa de apelación ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 						],						
 						"mensajesEspeciales": [
-							{	
-								"titulo":"Mensaje Especial",
-								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-							}
+								"Este es un mensaje especial de la etapa de apelación en Cursos Superiores ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan.",	
+								"Este es un segundo mensaje especial de la etapa de apelación en Cursos Superiores ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 						],
 						"beneficios": []
 					},
 					"preseleccion" : {
-						"mensajeTooltip":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015.",
+						"mensajeTooltip":"Mensaje tooltip preseleccion de Cursos Superiores ... ",
+						"mensajeDefinicion": "La preseleccion del beneficio corresponde a ...",			
 						"mensajesGenerales": [
-							{	
-								"titulo":"Mensaje General",
-								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-							}
 						],						
 						"mensajesEspeciales": [
-							{	
-								"titulo":"Mensaje Especial",
-								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-							}
+								"Este es un mensaje especial de la etapa de preseleccion en Cursos Superiores ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan.",	
+								"Este es un segundo mensaje especial de la etapa de preseleccion en Cursos Superiores ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 						],
 						"beneficios": [
 							{
@@ -792,24 +578,14 @@
 								"nombre":"Beca BBICSA",
 								"estado":"cumple",
 								"monto":"",
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BHPESA",
 								"nombre":"Beca BHPESA",
 								"estado":"cumple",
 								"monto":"",
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BJGMSA",
@@ -824,12 +600,7 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BNMSA",
@@ -844,28 +615,18 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							}
 						]
 					},
 					"asignacion" : {
-						"mensajeTooltip":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015.",
+						"mensajeTooltip":"Mensaje tooltip asignación de Cursos Superiores ... ",
+						"mensajeDefinicion": "La asignación del beneficio corresponde a ...",			
 						"mensajesGenerales": [
-							{	
-								"titulo":"Mensaje General",
-								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-							}
 						],						
 						"mensajesEspeciales": [
-							{	
-								"titulo":"Mensaje Especial",
-								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-							}
+								"Este es un mensaje especial de la etapa de asignación en Cursos Superiores ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan.",	
+								"Este es un segundo mensaje especial de la etapa de asignación en Cursos Superiores ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 						],
 						"beneficios": [
 							{
@@ -873,24 +634,14 @@
 								"nombre":"Beca BBICSA",
 								"estado":"asignado",
 								"monto":"1100000",
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BHPESA",
 								"nombre":"Beca BHPESA",
 								"estado":"asignado",
 								"monto":"450000",
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BJGMSA",
@@ -905,12 +656,7 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BNMSA",
@@ -925,28 +671,19 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							}
 						]
 					},
 					"apelacion" : {
-						"mensajeTooltip":"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015.",
+						"mensajeTooltip":"Mensaje tooltip apelación de Cursos Superiores ... ",
+						"mensajeDefinicion": "La apelación del beneficio corresponde a ...",			
 						"mensajesGenerales": [
-							{	
-								"titulo":"Mensaje General",
-								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-							}
+							"La etapa de apelación ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 						],						
 						"mensajesEspeciales": [
-							{	
-								"titulo":"Mensaje Especial",
-								"contenido":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
-							}
+								"Este es un mensaje especial de la etapa de apelación en Cursos Superiores ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan.",	
+								"Este es un segundo mensaje especial de la etapa de apelación en Cursos Superiores ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
 						],
 						"beneficios": [
 							{
@@ -954,24 +691,14 @@
 								"nombre":"Beca BBICSA",
 								"estado":"asignado",
 								"monto":"1100000",
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BHPESA",
 								"nombre":"Beca BHPESA",
 								"estado":"asignado",
 								"monto":"450000",
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BJGMSA",
@@ -986,12 +713,7 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
 							},
 							{
 								"sigla":"BNMSA",
@@ -1006,13 +728,7 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
-								"mensajes":[
-									{
-										"contenido":""
-									}
-								]
-							}
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"							}
 						]
 					}
 				}
