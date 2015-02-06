@@ -23,7 +23,7 @@ angular.module('tideApp')
         var options = {
             title:scope.beneficio.nombre+" ("+scope.beneficio.sigla+") - Detalle del beneficio"+"<button type='button' class='close'>×</button>",
             content: "",
-            placement: "button",
+            placement: "auto",
             container: $('body'),
             html: true,
         };
