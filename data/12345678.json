@@ -2,12 +2,8 @@
 	"rut": "12345678-9",
 	"fechaActualizacion":"05/03/2015",
 	"mensajesDestacados" : [
-		{
-			"contenido":"Los resultados consideran el puntaje promedio PSU (lenguaje y comunicación y matemáticas) con el cual se ingresa a la carrera, el que es informado por la institución de educación superior al Mineduc."
-		},
-		{
-			"contenido":"Estos resultados consideran la matrícula informada por las Instituciones de Educación Superior al Mineduc hasta el 02 de mayo de 2014, y las acreditaciones."
-		}
+			"Los resultados consideran el puntaje promedio PSU (lenguaje y comunicación y matemáticas) con el cual se ingresa a la carrera, el que es informado por la institución de educación superior al Mineduc.",
+			"Estos resultados consideran la matrícula informada por las Instituciones de Educación Superior al Mineduc hasta el 02 de mayo de 2014, y las acreditaciones."
 	],
 	"datosPostulante": [
 		{
@@ -77,11 +73,7 @@
 	],
 	"misBeneficios":{
 		"montoOtorgado":"1550000",
-		"mensajes" : [
-			{
-				"contenido":"La información corresponde a la validación realizada por el MINEDUC del cumplimiento de los requisitos académicos y socioeconómicos establecidos para cada beneficio."
-			}
-		],
+		"mensajeBeneficios" : "La información corresponde a la validación realizada por el MINEDUC del cumplimiento de los requisitos académicos y socioeconómicos establecidos para cada beneficio.",
 		"categorias":[
 			{
 				"identificador":"primerano",
