@@ -1,0 +1,29 @@
+<svg height="50" width="350" class="timeline">
+	<g transform="translate(0,5)">
+		<line x1="45" x2="305" y1="10" y2="10" stroke="green" stroke-width="1"/>
+	 	<g class="etapa" id="postulacion" transform="translate(0,0)" data-original-title="{{infoEtapas.postulacion.mensajeTooltip}}">
+			<circle cx="45" cy="10" r="10" stroke="green" stroke-width="1" ></circle>
+			<text x="45" y="15" text-anchor="middle" fill="red" class="numero" font-size="15px">1</text>
+	 		<text x="45" y="40" text-anchor="middle" fill="red" class="etiqueta">Postulación</text>
+	 	</g>
+	 	<g class="etapa " id="preseleccion" transform="translate(90,0)" data-original-title="{{infoEtapas.preseleccion.mensajeTooltip}}">
+			<circle cx="45" cy="10" r="10" stroke="green" stroke-width="1" ></circle>
+			<text x="45" y="15" text-anchor="middle" fill="red" class="numero" font-size="15px">2</text>
+	 		<text x="45" y="40" text-anchor="middle" fill="red" class="etiqueta">Preasignación</text>
+	 	</g>
+	 	<g class="etapa" id="asignacion"  transform="translate(180,0)" data-original-title="{{infoEtapas.asignacion.mensajeTooltip}}">
+			<circle cx="45" cy="10" r="10" stroke="green" stroke-width="1"></circle>
+			<text x="45" y="15" text-anchor="middle" fill="red" class="numero" font-size="15px">3</text>
+	 		<text x="45" y="40" text-anchor="middle" fill="red" class="etiqueta">Asignación</text>
+	 	</g>
+	 	<g class="etapa" id="apelacion" transform="translate(270,0)" data-original-title="{{infoEtapas.apelacion.mensajeTooltip}}">
+			<circle cx="45" cy="10" r="10" stroke="green" stroke-width="1"></circle>
+			<text x="45" y="15" text-anchor="middle" fill="red" class="numero" font-size="15px">4</text>
+	 		<text x="45" y="40" text-anchor="middle" fill="red" class="etiqueta">Apelación</text>
+	 	</g>
+
+ 	</g>
+
+
+
+</svg>

@@ -1,0 +1,12 @@
+/* Colores en línea de tiempo */
+.timeline .etapa{
+  fill:white;
+}
+
+.timeline .etapa:hover{
+  fill:#FBFBFB;
+}
+
+.timeline .etapa.active {
+  fill:#DBDBDB;
+}
