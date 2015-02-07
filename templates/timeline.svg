@@ -9,7 +9,7 @@
 	 	<g class="etapa " id="preseleccion" transform="translate(90,0)" data-original-title="{{infoEtapas.preseleccion.mensajeTooltip}}">
 			<circle cx="45" cy="10" r="10" stroke="green" stroke-width="1" ></circle>
 			<text x="45" y="15" text-anchor="middle" fill="red" class="numero" font-size="15px">2</text>
-	 		<text x="45" y="40" text-anchor="middle" fill="red" class="etiqueta">Preasignación</text>
+	 		<text x="45" y="40" text-anchor="middle" fill="red" class="etiqueta">Preselección</text>
 	 	</g>
 	 	<g class="etapa" id="asignacion"  transform="translate(180,0)" data-original-title="{{infoEtapas.asignacion.mensajeTooltip}}">
 			<circle cx="45" cy="10" r="10" stroke="green" stroke-width="1"></circle>
