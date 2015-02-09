@@ -69,7 +69,7 @@
        <div ng-controller="AccordionDemoCtrl">
         <accordion close-others="oneAtATime">
          <!--Accordion: Informacion Destacada-->
-         <accordion-group>
+         <accordion-group is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
          <accordion-heading>
          <div class="row">
           <div class="col-xs-12 col-md-12 col-lg-12">
