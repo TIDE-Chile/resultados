@@ -24,7 +24,6 @@ angular.module('tideApp')
   this.rut = "12345678";
   this.estadoSeleccionado = {}
 
-
  /*
   * iniciaEpataSeleccionada
   * Asigna valores iniciales para 
@@ -40,6 +39,12 @@ angular.module('tideApp')
     }
   }
 
+ this.isOpenAccordion = {
+    mensajesDestacados: true,
+    datosPostulante: false,
+    misBeneficios : false
+  };
+
   dataService.getData(this.rut)
   .then(function(data) {
     iniciaEtapaSeleccionada(data);
@@ -48,8 +53,6 @@ angular.module('tideApp')
   .catch(function(error) {
     myself.errorMsg="Error al consultar los datos";
   })
-
-
 
 
 }]);

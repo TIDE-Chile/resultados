@@ -48,6 +48,8 @@ angular.module('tideApp')
 
       element.on('shown.bs.popover', function () {
         var popover = element.data('bs.popover');
+
+
         if (typeof popover !== "undefined") {
             var $tip = popover.tip();
             var zindex = $tip.css('z-index');
@@ -55,7 +57,11 @@ angular.module('tideApp')
             $tip.find('.close').bind('click', function () {
                 popover.hide();
             });
-            
+        /*en prueba aun falta afinar mas esto */
+         $("body").on('click',function(){
+                popover.hide();
+             });
+
             $tip.mouseover(function () {
                 $tip.css('z-index', function () {
                     return zindex + 1;
@@ -67,6 +73,10 @@ angular.module('tideApp')
                 });
             });
         }
+
+
+
+            
     });
     }
   };

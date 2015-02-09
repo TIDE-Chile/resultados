@@ -66,10 +66,10 @@
      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <!--PARA COLORES DE ACCORDEON--> 
       <div id="custom-accord">
-       <div ng-controller="AccordionDemoCtrl">
-    <accordion close-others="oneAtATime">
+       <div ng-controller="AppController as controller">
+    <accordion close-others="true">
          <!--Accordion: Informacion Destacada-->
-      <accordion-group is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+      <accordion-group is-open="controller.isOpenAccordion.mensajesDestacados">
         <accordion-heading>
          <div class="row">
           <div class="col-xs-12 col-md-12 col-lg-12">
@@ -92,8 +92,8 @@
        </accordion-group>
        <!--Accordion: Informacion Destacada-->
        <!--Accordion: Datos Postulante-->
-       <accordion-group>
-       <accordion-heading>
+      <accordion-group is-open="controller.isOpenAccordion.datosPostulante">
+      <accordion-heading>
        <div class="row">
         <div class="col-xs-12 col-md-12 col-lg-12">
          <p class="subtitulo">Datos del Postulante (matrícula, acreditación)</p>
@@ -147,13 +147,12 @@
          </div><!-- Recuadros evaluación -->
         </div><!--row -->
       </div> <!-- Recuadro matricula -->
-
     </div><!-- Bloque 2 - Datos del Postulante -->
     </accordion-group>
      <!--Accordion: Datos Postulante-->
      <!--Accordion: Mis Beneficios-->
-     <accordion-group is-open="status.open">
-     <accordion-heading>
+    <accordion-group  is-open="controller.isOpenAccordion.misBeneficios">
+    <accordion-heading>
      <div class="row">
       <!--<div class="col-xs-12 col-md-12 col-lg-12">-->
 
@@ -177,7 +176,7 @@
       {{controller.data.misBeneficios.mensajeBeneficios}}
      </div><!-- Mensaje -->
      <!-- Mis Beneficios - Categorías -->
-     <div ng-repeat="categoriaBeneficio in controller.data.misBeneficios.categorias" class="rectangulo recuadroProceso" id="{{categoriaBeneficio.identificador}}"> 
+    <div ng-repeat="categoriaBeneficio in controller.data.misBeneficios.categorias" class="rectangulo recuadroProceso" id="{{categoriaBeneficio.identificador}}"> 
 
       <div class="row">
        <div class="col-xs-12 col-md-12 col-lg-12 margen">
