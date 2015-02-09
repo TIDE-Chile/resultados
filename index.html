@@ -67,10 +67,10 @@
       <!--PARA COLORES DE ACCORDEON--> 
       <div id="custom-accord">
        <div ng-controller="AccordionDemoCtrl">
-        <accordion close-others="oneAtATime">
+    <accordion close-others="oneAtATime">
          <!--Accordion: Informacion Destacada-->
-         <accordion-group is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
-         <accordion-heading>
+      <accordion-group is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+        <accordion-heading>
          <div class="row">
           <div class="col-xs-12 col-md-12 col-lg-12">
            <p class="subtitulo"> Información Destacada <span style="color:blue;"><i class="glyphicon glyphicon-exclamation-sign"></i></span></p>
@@ -102,13 +102,13 @@
       </accordion-heading>
       <!--Cuerpo de Datos Postulante-->
       <!-- Bloque 2 - Datos del Postulante -->
-      <div class="divmayor bloqueInformacion">
+    <div class="divmayor bloqueInformacion">
        <!-- Recuadro matricula -->
-       <div class="rectangulo recuadroProceso" id="datospostulante" ng-repeat="datospostulante in controller.data.datosPostulante">
+      <div class="rectangulo recuadroProceso" id="datospostulante" ng-repeat="datospostulante in controller.data.datosPostulante">
         <div class="row" >
 
-         <!-- Tabla de datos -->             
-         <div class="col-xs-12 col-md-7 col-lg-7">
+        <!-- Tabla de datos -->             
+        <div class="col-xs-12 col-md-7 col-lg-7">
           <h4 ng-show="datospostulante" class="cursos"> {{datospostulante.nombre}}</h4>
 
           <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Matriculado en:</h5></div>
@@ -146,10 +146,10 @@
           </div><!--rectangulo -->
          </div><!-- Recuadros evaluación -->
         </div><!--row -->
-       </div> <!-- Recuadro matricula -->
+      </div> <!-- Recuadro matricula -->
 
-      </div><!-- Bloque 2 - Datos del Postulante -->
-     </accordion-group>
+    </div><!-- Bloque 2 - Datos del Postulante -->
+    </accordion-group>
      <!--Accordion: Datos Postulante-->
      <!--Accordion: Mis Beneficios-->
      <accordion-group is-open="status.open">
@@ -164,7 +164,7 @@
 
       <!-- Monto otorgado -->
       <div class="col-xs-12 col-md-4 col-lg-4">
-       <p class="botorgado">Beneficio Otorgado: <spam style="color:red;">${{controller.data.misBeneficios.montoOtorgado}}</spam></p>
+       <p class="botorgado">Beneficio Otorgado: <spam style="color:red;">{{controller.data.misBeneficios.montoOtorgado | currency:fractionSize:0}}</spam></p>
       </div><!-- Monto otorgado -->
 
       <!--</div> por ahora no es necesario-->
@@ -233,7 +233,7 @@
         <div  ng-repeat="beneficio in categoriaBeneficio.etapas.postulacion.beneficios" > 
 
          <!-- ddRecuadro beneficio -->
-         <div class="col-xs-4 col-md-2 col-lg-1 beneficiosrectangulo recuadroBeneficio" id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'">
+         <div class="col-xs-5 col-md-2 col-lg-1 beneficiosrectangulo recuadroBeneficio" id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'">
 
           <!--Si esta asignado un icono sino el otro-->
           <div style="text-align:left;">
@@ -275,7 +275,7 @@
         <div  ng-repeat="beneficio in categoriaBeneficio.etapas.preseleccion.beneficios" > 
          <!-- Recuadro beneficio -->
          <!--Inicio de Cumple en preseleccion-->
-         <div class="col-xs-4 col-md-2 col-lg-1 cambiarluegopreseleccionCumple " id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'" ng-if="beneficio.estado == 'cumpleRequisitos' || beneficio.estado == 'cumple'">
+         <div class="col-xs-5 col-md-2 col-lg-1 cambiarluegopreseleccionCumple " id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'" ng-if="beneficio.estado == 'cumpleRequisitos' || beneficio.estado == 'cumple'">
           <!--Si esta asignado un icono sino el otro-->
           <div style="text-align:left;">
            <span style='color:green' ng-if="beneficio.estado == 'cumpleRequisitos' || beneficio.estado == 'cumple'">
@@ -290,7 +290,7 @@
           <div style="height:20px;">{{beneficio.monto}}</div>
          </div><!-- Fin Cumple en preseleccion-->
          <!--Inicio de No cumple en preseleccion-->
-         <div class="col-xs-4 col-md-2 col-lg-1 cambiarluegopreseleccionNocumple " id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'" ng-if="beneficio.estado == 'noCumpleRequisitos' || beneficio.estado == 'noCumple'">
+         <div class="col-xs-5 col-md-2 col-lg-1 cambiarluegopreseleccionNocumple " id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'" ng-if="beneficio.estado == 'noCumpleRequisitos' || beneficio.estado == 'noCumple'">
           <!--Si esta asignado un icono sino el otro-->
           <div style="text-align:left;">
            <span style='color:green' ng-if="beneficio.estado == 'cumpleRequisitos' || beneficio.estado == 'cumple'">
@@ -331,7 +331,7 @@
 
        <!-- ETAPA: ASIGNACION -->
        <!-- ----------------- -->
-       <div class="col-xs-12 col-md-12 col-lg-12 asignacion" ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'asignacion'">
+      <div class="col-xs-12 col-md-12 col-lg-12 asignacion" ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'asignacion'">
 
         <!-- Mensaje definición etapa -->
         <div style="padding:5px;">
@@ -347,7 +347,7 @@
         <div  ng-repeat="beneficio in categoriaBeneficio.etapas.asignacion.beneficios" > 
 
          <!-- Recuadro beneficio -->
-         <div class="col-xs-4 col-md-2 col-lg-1 beneficiosrectangulo recuadroBeneficio" id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'">
+         <div class="col-xs-5 col-md-2 col-lg-1 beneficiosrectangulo recuadroBeneficio" id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'">
 
           <!--Si esta asignado un icono sino el otro-->
           <div style="text-align:left;">
@@ -359,8 +359,15 @@
            </span>
           </div>
 
-          <div>{{beneficio.sigla}}</div>      
-          <div style="height:20px;">{{beneficio.monto}}</div>
+          <div>{{beneficio.sigla}}</div>
+          <!-- monto > 0 || = 0 -->
+            <div ng-if="beneficio.monto > 0">      
+                <div style="height:20px;">{{beneficio.monto | currency:fractionSize:0}}</div>
+            </div>
+            <div ng-if="beneficio.monto == 0">      
+                <div style="height:20px;"></div>
+            </div>
+          <!-- monto > 0 || = 0 -->
          </div><!-- Recuadro beneficio -->
 
         </div>
@@ -389,7 +396,7 @@
         <div  ng-repeat="beneficio in categoriaBeneficio.etapas.asignacion.beneficios" > 
 
          <!-- Recuadro beneficio -->
-         <div class="col-xs-4 col-md-2 col-lg-1 beneficiosrectangulo recuadroBeneficio" id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'">
+         <div class="col-xs-5 col-md-2 col-lg-1 beneficiosrectangulo recuadroBeneficio" id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'">
           <!--Si esta asignado un icono sino el otro-->
           <div style="text-align:left;">
            <span style='color:green' ng-if="beneficio.estado == 'asignado'">
@@ -401,7 +408,14 @@
           </div>
 
           <div>{{beneficio.sigla}}</div>      
-          <div style="height:20px;">{{beneficio.monto}}</div>
+          <!-- monto > 0 || = 0 -->
+            <div ng-if="beneficio.monto > 0">      
+                <div style="height:20px;">{{beneficio.monto | currency:fractionSize:0}}</div>
+            </div>
+            <div ng-if="beneficio.monto == 0">      
+                <div style="height:20px;"></div>
+            </div>
+          <!-- monto > 0 || = 0 -->
          </div><!-- Recuadro beneficio -->
 
         </div>
