@@ -8,5 +8,19 @@
 }
 
 .timeline .etapa.active {
-  fill:#DBDBDB;
+  fill:rgba(255, 168, 52, 1);
+  font-size: 17px;
+}
+
+.timeline .etapa .cicule{
+r:15px;
+
+}
+.timeline .etapa .etiqueta{
+
+	 fill:rgb(0, 0, 0);
+}
+.timeline .etapa .numeros{
+
+	 fill:rgb(0, 0, 0);
 }
