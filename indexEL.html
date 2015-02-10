@@ -33,13 +33,22 @@
   <div id="browser_warning">
    <h3 class="text-muted">Su navegador no soporta algunas funciones modernas que son necesarias para el funcionamiento de esta página. Le sugerimos actualizar el navegador o probar con uno diferente.</h3>
    </div>
-
+    <script>
+    window.onload = function() {
+//codigo para ejecutar cuando se carga la pagina
+   if(!Modernizr.svg)
+        {
+        $(function(){
+        alert("SVG no es compatible con tu explorador");
+        });
+        }
+};
+ 
+</script>
   <!-- Contenedor principal -->
   <div class="container" ng-controller="AppController as controller">
 
-   <!-- DEMO DE LINEA DE TIEMPO -->
-   <div td-timeline ng-model="controller.estadoSeleccionado.primerano" td-template-url="'./templates/timeline.svg'" td-info-etapas="controller.data.misBeneficios.categorias[0].etapas"> </div>
-   <div>Etapa seleccioanda: {{controller.estadoSeleccionado.primerano}}</div>
+
 
    <!-- Encabezado -->
    <div class="head">
@@ -168,7 +177,7 @@
 
           <!-- Linea de tiempo - etapas -->
           <div class="col-xs-12 col-md-8 col-lg-6 margen">
-           <div class="btn-toolbar" role="toolbar">
+           <div class="btn-toolbar" role="toolbar" ng-show="Modernizr.svg">
             <div class="btn-group">
              <button type="button" ng-class="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'postulacion' ? 'btn btn-default active' : 'btn btn-default'" ng-click="controller.estadoSeleccionado[categoriaBeneficio.identificador] = 'postulacion';">Postulación</button>
             </div>
@@ -182,6 +191,12 @@
                <button type="button" ng-class="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'apelacion' ? 'btn btn-default active' : 'btn btn-default'" ng-click="controller.estadoSeleccionado[categoriaBeneficio.identificador] = 'apelacion';">Apelación</button>
             </div>          
            </div>
+
+            <!-- se esta probando tbn con javascript LINEA DE TIEMPO -->
+            <div class="inlinesvg" ng-show="!Modernizr.svg">
+                <div td-timeline ng-model="controller.estadoSeleccionado[categoriaBeneficio.identificador]" td-template-url="'./templates/timeline.svg'" td-info-etapas="controller.data.misBeneficios.categorias[0].etapas"> </div>
+                 <!--<div>Etapa seleccioanda: {{controller.estadoSeleccionado.primerano}}</div>-->
+            </div>
           </div><!-- Linea de tiempo - etapas -->
           
           <!-- Apelación -->
