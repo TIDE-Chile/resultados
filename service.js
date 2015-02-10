@@ -36,6 +36,24 @@ angular.module('tideApp')
     return deferred.promise;
   }
 
+  this.getDataRemota = function(rut) {
+    var deferred = $q.defer();
+
+    // Simple GET request example :
+    $http.jsonp("http://phpres-ca55fcb1-1.elaval.cont.tutum.io/index.php/resultados/"+rut+"?callback=JSON_CALLBACK").
+      success(function(data, status, headers, config) {
+        deferred.resolve(data)
+      }).
+      error(function(data, status, headers, config) {
+        deferred.reject(status)
+      });
+      
+    return deferred.promise;
+
+  }
+
+  
+
 
 }])
 
