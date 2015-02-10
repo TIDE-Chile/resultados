@@ -16,6 +16,8 @@ angular.module('tideApp')
 .service('DataService',['$q', '$http',function($q, $http) {
   var myself = this;
 
+  var apiUrl = "http://bcphp-95e000a0-1.elaval.cont.tutum.io";
+
   var host = './data';
   
  /*
@@ -40,7 +42,7 @@ angular.module('tideApp')
     var deferred = $q.defer();
 
     // Simple GET request example :
-    $http.jsonp("http://phpres-ca55fcb1-1.elaval.cont.tutum.io/index.php/resultados/"+rut+"?callback=JSON_CALLBACK").
+    $http.jsonp(apiUrl+"/index.php/resultados/"+rut+"?callback=JSON_CALLBACK").
       success(function(data, status, headers, config) {
         deferred.resolve(data)
       }).
