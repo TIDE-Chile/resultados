@@ -65,17 +65,13 @@ angular.module('tideApp')
             $tip.find('.close').bind('click', function () {
                 popover.hide();
             });
-<<<<<<< HEAD
+
         /*en prueba aun falta afinar mas esto */
         /*
          $("body").on('click',function(){
-=======
-            /*en prueba aun falta afinar mas esto */
-            $("body").on('click',function(){
->>>>>>> FETCH_HEAD
                 popover.hide();
              });
-*/
+        */
 
             $tip.mouseover(function () {
                 $tip.css('z-index', function () {
