@@ -21,6 +21,7 @@
   <!-- build:css({.tmp,app}) styles/main.css -->
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="colors.css">
+  <link rel="stylesheet" href="colorsTimeline.css">
   <!-- endbuild -->
   <script src="./bower_components/modernizr/modernizr.js"></script>
  </head>
@@ -29,12 +30,12 @@
    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
    <![endif]-->
 
-   <div id="browser_warning">
+  <div id="browser_warning">
     <h3 class="text-muted">Su navegador no soporta algunas funciones modernas que son necesarias para el funcionamiento de esta página. Le sugerimos actualizar el navegador o probar con uno diferente.</h3>
-   </div>
+  </div>
 
    <!-- Contenedor principal -->
-   <div class="container" ng-controller="AppController as controller">
+  <div class="container" ng-controller="AppController as controller">
     <!-- Encabezado -->
     <div class="head">
      <div class="row">
@@ -188,7 +189,7 @@
 
         <!-- Linea de tiempo - etapas -->
         <div class="col-xs-12 col-md-8 col-lg-6 margen">
-         <div class="btn-toolbar" role="toolbar">
+         <div class="btn-toolbar" role="toolbar" ng-show="Modernizr.inlinesvgs">
           <div class="btn-group">
            <button type="button" ng-class="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'postulacion' ? 'btn btn-default active' : 'btn btn-default'" ng-click="controller.estadoSeleccionado[categoriaBeneficio.identificador] = 'postulacion';">Postulación</button>
           </div>
@@ -202,6 +203,11 @@
            <button type="button" ng-class="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'apelacion' ? 'btn btn-default active' : 'btn btn-default'" ng-click="controller.estadoSeleccionado[categoriaBeneficio.identificador] = 'apelacion';">Apelación</button>
           </div>          
          </div>
+          <!-- se esta probando tbn con javascript LINEA DE TIEMPO -->
+          <div class="inlinesvg" ng-show="!Modernizr.inlinesvgs">
+              <div td-timeline ng-model="controller.estadoSeleccionado[categoriaBeneficio.identificador]" td-template-url="'./templates/timeline.svg'" td-info-etapas="controller.data.misBeneficios.categorias[0].etapas"> </div>
+                 <!--<div>Etapa seleccioanda: {{controller.estadoSeleccionado.primerano}}</div>-->
+          </div>         
         </div><!-- Linea de tiempo - etapas -->
 
         <!-- Apelación -->
@@ -215,7 +221,7 @@
 
        <!-- ETAPA: POSTULACION -->
        <!-- ------------------ -->
-       <div class="col-xs-12 col-md-12 col-lg-12 postulacion" ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'postulacion'">
+      <div class="col-xs-12 col-md-12 col-lg-12 postulacion" ng-show="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'postulacion'">
 
 
         <!-- Mensaje definición etapa -->
@@ -304,28 +310,49 @@
           <div style="height:20px;">{{beneficio.monto}}</div>
          </div><!-- Fin No cumple en preseleccion-->
         </div> 
+        <div  ng-if="categoriaBeneficio.nombre != 'Becas complementarias'">
+                  <div class="col-xs-12 col-md-12 col-lg-4">
+                   <div class="col-xs-2 col-md-1 col-lg-2 cambiarluegopreseleccionCumple">
+                    <div style="height:20px;"></div>
+                   </div>  
+                   <div class="col-xs-8 col-md-6 col-lg-8">
+                    <p><b>Cumple</b> requisitos para este beneficio</p>
 
-        <div class="col-xs-12 col-md-12 col-lg-4">
-         <div class="col-xs-2 col-md-1 col-lg-2 cambiarluegopreseleccionCumple">
-          <div style="height:20px;"></div>
-         </div>  
-         <div class="col-xs-8 col-md-6 col-lg-8">
-          <p><b>Cumple</b> requisitos para este beneficio</p>
+                   </div><!-- Fin Cumple en preseleccion-->
+                  </div> 
+                  <div class="col-xs-12 col-md-12 col-lg-4">  
+                   <div class="col-xs-2 col-md-1 col-lg-2 cambiarluegopreseleccionNocumple">
+                    <div style="height:20px;"></div>
+                   </div>  
+                   <div class="col-xs-8 col-md-6 col-lg-8">
+                    <p><b>No Cumple</b> requisitos para este beneficio</p>
+                   </div> 
+                  </div>
+        </div>
+        <!--solucion propuesta para que cuando hay pocas becas no quede horizontal -->
+        <div  ng-if="categoriaBeneficio.nombre == 'Becas complementarias'">
+                  <div class="col-xs-12 col-md-12 col-lg-8">
+                   <div class="col-xs-2 col-md-1 col-lg-1 cambiarluegopreseleccionCumple">
+                    <div style="height:20px;"></div>
+                   </div>  
+                   <div class="col-xs-8 col-md-6 col-lg-8">
+                    <p><b>Cumple</b> requisitos para este beneficio</p>
 
-         </div><!-- Fin Cumple en preseleccion-->
-        </div> 
-        <div class="col-xs-12 col-md-12 col-lg-4">  
-         <div class="col-xs-2 col-md-1 col-lg-2 cambiarluegopreseleccionNocumple">
-          <div style="height:20px;"></div>
-         </div>  
-         <div class="col-xs-8 col-md-6 col-lg-8">
-          <p><b>No Cumple</b> requisitos para este beneficio</p>
-         </div> 
+                   </div><!-- Fin Cumple en preseleccion-->
+                  </div> 
+                  <div class="col-xs-12 col-md-12 col-lg-8">  
+                   <div class="col-xs-2 col-md-1 col-lg-1 cambiarluegopreseleccionNocumple">
+                    <div style="height:20px;"></div>
+                   </div>  
+                   <div class="col-xs-8 col-md-6 col-lg-8">
+                    <p><b>No Cumple</b> requisitos para este beneficio</p>
+                   </div> 
+                  </div>
         </div>
         <!-- Mensajes Especiales preseleccion -->
-        <div  class="col-xs-12 col-md-12 col-lg-12 MensajesEspeciales" ng-repeat="mensaje in categoriaBeneficio.etapas.preseleccion.mensajesEspeciales">
+      <div  class="col-xs-12 col-md-12 col-lg-12 MensajesEspeciales" ng-repeat="mensaje in categoriaBeneficio.etapas.preseleccion.mensajesEspeciales">
          <p><b>Mensaje Especial {{$index+1}}: </b>{{mensaje}}</p>
-        </div><!-- Mensajes -->      
+      </div><!-- Mensajes -->      
        </div>
 
        <!-- ETAPA: ASIGNACION -->
@@ -484,6 +511,7 @@
   <script src="controllerAccordion.js"></script>
   <script src="service.js"></script>
   <script src="directive.js"></script>
+
   <!-- endbuild -->
  </body>
  </html>
