@@ -197,7 +197,7 @@
            <button type="button" ng-class="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'preseleccion' ? 'btn btn-default active' : 'btn btn-default'" ng-click="controller.estadoSeleccionado[categoriaBeneficio.identificador] = 'preseleccion';">Preselección</button>
           </div>
           <div class="btn-group">
-           <button type="button" class2="" ng-class="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'asignacion' ? 'btn btn-default active' : 'btn btn-default'" ng-click="controller.estadoSeleccionado[categoriaBeneficio.identificador] = 'asignacion';">Asignación</button>
+           <button type="button" class="" ng-class="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'asignacion' ? 'btn btn-default active' : 'btn btn-default'" ng-click="controller.estadoSeleccionado[categoriaBeneficio.identificador] = 'asignacion';">Asignación</button>
           </div>
           <div class="btn-group">
            <button type="button" ng-class="controller.estadoSeleccionado[categoriaBeneficio.identificador] == 'apelacion' ? 'btn btn-default active' : 'btn btn-default'" ng-click="controller.estadoSeleccionado[categoriaBeneficio.identificador] = 'apelacion';">Apelación</button>
@@ -205,7 +205,7 @@
          </div>
           <!-- se esta probando tbn con javascript LINEA DE TIEMPO -->
           <div class="inlinesvg" ng-show="!Modernizr.inlinesvgs">
-              <div td-timeline ng-model="controller.estadoSeleccionado[categoriaBeneficio.identificador]" td-template-url="'./templates/timeline.svg'" td-info-etapas="controller.data.misBeneficios.categorias[0].etapas"> </div>
+              <div td-timeline ng-model="controller.estadoSeleccionado[categoriaBeneficio.identificador]" td-template-url="'./templates/timeline.svg'" td-info-etapas="categoriaBeneficio.etapas"> </div>
                  <!--<div>Etapa seleccioanda: {{controller.estadoSeleccionado.primerano}}</div>-->
           </div>         
         </div><!-- Linea de tiempo - etapas -->
