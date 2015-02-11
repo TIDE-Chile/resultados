@@ -74,7 +74,7 @@
         <accordion-heading>
          <div class="row">
           <div class="col-xs-12 col-md-12 col-lg-12">
-           <p class="subtitulo"> Información Destacada <span style="color:blue;"><i class="glyphicon glyphicon-exclamation-sign"></i></span></p>
+           <p class="subtitulo"><i class="pull-left glyphicon iconoAccordeon" ng-class="{'glyphicon-chevron-down': controller.isOpenAccordion.mensajesDestacados, 'glyphicon-chevron-right': !controller.isOpenAccordion.mensajesDestacados}"></i> Información Destacada <span style="color:blue;"><i class="glyphicon glyphicon-exclamation-sign"></i></span></p>
           </div>
          </div>
         </accordion-heading>
@@ -93,11 +93,11 @@
        </accordion-group>
        <!--Accordion: Informacion Destacada-->
        <!--Accordion: Datos Postulante-->
-      <accordion-group is-open="controller.isOpenAccordion.datosPostulante">
+    <accordion-group is-open="controller.isOpenAccordion.datosPostulante">
       <accordion-heading>
        <div class="row">
         <div class="col-xs-12 col-md-12 col-lg-12">
-         <p class="subtitulo">Datos del Postulante (matrícula, acreditación)</p>
+         <p class="subtitulo"><i class="pull-left glyphicon iconoAccordeon" ng-class="{'glyphicon-chevron-down': controller.isOpenAccordion.datosPostulante, 'glyphicon-chevron-right': !controller.isOpenAccordion.datosPostulante}"></i> Datos del Postulante (matrícula, acreditación)</p>
         </div>
        </div>
       </accordion-heading>
@@ -152,19 +152,19 @@
     </accordion-group>
      <!--Accordion: Datos Postulante-->
      <!--Accordion: Mis Beneficios-->
-    <accordion-group  is-open="controller.isOpenAccordion.misBeneficios">
+<accordion-group  is-open="controller.isOpenAccordion.misBeneficios">
     <accordion-heading>
      <div class="row">
       <!--<div class="col-xs-12 col-md-12 col-lg-12">-->
 
       <!-- Titulo bloque -->
       <div class="col-xs-12 col-md-8 col-lg-8">
-       <p class="subtitulo" ng-show="controller.data.misBeneficios">Mis Beneficios (Postulados, En Proceso, Otorgados)</p>
+       <p class="subtitulo" ng-show="controller.data.misBeneficios"><i class="pull-left glyphicon iconoAccordeon" ng-class="{'glyphicon-chevron-down': controller.isOpenAccordion.misBeneficios, 'glyphicon-chevron-right': !controller.isOpenAccordion.misBeneficios}"></i> Mis Beneficios (Postulados, En Proceso, Otorgados)</p>
       </div><!-- Titulo bloque -->
 
       <!-- Monto otorgado -->
       <div class="col-xs-12 col-md-4 col-lg-4">
-       <p class="botorgado">Beneficio Otorgado: <spam style="color:red;">{{controller.data.misBeneficios.montoOtorgado | currency:fractionSize:0}}</spam></p>
+       <p class="botorgado">Beneficio Otorgado: <spam style="color:red;">{{(controller.data.misBeneficios.montoOtorgado | currency).slice(0,-3) }}</spam></p> <!-- solucion 1  era para angularjs 1.3 : {{controller.data.misBeneficios.montoOtorgado | currency:fractionSize:0}} -->
       </div><!-- Monto otorgado -->
 
       <!--</div> por ahora no es necesario-->
@@ -292,7 +292,7 @@
           </div>
 
           <div>{{beneficio.sigla}}</div>      
-          <div style="height:20px;">{{beneficio.monto}}</div>
+          <div style="height:20px;">{{beneficio.monto }}</div>
          </div><!-- Fin Cumple en preseleccion-->
          <!--Inicio de No cumple en preseleccion-->
          <div class="col-xs-5 col-md-2 col-lg-1 cambiarluegopreseleccionNocumple " id="{{categoriaBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'" ng-if="beneficio.estado == 'noCumpleRequisitos' || beneficio.estado == 'noCumple'">
@@ -388,7 +388,7 @@
           <div>{{beneficio.sigla}}</div>
           <!-- monto > 0 || = 0 -->
             <div ng-if="beneficio.monto > 0">      
-                <div style="height:20px;">{{beneficio.monto | currency:fractionSize:0}}</div>
+                <div style="height:20px;">{{(beneficio.monto | currency).slice(0,-3) }}</div>
             </div>
             <div ng-if="beneficio.monto == 0">      
                 <div style="height:20px;"></div>
@@ -436,7 +436,7 @@
           <div>{{beneficio.sigla}}</div>      
           <!-- monto > 0 || = 0 -->
             <div ng-if="beneficio.monto > 0">      
-                <div style="height:20px;">{{beneficio.monto | currency:fractionSize:0}}</div>
+                <div style="height:20px;">{{(beneficio.monto | currency).slice(0,-3) }}</div>
             </div>
             <div ng-if="beneficio.monto == 0">      
                 <div style="height:20px;"></div>

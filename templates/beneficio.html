@@ -1,11 +1,12 @@
 <div>
 	<div ng-show="beneficio.estado=='asignado'"> 
-		Usted ha sido beneficado(a) con la <b>{{beneficio.nombre}}</b> y ha obtenido el siguiente monto anual:
+		<div>Usted ha sido beneficado(a) con la <b>{{beneficio.nombre}}</b> y ha obtenido el siguiente monto anual:</div>
 		<!--style convertir en clase cuando ya sea definitivo-->
 		<div style="text-aling:center;">
-				<div style="position:relative; left:10%; border:1px solid red; padding:5px; width:50%;">Monto Obtenido: <b>{{beneficio.monto}}</b></div>
+				<div style="position:relative; left:10%; border:2px solid red; padding:5px; width:60%;margin:15px;font-size:18px;"> Monto Obtenido: <b>{{(beneficio.monto | currency).slice(0,-3) }}</b></div>
 		</div>
-		<div>Pincha aquí para ver los pasos a seguir</div>
+		<div><i class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i> Pincha aquí para ver los pasos a seguir</div>
+		<div>{{beneficio.pasos}}</div>
 	</div>
 	<div ng-show="beneficio.estado=='noAsignado'"> 
 		<div>Usted <b>no ha sido beneficiado</b> con esta beca. Los motivos son:  </div>
