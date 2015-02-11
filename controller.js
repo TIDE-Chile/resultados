@@ -87,5 +87,11 @@ angular.module('tideApp')
     myself.errorMsg="Error al consultar los datos";
   })
 
+/*mostrar/ocultar texto popup ver pasos..*/  
+this.pasos = {
+  show : false
+}
+
+
 
 }]);
