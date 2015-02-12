@@ -96,7 +96,7 @@ angular.module('tideApp')
 this.pasos = {
   show : false
 }
-
-
+/*barra de progreso al cargar pagina*/
+this.procressbar = 20;
 
 }]);
