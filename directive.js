@@ -49,13 +49,21 @@ angular.module('tideApp')
       element.on('shown.bs.popover', function (e) {
         var popover = element.data('bs.popover');
 
-        //Ocultar todos los popovers excepto el mío
+        /*Ocultar todos los popovers excepto el mío prueba 2
         $('.popover').each(function() {
             if ($(this).attr("id") != popover.$tip.attr("id")) {
                 $(this).popover('hide'); 
             }
         }); 
-
+        */
+        //ocultar todos los popovers al hacer click fuera del mismo popover prueba 3
+        $('html').on('mouseup', function(e) {
+            if(!$(e.target).closest('.popover').length) {
+                $('.popover').each(function(){
+                    $(this).popover('hide');
+                });
+            }
+        });
 
 
     if (typeof popover !== "undefined") {

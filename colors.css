@@ -118,7 +118,35 @@ border-color: rgb(226, 238, 121);
 
 }
 
+/*
+Colores de Tooltip 
+*/
+.tooltip-inner {
+    color: black;
+    background-color:rgb(252, 211, 135);
+    border: 2px black solid;
+}
+.tooltip-inner strong {
+    font-size: 16px;
+}
+.tooltip.in {
+    opacity: 1;
+}
+/* en prueba ..
+.tooltip.top .tooltip-arrow {
+    border-top-color: rgb(252, 211, 135);
+}
 
+.tooltip.right .tooltip-arrow {
+    border-right-color:rgb(252, 211, 135);
+}
 
+.tooltip.left .tooltip-arrow {
+    border-left-color: rgb(252, 211, 135);
+}
 
+.tooltip.bottom .tooltip-arrow {
+    border-bottom-color: rgb(252, 211, 135);
+}
 
+*/

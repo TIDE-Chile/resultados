@@ -1,6 +1,7 @@
 /* Colores en línea de tiempo */
 .timeline .etapa{
   fill:white;
+  cursor: pointer;
 }
 
 .timeline .etapa:hover{
@@ -24,3 +25,16 @@ r:15px;
 
 	 fill:rgb(0, 0, 0);
 }
+/*Linea de tiempo Display Small */
+@media (max-width: 767px) {
+
+.timeline .etapa {
+  
+  font-size: 10px;
+}
+
+.timeline .etapa.active {
+  fill:rgba(255, 168, 52, 1);
+  font-size: 12px;
+}
+ }
