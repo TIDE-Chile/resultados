@@ -78,12 +78,17 @@ angular.module('tideApp')
     misBeneficios : false
   };
 
+  this.loading = true;
+  this.errorMsg=null;
+
   dataService.getData(this.rut)
   .then(function(data) {
+    myself.loading = false;
     iniciaEtapaSeleccionada(data);
     myself.data = data;
   })
   .catch(function(error) {
+    myself.loading = false;
     myself.errorMsg="Error al consultar los datos";
   })
 
