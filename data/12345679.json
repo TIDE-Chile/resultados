@@ -77,13 +77,15 @@
 								"sigla":"BVP",
 								"nombre":"Beca Vocacion de Profesor",
 								"estado":"cumpleRequisitos",
-								"pasos":""
+								"pasos":"",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
 							},
 							{
 								"sigla":"BJGM",
 								"nombre":"Beca Juan Gómez Millas",
 								"estado":"cumpleRequisitos",
-								"pasos":""
+								"pasos":"",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
 							},
 							{
 								"sigla":"BEA",
@@ -97,7 +99,8 @@
 										"descripcion":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":""
+								"pasos":"",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
 							},
 							{
 								"sigla":"BHPE",
@@ -112,7 +115,8 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":""
+								"pasos":"",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
 							},
 							{
 								"sigla":"BNM",
@@ -127,7 +131,8 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":""
+								"pasos":"",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
 							},
 							{
 								"sigla":"BET",
@@ -142,7 +147,8 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":""
+								"pasos":"",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
 							},
 							{
 								"sigla":"BART",
@@ -157,7 +163,8 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":""
+								"pasos":"",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
 							}
 						]
 					},
@@ -182,7 +189,8 @@
 								"nombre":"Beca Juan Gómez Millas",
 								"estado":"asignado",
 								"monto":"450000",
-								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
 							},
 							{
 								"sigla":"BEA",
@@ -197,7 +205,8 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
 							},
 							{
 								"sigla":"BHPE",
@@ -212,8 +221,8 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
-							},
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."		},
 							{
 								"sigla":"BNM",
 								"nombre":"Beca Nuevo Milenio",
@@ -227,7 +236,8 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
 							},
 							{
 								"sigla":"BET",
@@ -242,7 +252,8 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
 							},
 							{
 								"sigla":"BART",
@@ -257,7 +268,8 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
 							}
 						]
 					},
@@ -277,14 +289,16 @@
 								"nombre":"Beca Vocacion de Profesor",
 								"estado":"asignado",
 								"monto":"1100000",
-								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
 							},
 							{
 								"sigla":"BJGM",
 								"nombre":"Beca Juan Gómez Millas",
 								"estado":"asignado",
 								"monto":"450000",
-								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
 							},
 							{
 								"sigla":"BEA",
@@ -299,7 +313,8 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
 							},
 							{
 								"sigla":"BHPE",
@@ -314,7 +329,8 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
 							},
 							{
 								"sigla":"BNM",
@@ -329,7 +345,8 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
 							},
 							{
 								"sigla":"BET",
@@ -344,7 +361,8 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
 							},
 							{
 								"sigla":"BART",
@@ -359,7 +377,8 @@
 										"contenido":  "Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
-								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
+								"pasos":"Los pasos a seguir son ... lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
 							}
 						]
 					}
