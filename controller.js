@@ -53,7 +53,7 @@ angular.module('tideApp')
   } ();
 
   // Parámetro (RUT) siendo buscado
-  this.rut = QueryString.rut ? QueryString.rut : "12345678";
+  this.rut = QueryString.rut ? QueryString.rut : "12345678B";
 
 
  /*
@@ -61,12 +61,12 @@ angular.module('tideApp')
   * Asigna valores iniciales para la etapa seleccionada de cada proceso
   */
   var iniciaEtapaSeleccionada = function(data) {
-    if (data && data.misBeneficios && data.misBeneficios.categorias) {
-      // Recorre cada una de las categorías en los datos
-      angular.forEach(data.misBeneficios.categorias, function(categoria) {
-        var idCategoria = categoria.identificador;
-        var etapaActual = categoria.etapaActual;
-        myself.estadoSeleccionado[idCategoria] = etapaActual;
+    if (data && data.misBeneficios && data.misBeneficios.procesos) {
+      // Recorre cada una de las Procesos en los datos
+      angular.forEach(data.misBeneficios.procesos, function(procesos) {
+        var idProcesos = procesos.identificador;
+        var etapaActual = procesos.etapaActual;
+        myself.estadoSeleccionado[idProcesos] = etapaActual;
       })
     }
   }

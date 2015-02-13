@@ -1,0 +1,23 @@
+  <!--Accordion: Informacion Destacada-->
+      <accordion-group is-open="controller.isOpenAccordion.mensajesDestacados">
+        <accordion-heading>
+         <div class="row">
+          <div class="col-xs-12 col-md-12 col-lg-12">
+           <p class="subtitulo"><i class="pull-left glyphicon iconoAccordeon" ng-class="{'glyphicon-chevron-down': controller.isOpenAccordion.mensajesDestacados, 'glyphicon-chevron-right': !controller.isOpenAccordion.mensajesDestacados}"></i> Información Destacada <span style="color:blue;"><i class="glyphicon glyphicon-exclamation-sign"></i></span></p>
+          </div>
+         </div>
+        </accordion-heading>
+        <!--Cuerpo de Informacion Destacada-->
+        <!-- Bloque 1 - Información destacada -->
+        <div class="divmayor bloqueInformacion">
+         <div class="row">
+
+          <div class="col-xs-12 col-md-12 col-lg-12">
+           <ul class="list-unstyled">
+            <li ng-repeat="(i, msg) in controller.data.mensajesDestacados"><span style="color:blue;"><i class="glyphicon glyphicon-exclamation-sign"></i></span> Mensaje General {{$index+1}}: {{msg}}</li>
+           </ul>
+          </div>
+         </div>
+        </div><!-- Bloque 1 - Información destacada -->
+       </accordion-group>
+ <!--Accordion: Informacion Destacada-->

@@ -376,3 +376,8 @@ text-align: right;
   margin:15px;
   font-size:18px;
 }
+
+
+.progress-bar { 
+  transition: width 1s ease-in-out; 
+}

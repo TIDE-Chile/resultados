@@ -1,0 +1,59 @@
+  <!--Accordion: Datos Postulante-->
+    <accordion-group is-open="controller.isOpenAccordion.datosPostulante">
+      <accordion-heading>
+       <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+         <p class="subtitulo"><i class="pull-left glyphicon iconoAccordeon" ng-class="{'glyphicon-chevron-down': controller.isOpenAccordion.datosPostulante, 'glyphicon-chevron-right': !controller.isOpenAccordion.datosPostulante}"></i> Datos del Postulante (matrícula, acreditación)</p>
+        </div>
+       </div>
+      </accordion-heading>
+      <!--Cuerpo de Datos Postulante-->
+      <!-- Bloque 2 - Datos del Postulante -->
+    <div class="divmayor bloqueInformacion">
+       <!-- Recuadro matricula -->
+      <div class="rectangulo recuadroProceso" id="datospostulante" ng-repeat="datospostulante in controller.data.datosPostulante">
+        <div class="row" >
+
+        <!-- Tabla de datos -->             
+        <div class="col-xs-12 col-md-7 col-lg-7">
+          <h4 ng-show="datospostulante" class="cursos"> {{datospostulante.nombre}}</h4>
+
+          <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Matriculado en:</h5></div>
+          <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue">{{datospostulante.institucion}}</b></h5></div>
+
+          <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Carrera:</h5></div>
+          <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue">{{datospostulante.carrera}}</b></h5></div>
+
+          <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Acreditado en:</h5></div>
+          <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue">{{datospostulante.acreditadoEn}}</b></h5></div>
+
+          <div class=" col-xs-12 col-md-12 col-lg-4"><h5>Fecha de Acreditación:</h5></div>
+          <div class=" col-xs-12 col-md-12 col-lg-8"><h5><b class="colorblue"> {{datospostulante.fechaAcreditacion}}</b></h5></div>
+
+         </div><!-- Tabla de datos --> 
+
+         <!-- Recuadros evaluación -->  
+         <div class=" col-xs-12 col-md-5 col-lg-5"> 
+          <h5>Con esta información fuiste evaluado:</h5>
+
+          <div class="rectangulo"> 
+           <div class="row">
+
+            <span ng-repeat="item in datospostulante.datosEvaluacion">
+             <div class="col-xs-6 col-md-4 col-lg-4"> 
+              <!-- Recuadro evaluacion --> 
+              <div class="infoevaluacion">
+               <div class="infosuperior">{{item.etiqueta}}:</div>
+               <div class="infoinferior">{{item.valor}}</div> 
+              </div> <!-- Recuadro evaluacion -->
+             </div>
+            </span>
+
+           </div><!--row -->
+          </div><!--rectangulo -->
+         </div><!-- Recuadros evaluación -->
+        </div><!--row -->
+      </div> <!-- Recuadro matricula -->
+    </div><!-- Bloque 2 - Datos del Postulante -->
+    </accordion-group>
+  <!--Accordion: Datos Postulante-->
