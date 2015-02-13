@@ -99,4 +99,11 @@ this.pasos = {
 /*barra de progreso al cargar pagina*/
 this.procressbar = 20;
 
+var isUndefined = function(val) {
+  if(angular.isUndefinedOrNull(val))
+    return true;
+ 
+return false;
+};
+
 }]);

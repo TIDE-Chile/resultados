@@ -56,7 +56,7 @@
     </div><!-- Encabezado -->
 
     <!-- Bloques de información -->
-    <div class="row">
+    <div class="row"  ng-cloak>
 
      <!-- Identificación del estudiante (RUT) -->
      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align:right;">
@@ -212,7 +212,7 @@
 
         <!-- Apelación -->
         <div class="col-xs-12 col-md-12 col-lg-4 margen2">
-         <button type="button" class="btn btn-default md">Apelar {{categoriaBeneficio.nombre}}</button>
+         <a  ng-show="controller.isUndefined=categoriaBeneficio.urlApelacion" class="btn btn-default md" href="{{categoriaBeneficio.urlApelacion}}" target="_blank">Apelar {{categoriaBeneficio.nombre}}</a>
         </div>
        </div>
       </div><!-- row -->
@@ -508,7 +508,6 @@
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
   <script src="app.js"></script>
   <script src="controller.js"></script>
-  <script src="controllerAccordion.js"></script>
   <script src="service.js"></script>
   <script src="directive.js"></script>
 
