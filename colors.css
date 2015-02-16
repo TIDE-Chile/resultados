@@ -150,3 +150,32 @@ Colores de Tooltip
 }
 
 */
+
+/* Colores en línea de tiempo */
+.timeline .etapa{
+  fill:white;
+}
+
+.timeline .etapa:hover{
+  fill:#FBFBFB;
+}
+
+.timeline .etapa.active {
+  fill:rgba(255, 168, 52, 1);
+}
+
+.timeline .etapa .etiqueta{
+
+   fill:rgb(0, 0, 0);
+}
+.timeline .etapa .numeros{
+
+   fill:rgb(0, 0, 0);
+}
+/*Linea de tiempo Small */
+@media (max-width: 767px) {
+
+.timeline .etapa.active {
+  fill:rgba(255, 168, 52, 1);
+}
+}

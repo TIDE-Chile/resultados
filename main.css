@@ -381,3 +381,29 @@ text-align: right;
 .progress-bar { 
   transition: width 1s ease-in-out; 
 }
+
+/* línea de tiempo */
+.timeline .etapa{
+  cursor: pointer;
+}
+
+.timeline .etapa.active {
+  font-size: 17px;
+}
+
+.timeline .etapa .cicule{
+r:15px;
+}
+
+/*Linea de tiempo Small */
+@media (max-width: 767px) {
+
+.timeline .etapa {
+  
+  font-size: 10px;
+}
+
+.timeline .etapa.active {
+  font-size: 12px;
+}
+}
