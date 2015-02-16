@@ -1,0 +1,737 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "/",
+	"type": "object",
+	"title": "Root schema.",
+	"description": "Datos con resultados de asignaciones de beneficios a un postulante.",
+	"name": "/",
+	"properties": {
+		"rut": {
+			"id": "rut",
+			"type": "string",
+			"title": "Rut postulate.",
+			"description": "RUT del postulante.",
+			"name": "rut"
+		},
+		"fechaActualizacion": {
+			"id": "fechaActualizacion",
+			"type": "string",
+			"title": "Fecha de Actualizacion.",
+			"description": "Fecha de actualización de los datos.",
+			"name": "fechaActualizacion"
+		},
+		"mensajesDestacados": {
+			"id": "mensajesDestacados",
+			"type": "array",
+			"title": "Mensajes Destacados.",
+			"description": "Mensajes destacados a presentar al postulante.",
+			"name": "mensajesDestacados",
+			"items": {
+				"id": "1",
+				"type": "string",
+				"title": "Mensaje",
+				"description": "Texto del mensaje.",
+				"name": "1"
+			}
+		},
+		"datosPostulante": {
+			"id": "datosPostulante",
+			"type": "array",
+			"title": "Datos del Postulante.",
+			"description": "Datos del postulante utilizados en la asignación de los beneficios para cada proceso.",
+			"name": "datosPostulante",
+			"items": {
+				"id": "1",
+				"type": "object",
+				"title": "1 schema.",
+				"description": "Datos del postulante correpondientes a un proceso en particular.",
+				"name": "1",
+				"properties": {
+					"identificador": {
+						"id": "identificador",
+						"type": "string",
+						"title": "Identificador del proceso.",
+						"description": "Identificador del proceso (Ej. matriculaPrimerAno).",
+						"name": "identificador"
+					},
+					"nombre": {
+						"id": "nombre",
+						"type": "string",
+						"title": "Nombre del proceso.",
+						"description": "Nombre del proceso (Ej. Matricula Primer Año).",
+						"name": "nombre"
+					},
+					"institucion": {
+						"id": "institucion",
+						"type": "string",
+						"title": "Institucion.",
+						"description": "Institución en la cual se encuentra matriculado.",
+						"name": "institucion"
+					},
+					"carrera": {
+						"id": "carrera",
+						"type": "string",
+						"title": "Carrera.",
+						"description": "Carrera en la cual se encuentra matriculado.",
+						"name": "carrera"
+					},
+					"acreditadoEn": {
+						"id": "acreditadoEn",
+						"type": "string",
+						"title": "Acreditado en.",
+						"description": "Institución en la cual se acreditan los datos.",
+						"name": "acreditadoEn"
+					},
+					"fechaAcreditacion": {
+						"id": "fechaAcreditacion",
+						"type": "string",
+						"title": "Fechade Acreditacion.",
+						"description": "Fecha de acreditación.",
+						"name": "fechaAcreditacion"
+					},
+					"datosEvaluacion": {
+						"id": "datosEvaluacion",
+						"type": "array",
+						"title": "Datos de Evaluacion.",
+						"description": "Datos con los cuales fue evaluado elpostulante en el respectivo proceso.",
+						"name": "datosEvaluacion",
+						"items": {
+							"id": "5",
+							"type": "object",
+							"title": "5 schema.",
+							"description": "Item de datos utilzado en la evaluación (Ej. datos de NEM).",
+							"name": "5",
+							"properties": {
+								"etiqueta": {
+									"id": "etiqueta",
+									"type": "string",
+									"title": "Etiqueta del dato.",
+									"description": "Etiqueta del item de dato (Ej. NEM)",
+									"name": "etiqueta"
+								},
+								"valor": {
+									"id": "valor",
+									"type": "string",
+									"title": "Valor.",
+									"description": "Valor del item de dato (Ej '650').",
+									"name": "valor"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"misBeneficios": {
+			"id": "misBeneficios",
+			"type": "object",
+			"title": "Mis Beneficios.",
+			"description": "Información de los beneficios asociados al postulante.",
+			"name": "misBeneficios",
+			"properties": {
+				"montoOtorgado": {
+					"id": "montoOtorgado",
+					"type": "string",
+					"title": "Monto otorgado.",
+					"description": "Monto total de beneficios otorgados.",
+					"name": "montoOtorgado"
+				},
+				"mensajeBeneficios": {
+					"id": "mensajeBeneficios",
+					"type": "string",
+					"title": "Mensaje beneficios.",
+					"description": "Mensaje global asociado a la sección de beneficios.",
+					"name": "mensajeBeneficios"
+				},
+				"procesos": {
+					"id": "procesos",
+					"type": "array",
+					"title": "Procesos.",
+					"description": "Conjunto de procesos para los cuales hay información de beneficios.",
+					"name": "procesos",
+					"items": {
+						"id": "2",
+						"type": "object",
+						"title": "Item de procesos.",
+						"description": "Item con datos de un proceso en particular (Ej datos del proceso de cursos superiores).",
+						"name": "2",
+						"properties": {
+							"identificador": {
+								"id": "identificador",
+								"type": "string",
+								"title": "Identificador proceso.",
+								"description": "Identificador del proceso (Ej. 'superiores').",
+								"name": "identificador"
+							},
+							"nombre": {
+								"id": "nombre",
+								"type": "string",
+								"title": "Nombre proceso.",
+								"description": "Nombre del proceso (Ej: Cursos superiores).",
+								"name": "nombre"
+							},
+							"etapaActual": {
+								"id": "etapaActual",
+								"type": "string",
+								"title": "Etapa actual.",
+								"description": "Identificador de la etapa actual asociada al proceso ['postulacion'|'preseleccion'|'asignacion'|'apelacion'].",
+								"name": "etapaActual"
+							},
+							"urlApelacion": {
+								"id": "urlApelacion",
+								"type": "string",
+								"title": "Url para apelacion.",
+								"description": "URL para realizar una apelación a este proceso.",
+								"name": "urlApelacion"
+							},
+							"mensajeProceso": {
+								"id": "mensajeProceso",
+								"type": "string",
+								"title": "MensajeProceso.",
+								"description": "Mensaje general asociado al proceso.",
+								"name": "mensajeProceso"
+							},
+							"etapas": {
+								"id": "etapas",
+								"type": "object",
+								"title": "Etapas.",
+								"description": "Información asociada a cada una de las etapas de un proceso ['postulacion', 'preseleccion', 'asignacion', 'apelacion'] .",
+								"name": "etapas",
+								"properties": {
+									"postulacion": {
+										"id": "postulacion",
+										"type": "object",
+										"title": "Etapa de Postulación.",
+										"description": "Datos asociados a la etapa de postulación.",
+										"name": "postulacion",
+										"properties": {
+											"mensajeTooltip": {
+												"id": "mensajeTooltip",
+												"type": "string",
+												"title": "Mensaje Tooltip.",
+												"description": "Mensaje breve descriptivo de la etapa que se recomeinda presentar como 'Tooltip' en botones de selección de la etapa.",
+												"name": "mensajeTooltip"
+											},
+											"mensajeDefinicion": {
+												"id": "mensajeDefinicion",
+												"type": "string",
+												"title": "Mensaje de Definicion.",
+												"description": "Mensaje con definición de la etapa.",
+												"name": "mensajeDefinicion"
+											},
+											"mensajesGenerales": {
+												"id": "mensajesGenerales",
+												"type": "array",
+												"title": "Mensajes Generales.",
+												"description": "Conjunto de mensajes generales con información al postulante.",
+												"name": "mensajesGenerales",
+												"items": {
+													"id": "0",
+													"type": "string",
+													"title": "Mensaje.",
+													"description": "Texto del mensaje general.",
+													"name": "0"
+												}
+											},
+											"mensajesEspeciales": {
+												"id": "mensajesEspeciales",
+												"type": "array",
+												"title": "Mensajes Especiales.",
+												"description": "Mensajes especiales para el postulante asociados a la etapa respectiva.",
+												"name": "mensajesEspeciales",
+												"items": {
+													"id": "1",
+													"type": "string",
+													"title": "Mensaje.",
+													"description": "Texto del mensaje especial.",
+													"name": "1"
+												}
+											},
+											"beneficios": {
+												"id": "beneficios",
+												"type": "array",
+												"title": "Beneficios.",
+												"description": "Conjunto de beneficios asociados a la etapa en el proceso respectivo.",
+												"name": "beneficios",
+												"items": {
+													"id": "3",
+													"type": "object",
+													"title": "Beneficio.",
+													"description": "Datos asociados a un beneficio específico al cual se ha postulado.",
+													"name": "3",
+													"properties": {
+														"sigla": {
+															"id": "sigla",
+															"type": "string",
+															"title": "Sigla beneficio.",
+															"description": "Sigla o nombre abreviado del beneficio (Ej. BVP).",
+															"name": "sigla"
+														},
+														"nombre": {
+															"id": "nombre",
+															"type": "string",
+															"title": "Nombre beneficio.",
+															"description": "Nombre del beneficio (Ej. Beca Vocación de profesor.",
+															"name": "nombre"
+														},
+														"estado": {
+															"id": "estado",
+															"type": "string",
+															"title": "Estado beneficio.",
+															"description": "Estado o condición asociada al beneficio ['cumpleRequisitos'|'noCumpleRequisitos'|'asignado'|'noAsignado'].",
+															"name": "estado"
+														},
+														"monto": {
+															"id": "monto",
+															"type": "string",
+															"title": "Monto beneficio.",
+															"description": "Monto asignado al beneficio (número entero).",
+															"name": "monto"
+														},
+														"motivos": {
+															"id": "motivos",
+															"type": "array",
+															"title": "Motivos.",
+															"description": "Motivos de la no asignación o no cumplimiento de requisitos.",
+															"name": "motivos",
+															"items": {
+																"id": "1",
+																"type": "object",
+																"title": "Motivo.",
+																"description": "Descripticón del motivo de no asignación o no cumplimiento.",
+																"name": "1",
+																"properties": {
+																	"contenido": {
+																		"id": "contenido",
+																		"type": "string",
+																		"title": "Texto motivo.",
+																		"description": "Texto descriptivo del motivo de no asignación o no cumplimiento.",
+																		"name": "contenido"
+																	}
+																}
+															}
+														},
+														"pasos": {
+															"id": "pasos",
+															"type": "string",
+															"title": "Pasos a seguir.",
+															"description": "Texto descriptivo de los pasos a seguir.",
+															"name": "pasos"
+														},
+														"urlBeneficio": {
+															"id": "urlBeneficio",
+															"type": "string",
+															"title": "Url beneficio.",
+															"description": "URL a una página con descripción del beneficio.",
+															"name": "urlBeneficio"
+														}
+													}
+												}
+											}
+										}
+									},
+									"preseleccion": {
+										"id": "preseleccion",
+										"type": "object",
+										"title": "Etapa de Preselección.",
+										"description": "Datos asociados a la etapa de preseleccion.",
+										"name": "preseleccion",
+										"properties": {
+											"mensajeTooltip": {
+												"id": "mensajeTooltip",
+												"type": "string",
+												"title": "Mensaje Tooltip.",
+												"description": "Mensaje breve descriptivo de la etapa que se recomeinda presentar como 'Tooltip' en botones de selección de la etapa.",
+												"name": "mensajeTooltip"
+											},
+											"mensajeDefinicion": {
+												"id": "mensajeDefinicion",
+												"type": "string",
+												"title": "Mensaje de Definicion.",
+												"description": "Mensaje con definición de la etapa.",
+												"name": "mensajeDefinicion"
+											},
+											"mensajesGenerales": {
+												"id": "mensajesGenerales",
+												"type": "array",
+												"title": "Mensajes Generales.",
+												"description": "Conjunto de mensajes generales con información al postulante.",
+												"name": "mensajesGenerales",
+												"items": {
+													"id": "0",
+													"type": "string",
+													"title": "Mensaje.",
+													"description": "Texto del mensaje general.",
+													"name": "0"
+												}
+											},
+											"mensajesEspeciales": {
+												"id": "mensajesEspeciales",
+												"type": "array",
+												"title": "Mensajes Especiales.",
+												"description": "Mensajes especiales para el postulante asociados a la etapa respectiva.",
+												"name": "mensajesEspeciales",
+												"items": {
+													"id": "1",
+													"type": "string",
+													"title": "Mensaje.",
+													"description": "Texto del mensaje especial.",
+													"name": "1"
+												}
+											},
+											"beneficios": {
+												"id": "beneficios",
+												"type": "array",
+												"title": "Beneficios.",
+												"description": "Conjunto de beneficios asociados a la etapa en el proceso respectivo.",
+												"name": "beneficios",
+												"items": {
+													"id": "3",
+													"type": "object",
+													"title": "Beneficio.",
+													"description": "Datos asociados a un beneficio específico al cual se ha postulado.",
+													"name": "3",
+													"properties": {
+														"sigla": {
+															"id": "sigla",
+															"type": "string",
+															"title": "Sigla beneficio.",
+															"description": "Sigla o nombre abreviado del beneficio (Ej. BVP).",
+															"name": "sigla"
+														},
+														"nombre": {
+															"id": "nombre",
+															"type": "string",
+															"title": "Nombre beneficio.",
+															"description": "Nombre del beneficio (Ej. Beca Vocación de profesor.",
+															"name": "nombre"
+														},
+														"estado": {
+															"id": "estado",
+															"type": "string",
+															"title": "Estado beneficio.",
+															"description": "Estado o condición asociada al beneficio ['cumpleRequisitos'|'noCumpleRequisitos'|'asignado'|'noAsignado'].",
+															"name": "estado"
+														},
+														"monto": {
+															"id": "monto",
+															"type": "string",
+															"title": "Monto beneficio.",
+															"description": "Monto asignado al beneficio (número entero).",
+															"name": "monto"
+														},
+														"motivos": {
+															"id": "motivos",
+															"type": "array",
+															"title": "Motivos.",
+															"description": "Motivos de la no asignación o no cumplimiento de requisitos.",
+															"name": "motivos",
+															"items": {
+																"id": "1",
+																"type": "object",
+																"title": "Motivo.",
+																"description": "Descripticón del motivo de no asignación o no cumplimiento.",
+																"name": "1",
+																"properties": {
+																	"contenido": {
+																		"id": "contenido",
+																		"type": "string",
+																		"title": "Texto motivo.",
+																		"description": "Texto descriptivo del motivo de no asignación o no cumplimiento.",
+																		"name": "contenido"
+																	}
+																}
+															}
+														},
+														"pasos": {
+															"id": "pasos",
+															"type": "string",
+															"title": "Pasos a seguir.",
+															"description": "Texto descriptivo de los pasos a seguir.",
+															"name": "pasos"
+														},
+														"urlBeneficio": {
+															"id": "urlBeneficio",
+															"type": "string",
+															"title": "Url beneficio.",
+															"description": "URL a una página con descripción del beneficio.",
+															"name": "urlBeneficio"
+														}
+													}
+												}
+											}
+										}
+									},
+									"asignacion": {
+										"id": "asignacion",
+										"type": "object",
+										"title": "Asignacion schema.",
+										"description": "An explanation about the puropose of this instance described by this schema.",
+										"name": "asignacion",
+										"properties": {
+											"mensajeTooltip": {
+												"id": "mensajeTooltip",
+												"type": "string",
+												"title": "Mensaje Tooltip.",
+												"description": "Mensaje breve descriptivo de la etapa que se recomeinda presentar como 'Tooltip' en botones de selección de la etapa.",
+												"name": "mensajeTooltip"
+											},
+											"mensajeDefinicion": {
+												"id": "mensajeDefinicion",
+												"type": "string",
+												"title": "Mensaje de Definicion.",
+												"description": "Mensaje con definición de la etapa.",
+												"name": "mensajeDefinicion"
+											},
+											"mensajesGenerales": {
+												"id": "mensajesGenerales",
+												"type": "array",
+												"title": "Mensajes Generales.",
+												"description": "Conjunto de mensajes generales con información al postulante.",
+												"name": "mensajesGenerales",
+												"items": {
+													"id": "0",
+													"type": "string",
+													"title": "Mensaje.",
+													"description": "Texto del mensaje general.",
+													"name": "0"
+												}
+											},
+											"mensajesEspeciales": {
+												"id": "mensajesEspeciales",
+												"type": "array",
+												"title": "Mensajes Especiales.",
+												"description": "Mensajes especiales para el postulante asociados a la etapa respectiva.",
+												"name": "mensajesEspeciales",
+												"items": {
+													"id": "1",
+													"type": "string",
+													"title": "Mensaje.",
+													"description": "Texto del mensaje especial.",
+													"name": "1"
+												}
+											},
+											"beneficios": {
+												"id": "beneficios",
+												"type": "array",
+												"title": "Beneficios.",
+												"description": "Conjunto de beneficios asociados a la etapa en el proceso respectivo.",
+												"name": "beneficios",
+												"items": {
+													"id": "3",
+													"type": "object",
+													"title": "Beneficio.",
+													"description": "Datos asociados a un beneficio específico al cual se ha postulado.",
+													"name": "3",
+													"properties": {
+														"sigla": {
+															"id": "sigla",
+															"type": "string",
+															"title": "Sigla beneficio.",
+															"description": "Sigla o nombre abreviado del beneficio (Ej. BVP).",
+															"name": "sigla"
+														},
+														"nombre": {
+															"id": "nombre",
+															"type": "string",
+															"title": "Nombre beneficio.",
+															"description": "Nombre del beneficio (Ej. Beca Vocación de profesor.",
+															"name": "nombre"
+														},
+														"estado": {
+															"id": "estado",
+															"type": "string",
+															"title": "Estado beneficio.",
+															"description": "Estado o condición asociada al beneficio ['cumpleRequisitos'|'noCumpleRequisitos'|'asignado'|'noAsignado'].",
+															"name": "estado"
+														},
+														"monto": {
+															"id": "monto",
+															"type": "string",
+															"title": "Monto beneficio.",
+															"description": "Monto asignado al beneficio (número entero).",
+															"name": "monto"
+														},
+														"motivos": {
+															"id": "motivos",
+															"type": "array",
+															"title": "Motivos.",
+															"description": "Motivos de la no asignación o no cumplimiento de requisitos.",
+															"name": "motivos",
+															"items": {
+																"id": "1",
+																"type": "object",
+																"title": "Motivo.",
+																"description": "Descripticón del motivo de no asignación o no cumplimiento.",
+																"name": "1",
+																"properties": {
+																	"contenido": {
+																		"id": "contenido",
+																		"type": "string",
+																		"title": "Texto motivo.",
+																		"description": "Texto descriptivo del motivo de no asignación o no cumplimiento.",
+																		"name": "contenido"
+																	}
+																}
+															}
+														},
+														"pasos": {
+															"id": "pasos",
+															"type": "string",
+															"title": "Pasos a seguir.",
+															"description": "Texto descriptivo de los pasos a seguir.",
+															"name": "pasos"
+														},
+														"urlBeneficio": {
+															"id": "urlBeneficio",
+															"type": "string",
+															"title": "Url beneficio.",
+															"description": "URL a una página con descripción del beneficio.",
+															"name": "urlBeneficio"
+														}
+													}
+												}
+											}
+										}
+									},
+									"apelacion": {
+										"id": "apelacion",
+										"type": "object",
+										"title": "Apelacion schema.",
+										"description": "An explanation about the puropose of this instance described by this schema.",
+										"name": "apelacion",
+										"properties": {
+																						"mensajeTooltip": {
+												"id": "mensajeTooltip",
+												"type": "string",
+												"title": "Mensaje Tooltip.",
+												"description": "Mensaje breve descriptivo de la etapa que se recomeinda presentar como 'Tooltip' en botones de selección de la etapa.",
+												"name": "mensajeTooltip"
+											},
+											"mensajeDefinicion": {
+												"id": "mensajeDefinicion",
+												"type": "string",
+												"title": "Mensaje de Definicion.",
+												"description": "Mensaje con definición de la etapa.",
+												"name": "mensajeDefinicion"
+											},
+											"mensajesGenerales": {
+												"id": "mensajesGenerales",
+												"type": "array",
+												"title": "Mensajes Generales.",
+												"description": "Conjunto de mensajes generales con información al postulante.",
+												"name": "mensajesGenerales",
+												"items": {
+													"id": "0",
+													"type": "string",
+													"title": "Mensaje.",
+													"description": "Texto del mensaje general.",
+													"name": "0"
+												}
+											},
+											"mensajesEspeciales": {
+												"id": "mensajesEspeciales",
+												"type": "array",
+												"title": "Mensajes Especiales.",
+												"description": "Mensajes especiales para el postulante asociados a la etapa respectiva.",
+												"name": "mensajesEspeciales",
+												"items": {
+													"id": "1",
+													"type": "string",
+													"title": "Mensaje.",
+													"description": "Texto del mensaje especial.",
+													"name": "1"
+												}
+											},
+											"beneficios": {
+												"id": "beneficios",
+												"type": "array",
+												"title": "Beneficios.",
+												"description": "Conjunto de beneficios asociados a la etapa en el proceso respectivo.",
+												"name": "beneficios",
+												"items": {
+													"id": "3",
+													"type": "object",
+													"title": "Beneficio.",
+													"description": "Datos asociados a un beneficio específico al cual se ha postulado.",
+													"name": "3",
+													"properties": {
+														"sigla": {
+															"id": "sigla",
+															"type": "string",
+															"title": "Sigla beneficio.",
+															"description": "Sigla o nombre abreviado del beneficio (Ej. BVP).",
+															"name": "sigla"
+														},
+														"nombre": {
+															"id": "nombre",
+															"type": "string",
+															"title": "Nombre beneficio.",
+															"description": "Nombre del beneficio (Ej. Beca Vocación de profesor.",
+															"name": "nombre"
+														},
+														"estado": {
+															"id": "estado",
+															"type": "string",
+															"title": "Estado beneficio.",
+															"description": "Estado o condición asociada al beneficio ['cumpleRequisitos'|'noCumpleRequisitos'|'asignado'|'noAsignado'].",
+															"name": "estado"
+														},
+														"monto": {
+															"id": "monto",
+															"type": "string",
+															"title": "Monto beneficio.",
+															"description": "Monto asignado al beneficio (número entero).",
+															"name": "monto"
+														},
+														"motivos": {
+															"id": "motivos",
+															"type": "array",
+															"title": "Motivos.",
+															"description": "Motivos de la no asignación o no cumplimiento de requisitos.",
+															"name": "motivos",
+															"items": {
+																"id": "1",
+																"type": "object",
+																"title": "Motivo.",
+																"description": "Descripticón del motivo de no asignación o no cumplimiento.",
+																"name": "1",
+																"properties": {
+																	"contenido": {
+																		"id": "contenido",
+																		"type": "string",
+																		"title": "Texto motivo.",
+																		"description": "Texto descriptivo del motivo de no asignación o no cumplimiento.",
+																		"name": "contenido"
+																	}
+																}
+															}
+														},
+														"pasos": {
+															"id": "pasos",
+															"type": "string",
+															"title": "Pasos a seguir.",
+															"description": "Texto descriptivo de los pasos a seguir.",
+															"name": "pasos"
+														},
+														"urlBeneficio": {
+															"id": "urlBeneficio",
+															"type": "string",
+															"title": "Url beneficio.",
+															"description": "URL a una página con descripción del beneficio.",
+															"name": "urlBeneficio"
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
