@@ -151,6 +151,16 @@ Colores de Tooltip
 
 */
 
+
+/*
+Color quiero una beca:MisBeneficios
+*/
+.quieroBeca
+{
+  background-color:white;
+  color:rgb(20, 100, 246);
+}
+
 /* Colores en línea de tiempo */
 .timeline .etapa{
   fill:white;

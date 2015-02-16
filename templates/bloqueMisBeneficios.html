@@ -18,11 +18,15 @@
      </div><!-- row -->
     </accordion-heading>
     <!-- Bloque 3 - Mis Beneficios -->
-    <div class="divmayor bloqueInformacion">
+  <div class="divmayor bloqueInformacion">
      <!-- Mensaje -->
-     <div>
-      {{controller.data.misBeneficios.mensajeBeneficios}}
-     </div><!-- Mensaje -->
+    <div class="row">
+      <div class="col-xs-12 col-md-12 col-lg-12">
+        <div class="padding5px">
+          <p>{{controller.data.misBeneficios.mensajeBeneficios}}</p>
+        </div>
+      </div>
+    </div><!-- Mensaje -->
      <!-- Mis Beneficios - etapas                      procesos antes categorias-->
     <div ng-repeat="ProcesosBeneficio in controller.data.misBeneficios.procesos" class="rectangulo recuadroProceso" id="{{ProcesosBeneficio.identificador}}"> 
 
@@ -50,7 +54,7 @@
            <button type="button" ng-class="controller.estadoSeleccionado[ProcesosBeneficio.identificador] == 'apelacion' ? 'btn btn-default active' : 'btn btn-default'" ng-click="controller.estadoSeleccionado[ProcesosBeneficio.identificador] = 'apelacion';">Apelación</button>
           </div>          
          </div>
-          <!-- se esta probando tbn con javascript LINEA DE TIEMPO -->
+          <!--LINEA DE TIEMPO -->
           <div class="inlinesvg" ng-show="!Modernizr.inlinesvgs">
               <div td-timeline ng-model="controller.estadoSeleccionado[ProcesosBeneficio.identificador]" td-template-url="'./templates/timeline.svg'" td-info-etapas="ProcesosBeneficio.etapas"> </div>
                  <!--<div>Etapa seleccioanda: {{controller.estadoSeleccionado.primerano}}</div>-->
@@ -85,7 +89,18 @@
       </div><!--row-->
 
     </div><!-- Mis Beneficios - Categorías -->
-
-    </div><!-- Bloque 3 - Mis Beneficios -->
+    <div class="row">
+      <div class="col-xs-12 col-md-5 col-lg-4">
+        <div class="padding5px">
+          <spam class="callcenter">Call Center: <b>600 600 2626</b></spam>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-4 col-lg-3">
+        <div class="quieroBeca">
+           <i class="glyphicon glyphicon-hand-right"></i> Quiero una Beca
+        </div>
+      </div>
+    </div>
+  </div><!-- Bloque 3 - Mis Beneficios -->
 </accordion-group>
    <!--Accordion: Mis Beneficios-->

@@ -11,11 +11,15 @@
         <!-- Bloque 1 - Información destacada -->
         <div class="divmayor bloqueInformacion">
          <div class="row">
-
-          <div class="col-xs-12 col-md-12 col-lg-12">
-           <ul class="list-unstyled">
-            <li ng-repeat="(i, msg) in controller.data.mensajesDestacados"><span style="color:blue;"><i class="glyphicon glyphicon-exclamation-sign"></i></span> Mensaje General {{$index+1}}: {{msg}}</li>
-           </ul>
+           <div class="col-xs-12 col-md-12 col-lg-12">
+            <div ng-repeat="(i, msg) in controller.data.mensajesDestacados">
+              <div class="col-xs-2 col-md-1 col-lg-1">
+                <p class="subtitulo" style="color:blue;text-align:right;"><i class="glyphicon glyphicon-exclamation-sign"></i></p>
+              </div>
+              <div class="col-xs-10 col-md-11 col-lg-11">
+                <p> Mensaje General {{$index+1}}: {{msg}}</p>
+              </div>
+            </div>
           </div>
          </div>
         </div><!-- Bloque 1 - Información destacada -->

@@ -182,7 +182,7 @@ font-size: 24px;
 border-radius: 5px;
 }
 
-.MensajesEspeciales
+.MensajesEspfeciales
 {
 padding:15px 15px 0 15px;
 }
@@ -275,7 +275,23 @@ padding:15px 15px 0 15px;
   padding:1px;
   background-color:rgb(255, 197, 129);
 }
-
+.padding5px
+{
+  padding-left:5px;
+}
+.callcenter
+{
+ font-size: 22px;
+}
+.quieroBeca
+{
+  background-color:white;
+  border:1px solid rgb(20, 100, 246);
+  padding:2px;color:rgb(20, 100, 246);
+  font-size:17px;
+  text-align:center;
+  cursor:pointer;
+}
 /*accordion*/
 
 #custom-accord{

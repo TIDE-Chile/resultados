@@ -9,7 +9,7 @@
         </div><!-- Mensaje definición etapa -->
 
         <!-- Mensajes generales -->
-        <div style="padding:15px;">
+        <div style="padding:10px;">
          <p style="font-size:16px;" ng-repeat="mensaje in ProcesosBeneficio.etapas.postulacion.mensajesGenerales">{{mensaje}}</p>
         </div><!-- Mensajes generales -->
 
@@ -37,6 +37,11 @@
 
         <!-- Mensajes Especiales postulacion -->
         <div  class="col-xs-12 col-md-12 col-lg-12 MensajesEspeciales" ng-repeat="mensaje in ProcesosBeneficio.etapas.postulacion.mensajesEspeciales">
-         <p><b>Mensaje Especial {{$index+1}}: </b>{{mensaje}}</p>
+          <div class="col-xs-2 col-md-1 col-lg-1" style="text-align:right;">
+              <spam class="subtitulo" style="color:red;"><i class="glyphicon glyphicon-exclamation-sign"></i></spam>
+          </div>
+          <div class="col-xs-10 col-md-11 col-lg-11">
+              <p><b>Mensaje Especial {{$index+1}}: </b>{{mensaje}}</p>
+          </div>
         </div><!-- Mensajes --> 
       </div>

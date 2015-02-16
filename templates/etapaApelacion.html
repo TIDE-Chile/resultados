@@ -42,7 +42,12 @@
         </div>
         <!-- Mensajes Especiales Apelacion -->
         <div  class="col-xs-12 col-md-12 col-lg-12 MensajesEspeciales" ng-repeat="mensaje in ProcesosBeneficio.etapas.apelacion.mensajesEspeciales" >
-         <p><b>Mensaje Especial {{$index+1}}: </b>{{mensaje}}</p>
+          <div class="col-xs-2 col-md-1 col-lg-1" style="text-align:right;">
+              <spam class="subtitulo" style="color:red;"><i class="glyphicon glyphicon-exclamation-sign"></i></spam>
+          </div>
+          <div class="col-xs-10 col-md-11 col-lg-11">
+              <p><b>Mensaje Especial {{$index+1}}: </b>{{mensaje}}</p>
+          </div>
         </div><!-- Mensajes -->
 
       </div><!--Etapa: Apelacion -->
