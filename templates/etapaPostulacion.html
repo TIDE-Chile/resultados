@@ -1,0 +1,42 @@
+  <!-- ETAPA: POSTULACION -->
+  <!-- ------------------ -->
+      <div class="col-xs-12 col-md-12 col-lg-12 postulacion" ng-show="controller.estadoSeleccionado[ProcesosBeneficio.identificador] == 'postulacion'">
+
+
+        <!-- Mensaje definición etapa -->
+        <div style="padding:5px;">
+         <p>{{ProcesosBeneficio.etapas.postulacion.mensajeDefinicion}}</p>
+        </div><!-- Mensaje definición etapa -->
+
+        <!-- Mensajes generales -->
+        <div style="padding:15px;">
+         <p style="font-size:16px;" ng-repeat="mensaje in ProcesosBeneficio.etapas.postulacion.mensajesGenerales">{{mensaje}}</p>
+        </div><!-- Mensajes generales -->
+
+        <!-- Beneficios -->
+        <div  ng-repeat="beneficio in ProcesosBeneficio.etapas.postulacion.beneficios" > 
+
+         <!-- ddRecuadro beneficio -->
+         <div class="col-xs-5 col-md-2 col-lg-1 beneficiosrectangulo recuadroBeneficio" id="{{ProcesosBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'">
+
+          <!--Si esta asignado un icono sino el otro-->
+          <div style="text-align:left;">
+           <span style='color:green' ng-if="beneficio.estado == 'asignado'">
+            <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
+           </span>
+           <span style='color:red' ng-if="beneficio.estado == 'noAsignado'">
+            <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
+           </span>
+          </div>
+
+          <div>{{beneficio.sigla}}</div>      
+          <div style="height:20px;">{{beneficio.monto}}</div>
+         </div><!-- Recuadro beneficio -->
+
+        </div>
+
+        <!-- Mensajes Especiales postulacion -->
+        <div  class="col-xs-12 col-md-12 col-lg-12 MensajesEspeciales" ng-repeat="mensaje in ProcesosBeneficio.etapas.postulacion.mensajesEspeciales">
+         <p><b>Mensaje Especial {{$index+1}}: </b>{{mensaje}}</p>
+        </div><!-- Mensajes --> 
+      </div>

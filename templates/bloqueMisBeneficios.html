@@ -1,0 +1,91 @@
+<!--Accordion: Mis Beneficios-->
+<accordion-group  is-open="controller.isOpenAccordion.misBeneficios">
+    <accordion-heading>
+     <div class="row">
+      <!--<div class="col-xs-12 col-md-12 col-lg-12">-->
+
+      <!-- Titulo bloque -->
+      <div class="col-xs-12 col-md-8 col-lg-8">
+       <p class="subtitulo" ng-show="controller.data.misBeneficios"><i class="pull-left glyphicon iconoAccordeon" ng-class="{'glyphicon-chevron-down': controller.isOpenAccordion.misBeneficios, 'glyphicon-chevron-right': !controller.isOpenAccordion.misBeneficios}"></i> Mis Beneficios (Postulados, En Proceso, Otorgados)</p>
+      </div><!-- Titulo bloque -->
+
+      <!-- Monto otorgado -->
+      <div class="col-xs-12 col-md-4 col-lg-4">
+       <p class="botorgado">Beneficio Otorgado: <spam style="color:red;">{{(controller.data.misBeneficios.montoOtorgado | currency).slice(0,-3) }}</spam></p> <!-- solucion 1  era para angularjs 1.3 : {{controller.data.misBeneficios.montoOtorgado | currency:fractionSize:0}} -->
+      </div><!-- Monto otorgado -->
+
+      <!--</div> por ahora no es necesario-->
+     </div><!-- row -->
+    </accordion-heading>
+    <!-- Bloque 3 - Mis Beneficios -->
+    <div class="divmayor bloqueInformacion">
+     <!-- Mensaje -->
+     <div>
+      {{controller.data.misBeneficios.mensajeBeneficios}}
+     </div><!-- Mensaje -->
+     <!-- Mis Beneficios - etapas                      procesos antes categorias-->
+    <div ng-repeat="ProcesosBeneficio in controller.data.misBeneficios.procesos" class="rectangulo recuadroProceso" id="{{ProcesosBeneficio.identificador}}"> 
+
+      <div class="row">
+       <div class="col-xs-12 col-md-12 col-lg-12 margen">
+
+        <!-- Nombre categoría -->     
+        <div class="col-xs-12 col-md-4 col-lg-2">
+         <b class="cursos NombreProcesoBeneficios">{{ProcesosBeneficio.nombre}}</b>
+        </div>
+
+        <!-- Linea de tiempo - ProcesosBeneficio -->
+        <div class="col-xs-12 col-md-8 col-lg-6 margen">
+         <div class="btn-toolbar" role="toolbar" ng-show="Modernizr.inlinesvgs">
+          <div class="btn-group">
+           <button type="button" ng-class="controller.estadoSeleccionado[ProcesosBeneficio.identificador] == 'postulacion' ? 'btn btn-default active' : 'btn btn-default'" ng-click="controller.estadoSeleccionado[ProcesosBeneficio.identificador] = 'postulacion';">Postulación</button>
+          </div>
+          <div class="btn-group">
+           <button type="button" ng-class="controller.estadoSeleccionado[ProcesosBeneficio.identificador] == 'preseleccion' ? 'btn btn-default active' : 'btn btn-default'" ng-click="controller.estadoSeleccionado[ProcesosBeneficio.identificador] = 'preseleccion';">Preselección</button>
+          </div>
+          <div class="btn-group">
+           <button type="button" class="" ng-class="controller.estadoSeleccionado[ProcesosBeneficio.identificador] == 'asignacion' ? 'btn btn-default active' : 'btn btn-default'" ng-click="controller.estadoSeleccionado[ProcesosBeneficio.identificador] = 'asignacion';">Asignación</button>
+          </div>
+          <div class="btn-group">
+           <button type="button" ng-class="controller.estadoSeleccionado[ProcesosBeneficio.identificador] == 'apelacion' ? 'btn btn-default active' : 'btn btn-default'" ng-click="controller.estadoSeleccionado[ProcesosBeneficio.identificador] = 'apelacion';">Apelación</button>
+          </div>          
+         </div>
+          <!-- se esta probando tbn con javascript LINEA DE TIEMPO -->
+          <div class="inlinesvg" ng-show="!Modernizr.inlinesvgs">
+              <div td-timeline ng-model="controller.estadoSeleccionado[ProcesosBeneficio.identificador]" td-template-url="'./templates/timeline.svg'" td-info-etapas="ProcesosBeneficio.etapas"> </div>
+                 <!--<div>Etapa seleccioanda: {{controller.estadoSeleccionado.primerano}}</div>-->
+          </div>         
+        </div><!-- Linea de tiempo - ProcesosBeneficio -->
+
+        <!-- Apelación -->
+        <div class="col-xs-12 col-md-12 col-lg-4 margen2">
+         <a  ng-show="controller.isUndefined=ProcesosBeneficio.urlApelacion" class="btn btn-default md" href="{{ProcesosBeneficio.urlApelacion}}" target="_blank">Apelar {{ProcesosBeneficio.nombre}}</a>
+        </div>
+       </div>
+      </div><!-- row -->
+
+      <div class="row">
+
+        <!-- ETAPA: POSTULACION -->
+            <div ng-include="'templates/etapaPostulacion.html'"></div>
+        <!-- ------------------ -->
+
+        <!-- ETAPA: PRESELECCION -->   
+            <div ng-include="'templates/etapaPreseleccion.html'"></div>
+        <!-- ------------------- -->
+
+        <!-- ETAPA: ASIGNACION -->
+            <div ng-include="'templates/etapaAsignacion.html'"></div>
+        <!-- ----------------- -->
+
+        <!-- ETAPA: APELACION -->
+            <div ng-include="'templates/etapaApelacion.html'"></div>
+        <!-- ---------------- -->
+
+      </div><!--row-->
+
+    </div><!-- Mis Beneficios - Categorías -->
+
+    </div><!-- Bloque 3 - Mis Beneficios -->
+</accordion-group>
+   <!--Accordion: Mis Beneficios-->
