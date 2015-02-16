@@ -53,7 +53,7 @@ angular.module('tideApp')
   } ();
 
   // Parámetro (RUT) siendo buscado
-  this.rut = QueryString.rut ? QueryString.rut : "12345678B";
+  this.rut = QueryString.rut ? QueryString.rut : "12345678";
 
 
  /*

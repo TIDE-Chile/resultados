@@ -44,7 +44,7 @@
 	"misBeneficios":{
 		"montoOtorgado":"1250000",
 		"mensajeBeneficios" : "La información corresponde a la validación realizada por el MINEDUC del cumplimiento de los requisitos académicos y socioeconómicos establecidos para cada beneficio.",
-		"categorias":[
+		"procesos":[
 			{
 				"identificador":"primerano",
 				"nombre":"Primer Año",
