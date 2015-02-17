@@ -56,7 +56,8 @@ angular.module('tideApp')
   this.rut = QueryString.rut ? QueryString.rut : "12345678";
   this.token = QueryString.token ? QueryString.token : null;
 
-
+  // Parámetro mode para ser utilizado en test ( &mode=test )
+  this.mode = QueryString.mode ? QueryString.mode : null;
 
  /*
   * iniciaEpataSeleccionada
@@ -83,7 +84,7 @@ angular.module('tideApp')
   this.loading = true;
   this.errorMsg=null;
 
-  dataService.getData(this.rut, this.token)
+  dataService.getData(this.rut, this.token, this.mode)
   .then(function(data) {
     myself.loading = false;
     iniciaEtapaSeleccionada(data);
@@ -91,7 +92,13 @@ angular.module('tideApp')
   })
   .catch(function(error) {
     myself.loading = false;
-    myself.errorMsg="Error al consultar los datos";
+    if (error == 401) {
+      myself.errorMsg="No se permiten consultas masivas, debe ingresar un captcha correcto";
+    } else if (error == 404) {
+      myself.errorMsg="No se encuentran datos para este RUT";
+    } else {
+      myself.errorMsg="Error en la consulta de datos";
+    }
   })
 
 /*mostrar/ocultar texto popup ver pasos..*/  

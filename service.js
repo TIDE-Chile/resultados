@@ -17,14 +17,15 @@ angular.module('tideApp')
   var myself = this;
 
   var apiUrl = "http://bcphp-95e000a0-1.elaval.cont.tutum.io";
+  //var apiUrl = "http://localhost/tutum";
   var host = './data';
   
  /*
   * getData
   */
-  this.getData = function(rut, token) {
+  this.getData = function(rut, token, mode) {
     if (token) {
-      return myself.getDataRemota(rut,token)
+      return myself.getDataRemota(rut,token,mode)
     } else {
       return myself.getDataLocal(rut);
     }
@@ -50,16 +51,28 @@ angular.module('tideApp')
   * getData (getDataRemota temporalmente)
   * Consulta a Web api por los resultados de un RUT incuyendo un token asociado al RUT
   */
-  this.getDataRemota = function(rut, token) {
+  this.getDataRemota = function(rut, token, mode) {
     var deferred = $q.defer();
 
     // Simple GET request example :
-    $http.jsonp(apiUrl+"/index.php/resultados/"+rut+"?token="+token+"&callback=JSON_CALLBACK").
+    $http.jsonp(apiUrl+"/index.php/resultados/"+rut+"?token="+token+"&mode="+mode+"&callback=JSON_CALLBACK").
       success(function(data, status, headers, config) {
-        deferred.resolve(data)
+        if (data.status && data.status == 200) {
+          deferred.resolve(data.resultado)
+        } else {
+          deferred.reject(data.status);
+        }
+        
       }).
       error(function(data, status, headers, config) {
-        deferred.reject(status)
+        if (status==401) {
+          deferred.reject(status);
+        } else if (status==404) {
+          deferred.reject(status);
+        } else {
+          deferred.reject(status);
+        }
+        
       });
       
     return deferred.promise;
