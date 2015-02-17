@@ -52,8 +52,10 @@ angular.module('tideApp')
       return query_string;
   } ();
 
-  // Parámetro (RUT) siendo buscado
+  // Parámetros (RUT & token) asociados al postulante consultado
   this.rut = QueryString.rut ? QueryString.rut : "12345678";
+  this.token = QueryString.token ? QueryString.token : null;
+
 
 
  /*
@@ -81,7 +83,7 @@ angular.module('tideApp')
   this.loading = true;
   this.errorMsg=null;
 
-  dataService.getData(this.rut)
+  dataService.getData(this.rut, this.token)
   .then(function(data) {
     myself.loading = false;
     iniciaEtapaSeleccionada(data);
