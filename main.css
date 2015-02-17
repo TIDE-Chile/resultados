@@ -282,6 +282,7 @@ padding:15px 15px 0 15px;
 .callcenter
 {
  font-size: 22px;
+ text-align: left;
 }
 .quieroBeca
 {
@@ -411,9 +412,9 @@ text-align: right;
 r:15px;
 }
 
-/*Linea de tiempo Small */
+/*css Small */
 @media (max-width: 767px) {
-
+/*Linea de tiempo */
 .timeline .etapa {
   
   font-size: 10px;
@@ -421,5 +422,12 @@ r:15px;
 
 .timeline .etapa.active {
   font-size: 12px;
+}
+
+/* pie de Mis beneficios*/
+.callcenter
+{
+ font-size: 20px;
+ text-align: center;
 }
 }
