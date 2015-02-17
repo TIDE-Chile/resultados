@@ -54,7 +54,7 @@
            <button type="button" ng-class="controller.estadoSeleccionado[ProcesosBeneficio.identificador] == 'apelacion' ? 'btn btn-default active' : 'btn btn-default'" ng-click="controller.estadoSeleccionado[ProcesosBeneficio.identificador] = 'apelacion';">Apelación</button>
           </div>          
          </div>
-          <!--LINEA DE TIEMPO -->
+          <!--LINEA DE TIEMPO SVG -->
           <div class="inlinesvg" ng-show="!Modernizr.inlinesvgs">
               <div td-timeline ng-model="controller.estadoSeleccionado[ProcesosBeneficio.identificador]" td-template-url="'./templates/timeline.svg'" td-info-etapas="ProcesosBeneficio.etapas"> </div>
                  <!--<div>Etapa seleccioanda: {{controller.estadoSeleccionado.primerano}}</div>-->

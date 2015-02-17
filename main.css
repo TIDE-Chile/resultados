@@ -417,11 +417,11 @@ r:15px;
 /*Linea de tiempo */
 .timeline .etapa {
   
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .timeline .etapa.active {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 /* pie de Mis beneficios*/
