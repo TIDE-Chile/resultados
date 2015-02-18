@@ -93,7 +93,7 @@ angular.module('tideApp')
   .catch(function(error) {
     myself.loading = false;
     if (error == 401) {
-      myself.errorMsg="No se permiten consultas masivas, debe ingresar un captcha correcto";
+      myself.errorMsg="No se permiten consultas sucesivas sin volver a validar que no es un robot (cerrar y volver a ingresar RUT y captcha)";
     } else if (error == 404) {
       myself.errorMsg="No se encuentran datos para este RUT";
     } else {
