@@ -34,12 +34,12 @@
   </div>
 
    <!-- Contenedor principal -->
-  <div class="container" ng-controller="AppController as controller">
+  <div class="container">
 
   <form>
     <div class="form-group">
       <label for="rut">RUT</label>
-      <input type="text" class="form-control" id="rut" placeholder="Ingrese RUT (sin guión)" ng-model="controller.rut" ng-show2="controller.captchaId">
+      <input type="text" class="form-control" id="rut" placeholder="Ingrese RUT (sin guión)" ng-model="controller.rut" ng-disabled="!controller.captchaId">
     </div>
     <div
     vc-recaptcha
