@@ -72,6 +72,25 @@ margin-top:15px;
   color: rgba(12, 89, 207, 1);
   font-size: 24px;
 }
+
+.errorMsg{
+  text-align: center;
+  font-size: 22px;
+  padding: 3px;
+}
+.Acerrar{
+  font-size:15px;
+  padding-left:10px;
+  padding-right:10px;
+  cursor: pointer;
+  text-align: right;
+}
+
+.Bienvenidos{
+   font-size:20px;
+   padding: 20px;
+
+}
 .subtitulo
 {
   
