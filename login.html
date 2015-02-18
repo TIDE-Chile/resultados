@@ -34,20 +34,62 @@
   </div>
 
    <!-- Contenedor principal -->
-  <div class="container">
-
-  <form>
-    <div class="form-group">
-      <label for="rut">RUT</label>
-      <input type="text" class="form-control" id="rut" placeholder="Ingrese RUT (sin guión)" ng-model="controller.rut" ng-disabled="!controller.captchaId">
+  <div class="container" ng-controller="AppController as controller">
+    <div class="head">
+     <div class="row"  ng-cloak>
+      <div class="col-xs-6 col-md-2 col-lg-2">
+       <img width="116" height="104" explicit-width="100%" explicit-height="100%" min-width="16" min-height="16" src="./imagen/logo.png" class="logo" />
+      </div>
+      <div class=" col-xs-12 col-md-7 col-lg-10" > 
+       <h1>Portal de Resultados Año 2015</h1>
+       <p class="byc">Becas y Créditos para la Educación Superior</p>
+      </div>
+     </div>
+    </div><!-- Encabezado -->
+    <div class="row">
+           <!-- Identificación del estudiante (RUT) -->
+     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="barranaranja barraRUT" style="height:40px;">
+      </div>
+     </div><!-- Identificación del estudiante (RUT) -->
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <p class="Bienvenidos">Bienvenidos al Portal de Resultados del Sistema de Ayudas Estudiantiles para la Educación Superior del Ministerio de Educación. Para consultar el estado o resultado de su postulación, a continuación ingrese su RUT y fecha de nacimiento:</p>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2"></div>
+    <div class="col-xs-10 col-sm-10 col-md-8 col-lg-8">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+              <form class="form-horizontal" role="form">
+                 <!-- <div class="form-group">
+                    <label for="rut">RUT</label>
+                    <input type="text" class="form-control" id="rut" placeholder="Ingrese RUT (sin guión)" ng-model="controller.rut" ng-show2="controller.captchaId">
+                  </div>-->
+                  <div class="form-group">
+                      <label for="rut" class="col-lg-1 control-label">RUT:</label>
+                      <div class="col-lg-11">
+                        <input type="text" class="form-control" id="rut" placeholder="Ingrese RUT (sin guión)" ng-model="controller.rut" required>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-2">
+                  </div>
+                    <div class="col-lg-10" style="padding:5px; text-align:center">
+                        <div 
+                        vc-recaptcha
+                        key="'6LfbKQITAAAAADKac1bqRhJpAJxciMwtmIzkx9ps'"
+                        on-create="controller.onCreate(widgetId)"
+                        on-success="controller.onSuccess(response)"
+                        ></div>
+                    </div>
+                  </div>
+              </form>
+        </div>
+       </div>
     </div>
-    <div
-    vc-recaptcha
-    key="'6LfbKQITAAAAADKac1bqRhJpAJxciMwtmIzkx9ps'"
-    on-create="controller.onCreate(widgetId)"
-    on-success="controller.onSuccess(response)"
-    ></div>
-  </form>
+    <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2"></div>
+</div>
 
 
   
