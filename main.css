@@ -456,3 +456,25 @@ r:15px;
 
 }
 }
+
+.mostrar-xs{
+  display:block;
+}
+.ocultar-xs {
+ display:none ;
+
+}
+
+/*linea de tiempo en dispositivos xs real*/
+@media (max-width: 500px) {
+
+.mostrar-xs {
+
+ display:none !important;
+}
+
+.ocultar-xs {
+ display:block !important;
+
+}
+  }
