@@ -456,7 +456,7 @@ r:15px;
 
 }
 }
-
+/*linea de tiempo mostrar/ocultar */
 .mostrar-xs{
   display:block;
 }
@@ -465,8 +465,8 @@ r:15px;
 
 }
 
-/*linea de tiempo en dispositivos xs real*/
-@media (max-width: 500px) {
+/*linea de tiempo en dispositivos xs real */
+@media (max-device-width: 500px) {
 
 .mostrar-xs {
 

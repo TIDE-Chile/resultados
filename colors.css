@@ -183,7 +183,7 @@ Color quiero una beca:MisBeneficios
    fill:rgb(0, 0, 0);
 }
 /*Linea de tiempo Small */
-@media (max-width: 767px) {
+@media (max-device-width: 767px) {
 
 .timeline .etapa.active {
   fill:rgba(255, 168, 52, 1);
