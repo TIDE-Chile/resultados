@@ -17,7 +17,7 @@
                 <p class="subtitulo" style="color:blue;text-align:right;"><i class="glyphicon glyphicon-exclamation-sign"></i></p>
               </div>
               <div class="col-xs-10 col-md-11 col-lg-11">
-                <p> Mensaje General {{$index+1}}: {{msg}}</p>
+                <p> Mensaje General {{$index+1}}: <span ng-bind-html="msg"></span></p>
               </div>
             </div>
           </div>

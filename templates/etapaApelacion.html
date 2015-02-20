@@ -5,12 +5,14 @@
 
         <!-- Mensaje definición etapa -->
         <div style="padding:5px;">
-         <p>{{ProcesosBeneficio.etapas.apelacion.mensajeDefinicion}}</p>
+         <p ng-bind-html="ProcesosBeneficio.etapas.apelacion.mensajeDefinicion"></p>
         </div><!-- Mensaje definición etapa -->
 
         <!-- Mensajes generales -->
-        <div style="padding:15px;">
-         <p style="font-size:16px;" ng-repeat="mensaje in ProcesosBeneficio.procesos.apelacion.mensajesGenerales">{{mensaje}}</p>
+        <div style="padding:10px;">
+         <p style="font-size:16px;" ng-repeat="mensaje in ProcesosBeneficio.procesos.apelacion.mensajesGenerales">
+            <spam ng-bind-html="mensaje"></spam>
+         </p>
         </div><!-- Mensajes generales -->
 
         <!-- Beneficios -->
@@ -46,7 +48,7 @@
               <spam class="subtitulo" style="color:red;"><i class="glyphicon glyphicon-exclamation-sign"></i></spam>
           </div>
           <div class="col-xs-10 col-md-11 col-lg-11">
-              <p><b>Mensaje Especial {{$index+1}}: </b>{{mensaje}}</p>
+            <p><b>Mensaje Especial {{$index+1}}: </b><spam ng-bind-html="mensaje"></spam> </p> 
           </div>
         </div><!-- Mensajes -->
 

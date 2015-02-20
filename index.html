@@ -46,7 +46,7 @@
        <p class="byc">Becas y Créditos para la Educación Superior</p>
       </div>
       <div class=" col-xs-12 col-md-3 col-lg-3"> 
-       <div class="actualizada">
+       <div class="actualizada" ng-show="!controller.loading && !controller.errorMsg">
         <h5>Información Actualizada a:</h5> 
         <p class="byc">{{controller.data.fechaActualizacion}}</p>
        </div>

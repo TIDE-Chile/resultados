@@ -93,10 +93,10 @@
 								"estado":"noCumpleRequisitos",
 								"motivos":[
 									{
-										"descripcion":  "Por <strong>no haber egresado</strong> de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+										"contenido":  "Por <strong>no haber egresado</strong> de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
 									},
 									{
-										"descripcion":  "Por <strong>no estar dentro del 10%</strong> de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+										"contenido":  "Por <strong>no estar dentro del 10%</strong> de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
 									}
 								],
 								"pasos":"",

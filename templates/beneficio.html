@@ -11,21 +11,24 @@
 				<div style="cursor:pointer;" ng-click='controller.pasos.show=!controller.pasos.show'><i class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': controller.pasos.show, 'glyphicon-chevron-right': !controller.pasos.show}"></i> Pincha aquí para ver los pasos a seguir</div>
 			</div>
 			<div ng-show="controller.pasos.show" style="margin:10px;">
-				{{beneficio.pasos}}
+				<p ng-bind-html="beneficio.pasos"></p>
 			</div>
 		</div>
 	</div>
 	<div ng-show="beneficio.estado=='noAsignado'"> 
+		
 		<div>Usted <b>no ha sido beneficiado</b> con esta beca. Los motivos son:  </div>
-		<div>1.- Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada,  </div>
-		<div>2.- Por no estar dentro del 10% de los mejores alumnos de su colegio según las notas registradas en la base de datos del </div>
+		<div ng-repeat="motivo in beneficio.motivos">
+			<!--<p>{{$index+1}}.- {{motivo.contenido}} </p>-->
+			<p>{{$index+1}}.- <spam ng-bind-html="motivo.contenido"></spam> </p> 
+		</div>
 		<div  ng-show="controller.isUndefined=beneficio.urlBeneficio" style=" text-align: right;"><a href="{{beneficio.urlBeneficio}}" target="_blank"><b>{{beneficio.nombre}}</b></a></div>
 		<div ng-show="beneficio.pasos!=''">
 			<div >
 				<div style="cursor:pointer;" ng-click='controller.pasos.show=!controller.pasos.show'><i class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': controller.pasos.show, 'glyphicon-chevron-right': !controller.pasos.show}"></i> Pincha aquí para ver los pasos a seguir</div>
 			</div>
 			<div ng-show="controller.pasos.show" style="margin:10px;">
-				{{beneficio.pasos}}
+				<p ng-bind-html="beneficio.pasos"></p>
 			</div>
 		</div>
 	</div>
@@ -37,21 +40,22 @@
 				<div style="cursor:pointer;" ng-click='controller.pasos.show=!controller.pasos.show'><i class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': controller.pasos.show, 'glyphicon-chevron-right': !controller.pasos.show}"></i> Pincha aquí para ver los pasos a seguir</div>
 			</div>
 			<div ng-show="controller.pasos.show" style="margin:10px;">
-				{{beneficio.pasos}}
+				<p ng-bind-html="beneficio.pasos"></p>
 			</div>
 		</div>
 	</div>
 	<div ng-show="beneficio.estado=='noCumpleRequisitos'"> 
 		<div>Usted <b>No cumple con los requisitos</b> para obtener esta beca, conforme a la información que posee el Mineduc. Las razones son:</div>
-		<div>1. Por no tener Puntaje Nacional o Regional.  </div>
-		<div>2. Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada</div>
+		<div ng-repeat="motivo in beneficio.motivos">
+			<p>{{$index+1}}.- <spam ng-bind-html="motivo.contenido"></spam> </p> 
+		</div>
 		<div  ng-show="controller.isUndefined=beneficio.urlBeneficio" style=" text-align: right;"><a href="{{beneficio.urlBeneficio}}" target="_blank"><b>{{beneficio.nombre}}</b></a></div>
 		<div ng-show="beneficio.pasos!=''">
 			<div >
 				<div style="cursor:pointer;" ng-click='controller.pasos.show=!controller.pasos.show'><i class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': controller.pasos.show, 'glyphicon-chevron-right': !controller.pasos.show}"></i> Pincha aquí para ver los pasos a seguir</div>
 			</div>
 			<div ng-show="controller.pasos.show" style="margin:10px;">
-				{{beneficio.pasos}}
+				<p ng-bind-html="beneficio.pasos"></p>
 			</div>
 		</div>
 	</div>
@@ -64,22 +68,23 @@
 				<div style="cursor:pointer;" ng-click='controller.pasos.show=!controller.pasos.show'><i class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': controller.pasos.show, 'glyphicon-chevron-right': !controller.pasos.show}"></i> Pincha aquí para ver los pasos a seguir</div>
 			</div>
 			<div ng-show="controller.pasos.show" style="margin:10px;">
-				{{beneficio.pasos}}
+				<p ng-bind-html="beneficio.pasos"></p>
 			</div>
 		</div>
 	</div>
 	<div ng-show="beneficio.estado=='noCumple'"> 
 
 		<div>Usted <b>No cumple con los requisitos</b> para obtener esta beca, conforme a la información que posee el Mineduc. Las razones son:</div>
-		<div>1. Por no tener Puntaje Nacional o Regional.  </div>
-		<div>2. Por no haber egresado de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada</div>
+		<div ng-repeat="motivo in beneficio.motivos">
+			<p>{{$index+1}}.- <spam ng-bind-html="motivo.contenido"></spam> </p> 
+		</div>
 		<div  ng-show="controller.isUndefined=beneficio.urlBeneficio" style=" text-align: right;"><a href="{{beneficio.urlBeneficio}}" target="_blank"><b>{{beneficio.nombre}}</b></a></div>
 		<div ng-show="beneficio.pasos!=''">
 			<div >
 				<div style="cursor:pointer;" ng-click='controller.pasos.show=!controller.pasos.show'><i class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': controller.pasos.show, 'glyphicon-chevron-right': !controller.pasos.show}"></i> Pincha aquí para ver los pasos a seguir</div>
 			</div>
 			<div ng-show="controller.pasos.show" style="margin:10px;">
-				{{beneficio.pasos}}
+				<p ng-bind-html="beneficio.pasos"></p>
 			</div>
 		</div>
 	</div>
