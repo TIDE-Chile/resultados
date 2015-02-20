@@ -1,0 +1,389 @@
+{
+	"rut": "12345679-0",
+	"fechaActualizacion":"05/03/2015",
+	"mensajesDestacados" : [
+			"Los resultados consideran el <strong>puntaje promedio</strong> PSU (lenguaje y comunicación y matemáticas) con el cual se ingresa a la carrera, el que es informado por la institución de educación superior al Mineduc.",
+			"Estos resultados consideran la <strong>matrícula informada</strong> por las Instituciones de Educación Superior al Mineduc hasta el 02 de mayo de 2014, y las acreditaciones."
+	],
+	"datosPostulante": [
+		{
+			"identificador":"matriculaPrimerAno",
+			"nombre":"Primer Año",
+			"institucion":"UNIVERSIDAD DE CONCEPCION",
+			"carrera":"PEDAGOGIA EN MÚSICA",
+			"acreditadoEn":"UNIVERSIDAD DE CONCEPCION",
+			"fechaAcreditacion":"21-04-2014",
+			"datosEvaluacion" : [
+				{
+					"etiqueta":"PSU (Leng)",
+					"valor":"557"
+				},
+				{
+					"etiqueta":"PSU (Mat)",
+					"valor":"493"
+				},
+				{
+					"etiqueta":"PSU (Cs)",
+					"valor":"612"
+				},
+				{
+					"etiqueta":"Ranking",
+					"valor":"30"
+				},
+				{
+					"etiqueta":"NEM",
+					"valor":"5,9"
+				},
+				{
+					"etiqueta":"Quintil",
+					"valor":"2"
+				}
+			]
+		}
+	],
+	"misBeneficios":{
+		"montoOtorgado":"1250000",
+		"mensajeBeneficios" : "La información corresponde a la <strong>validación</strong> realizada por el MINEDUC del cumplimiento de los requisitos académicos y socioeconómicos establecidos para cada beneficio.",
+		"procesos":[
+			{
+				"identificador":"primerano",
+				"nombre":"Primer Año",
+				"etapaActual":"apelacion",
+				"urlApelacion":"http://mineduc.cl",
+				"mensajeProceso":"El proceso de <strong>Primer Año</strong> ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan.",
+				"etapas": {
+					"postulacion" : {
+						"mensajeTooltip":"Mensaje tooltip <strong>postulación</strong> primer año ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit.",
+						"mensajeDefinicion": "La <strong>postulación</strong> <strong>del beneficio</strong> corresponde a ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit.",			
+						"mensajesGenerales": [
+							"La etapa de <strong>postulación</strong> ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
+						],						
+						"mensajesEspeciales": [
+								"Este es un <strong>mensaje especial</strong> de la etapa de postulación en Primer Año ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan.",
+								"Este es un segundo <strong>mensaje especial</strong> de la etapa de postulación en Primer Año ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
+						],
+						"beneficios": []
+					},
+					"preseleccion" : {
+						"mensajeTooltip":"Mensaje tooltip <strong>preselección</strong> primer año ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit.",
+						"mensajeDefinicion": "La <strong>preselección</strong> <strong>del beneficio</strong> corresponde a ...",			
+						"mensajesGenerales": [],						
+						"mensajesEspeciales": [
+								"Este es un <strong>mensaje especial</strong> de la etapa de preselección en Primer Año ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan.",
+								"Este es un segundo <strong>mensaje especial</strong> de la etapa de preselección en Primer Año ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
+						],
+						"beneficios": [
+							{
+								"sigla":"BVP",
+								"nombre":"Beca Vocacion de Profesor",
+								"estado":"cumpleRequisitos",
+								"pasos":"",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
+							},
+							{
+								"sigla":"BJGM",
+								"nombre":"Beca Juan Gómez Millas",
+								"estado":"cumpleRequisitos",
+								"pasos":"",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
+							},
+							{
+								"sigla":"BEA",
+								"nombre":"Beca Excelencia Académica",
+								"estado":"noCumpleRequisitos",
+								"motivos":[
+									{
+										"descripcion":  "Por <strong>no haber egresado</strong> de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"descripcion":  "Por <strong>no estar dentro del 10%</strong> de los mejores alumnos de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
+							},
+							{
+								"sigla":"BHPE",
+								"nombre":"Beca Hijos Profesionales de la Educación",
+								"estado":"noCumpleRequisitos",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por <strong>no haber egresado</strong> de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del <strong>10% de los mejores alumnos</strong> de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
+							},
+							{
+								"sigla":"BNM",
+								"nombre":"Beca Nuevo Milenio",
+								"estado":"noCumpleRequisitos",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por <strong>no haber egresado</strong> de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del <strong>10% de los mejores alumnos</strong> de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
+							},
+							{
+								"sigla":"BET",
+								"nombre":"Beca Excelencia Técnica",
+								"estado":"noCumpleRequisitos",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por <strong>no haber egresado</strong> de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del <strong>10% de los mejores alumnos</strong> de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
+							},
+							{
+								"sigla":"BART",
+								"nombre":"Beca ART",
+								"estado":"noCumpleRequisitos",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por <strong>no haber egresado</strong> de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del <strong>10% de los mejores alumnos</strong> de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
+							}
+						]
+					},
+					"asignacion" : {
+						"mensajeTooltip":"Mensaje tooltip asignación primer año ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit.",
+						"mensajeDefinicion": "La asignación <strong>del beneficio</strong> corresponde a ...",			
+						"mensajesGenerales": [],						
+						"mensajesEspeciales": [
+								"Este es un mensaje especial de la etapa de asignación en Primer Año ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan.",
+								"Este es un segundo mensaje especial de la etapa de asignación en Primer Año ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
+						],						
+						"beneficios": [
+							{
+								"sigla":"BVP",
+								"nombre":"Beca Vocacion de Profesor",
+								"estado":"asignado",
+								"monto":"1100000",
+								"pasos":"Los pasos a seguir son ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,"
+							},
+							{
+								"sigla":"BJGM",
+								"nombre":"Beca Juan Gómez Millas",
+								"estado":"asignado",
+								"monto":"450000",
+								"pasos":"Los pasos a seguir son ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
+							},
+							{
+								"sigla":"BEA",
+								"nombre":"Beca Excelencia Académica",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por <strong>no haber egresado</strong> de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del <strong>10% de los mejores alumnos</strong> de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Los pasos a seguir son ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
+							},
+							{
+								"sigla":"BHPE",
+								"nombre":"Beca Hijos Profesionales de la Educación",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por <strong>no haber egresado</strong> de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del <strong>10% de los mejores alumnos</strong> de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Los pasos a seguir son ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."		},
+							{
+								"sigla":"BNM",
+								"nombre":"Beca Nuevo Milenio",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por <strong>no haber egresado</strong> de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del <strong>10% de los mejores alumnos</strong> de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Los pasos a seguir son ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
+							},
+							{
+								"sigla":"BET",
+								"nombre":"Beca Excelencia Técnica",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por <strong>no haber egresado</strong> de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del <strong>10% de los mejores alumnos</strong> de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Los pasos a seguir son ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
+							},
+							{
+								"sigla":"BART",
+								"nombre":"Beca ART",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por <strong>no haber egresado</strong> de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del <strong>10% de los mejores alumnos</strong> de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Los pasos a seguir son ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
+							}
+						]
+					},
+					"apelacion" : {
+					"mensajeTooltip":"Mensaje tooltip apelación primer año ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit.",
+						"mensajeDefinicion": "La apelación <strong>del beneficio</strong> corresponde a ...",			
+						"mensajesGenerales": [
+							"El periodo de apelación será a partir del día siguiente a la publicación de resultados de asignación y se iniciará el 19 de febrero de 2015."
+						],						
+						"mensajesEspeciales": [
+							"Este es un mensaje especial de la etapa de apelación en Primer Año ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan.",
+							"Este es un segundo mensaje especial de la etapa de apelación en Primer Año ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Praesent maximus sem et tempus consectetur. Morbi tempor lacus est, ut eleifend ex sollicitudin sed. Donec mattis felis et sem congue accumsan."
+						],
+						"beneficios": [
+							{
+								"sigla":"BVP",
+								"nombre":"Beca Vocacion de Profesor",
+								"estado":"asignado",
+								"monto":"1100000",
+								"pasos":"Los pasos a seguir son ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
+							},
+							{
+								"sigla":"BJGM",
+								"nombre":"Beca Juan Gómez Millas",
+								"estado":"asignado",
+								"monto":"450000",
+								"pasos":"Los pasos a seguir son ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
+							},
+							{
+								"sigla":"BEA",
+								"nombre":"Beca Excelencia Académica",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por <strong>no haber egresado</strong> de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del <strong>10% de los mejores alumnos</strong> de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Los pasos a seguir son ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
+							},
+							{
+								"sigla":"BHPE",
+								"nombre":"Beca Hijos Profesionales de la Educación",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por <strong>no haber egresado</strong> de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del <strong>10% de los mejores alumnos</strong> de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Los pasos a seguir son ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
+							},
+							{
+								"sigla":"BNM",
+								"nombre":"Beca Nuevo Milenio",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por <strong>no haber egresado</strong> de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del <strong>10% de los mejores alumnos</strong> de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Los pasos a seguir son ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
+							},
+							{
+								"sigla":"BET",
+								"nombre":"Beca Excelencia Técnica",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por <strong>no haber egresado</strong> de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del <strong>10% de los mejores alumnos</strong> de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Los pasos a seguir son ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
+							},
+							{
+								"sigla":"BART",
+								"nombre":"Beca ART",
+								"estado":"noAsignado",
+								"monto":"",
+								"motivos":[
+									{
+										"contenido":  "Por <strong>no haber egresado</strong> de enseñanza media de un establecimiento Municipal, Particular Subvencionado o de Administración Delegada"
+									},
+									{
+										"contenido":  "Por no estar dentro del <strong>10% de los mejores alumnos</strong> de su colegio según las notas registradas en la base de datos del MINEDUC"
+									}
+								],
+								"pasos":"Los pasos a seguir son ... <strong>lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,",
+								"urlBeneficio":"http://http://portal.becasycreditos.cl/benecicios/..."
+							}
+						]
+					}
+				}
+			}
+		]
+	}
+}
