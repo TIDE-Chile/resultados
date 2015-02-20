@@ -7,5 +7,6 @@
 angular
   .module('tideApp', [
    'ui.bootstrap',
+   'ngSanitize'
   ]);
 
