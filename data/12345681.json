@@ -1,0 +1,274 @@
+{
+	"rut": "12345681-0",
+	"fechaActualizacion":"05/03/2015",
+	"mensajesDestacados" : [
+			"La asignación del beneficio considera la validación realizada por el Ministerio de Educación del cumplimiento por parte del postulante de los requisitos académicos y socioeconómicos establecidos. Si postulaste a la Beca Vocación de Profesor revisa tu resultado en el módulo Asignación BVP. <br>Si postulaste a la Beca Bicentenario Discapacidad o Juan Gómez Millas Discapacidad revisa tu resultado en el módulo de Asignación Discapacidad.",
+			"Los resultados de las becas seran publicados el dia dd/mm/ aaa"
+	],
+	"datosPostulante": [
+		{
+			"identificador":"",
+			"nombre":"",
+			"institucion":"Universidad Alcantara",
+			"carrera":"Tecnología Médica",
+			"acreditadoEn":"Universidad Alcantara",
+			"fechaAcreditacion":"2/1/15",
+			"datosEvaluacion" : [
+				{
+					"etiqueta":"PSU (Leng)",
+					"valor":"591"
+				},
+				{
+					"etiqueta":"PSU (Mat)",
+					"valor":"565"
+				},
+				{
+					"etiqueta":"PSU (Cs)",
+					"valor":"486"
+				},
+				{
+					"etiqueta":"Ranking",
+					"valor":"721"
+				},
+				{
+					"etiqueta":"NEM",
+					"valor":"5780"
+				}
+			]
+		}
+	],
+	"misBeneficios":{
+		"montoOtorgado":"",
+		"mensajeBeneficios" : "",
+		"procesos":[
+			{
+				"identificador":"primerano",
+				"nombre":"Primer Año",
+				"etapaActual":"asignacion",
+				"urlApelacion":"http://mineduc.cl",
+				"mensajeProceso":"",
+				"etapas": {
+					"postulacion" : {
+						"mensajeTooltip":"",
+						"mensajeDefinicion": "",			
+						"mensajesGenerales": [
+							""
+						],						
+						"mensajesEspeciales": [
+						],																	
+						"beneficios": [
+						]
+					},
+					"preseleccion" : {
+						"mensajeTooltip":"",
+						"mensajeDefinicion": "",			
+						"mensajesGenerales": [],						
+						"mensajesEspeciales": [
+						],
+						"beneficios": [
+							{
+								"sigla":"PSU",
+								"nombre":"PSU",
+								"estado":"",
+								"pasos":"",
+								"urlBeneficio":""
+							},
+							{
+								"sigla":"BEA",
+								"nombre":"BEA",
+								"estado":"",
+								"pasos":"",
+								"urlBeneficio":""
+							},
+							{
+								"sigla":"BPSU",
+								"nombre":"BPSU",
+								"estado":"",
+								"pasos":"",
+								"urlBeneficio":""
+							},
+							{
+								"sigla":"BNM",
+								"nombre":"BNM",
+								"estado":"",
+								"pasos":"",
+								"urlBeneficio":""
+							},				
+							{
+								"sigla":"FSCC",
+								"nombre":"FSCC",
+								"estado":"",
+								"pasos":"",
+								"urlBeneficio":""
+							}
+						]
+					},
+					"asignacion" : {
+						"mensajeTooltip":"",
+						"mensajeDefinicion": "",			
+						"mensajesGenerales": [],						
+						"mensajesEspeciales": [
+								"Tus resultados de asignación de beneficios NO han sido procesados debido a que te encuentras matriculado en más de una institución: [instituciones].",
+								"De acuerdo a lo informado por la institución donde estas matriculado, no has presentado los documentos que respaldan tu postulación al día xx de enero de 2015.",
+								"Has sido beneficiado con la Beca de Nivelación Académica, la cual financia tu participación en un programa académico que ha preparado tu casa de estudios."
+						],						
+						"beneficios": [
+							{
+								"sigla":"PSU",
+								"nombre":"PSU",
+								"estado":"",
+								"pasos":"",
+								"urlBeneficio":""
+							},
+							{
+								"sigla":"BEA",
+								"nombre":"BEA",
+								"estado":"",
+								"pasos":"",
+								"urlBeneficio":""
+							},
+							{
+								"sigla":"BPSU",
+								"nombre":"BPSU",
+								"estado":"",
+								"pasos":"",
+								"urlBeneficio":""
+							},
+							{
+								"sigla":"BNM",
+								"nombre":"BNM",
+								"estado":"",
+								"pasos":"",
+								"urlBeneficio":""
+							},				
+							{
+								"sigla":"FSCC",
+								"nombre":"FSCC",
+								"estado":"",
+								"pasos":"",
+								"urlBeneficio":""
+							}
+						]
+					},
+					"apelacion" : {
+					"mensajeTooltip":"",
+						"mensajeDefinicion": "",			
+						"mensajesGenerales": [
+						],						
+						"mensajesEspeciales": [
+						],
+						"beneficios": [
+							{
+								"sigla":"PSU",
+								"nombre":"PSU",
+								"estado":"",
+								"pasos":"",
+								"urlBeneficio":""
+							},
+							{
+								"sigla":"BEA",
+								"nombre":"BEA",
+								"estado":"",
+								"pasos":"",
+								"urlBeneficio":""
+							},
+							{
+								"sigla":"BPSU",
+								"nombre":"BPSU",
+								"estado":"",
+								"pasos":"",
+								"urlBeneficio":""
+							},
+							{
+								"sigla":"BNM",
+								"nombre":"BNM",
+								"estado":"",
+								"pasos":"",
+								"urlBeneficio":""
+							},				
+							{
+								"sigla":"FSCC",
+								"nombre":"FSCC",
+								"estado":"",
+								"pasos":"",
+								"urlBeneficio":""
+							}
+						]
+					}
+				}
+			},
+			{
+				"identificador":"bvp",
+				"nombre":"BVP Pedagogía",
+				"etapaActual":"asignacion",
+				"urlApelacion":"http://mineduc.cl",
+				"mensajeProceso":"",
+				"etapas": {
+					"postulacion" : {
+						"mensajeTooltip":"",
+						"mensajeDefinicion": "",			
+						"mensajesGenerales": [
+							""
+						],						
+						"mensajesEspeciales": [
+						],
+						"beneficios": []
+					},
+					"preseleccion" : {
+						"mensajeTooltip":"",
+						"mensajeDefinicion": "",			
+						"mensajesGenerales": [],						
+						"mensajesEspeciales": [
+						],
+						"beneficios": [
+							{
+								"sigla":"BVP",
+								"nombre":"Beca Vocación de Profesor",
+								"estado":"",
+								"pasos":"",
+								"urlBeneficio":""
+							}
+						]
+					},
+					"asignacion" : {
+						"mensajeTooltip":"",
+						"mensajeDefinicion": "",			
+						"mensajesGenerales": [],						
+						"mensajesEspeciales": [
+								"Tus resultados de asignación de beneficios NO han sido procesados debido a que te encuentras matriculado en más de una institución: [instituciones].",
+								"Para completar el proceso de asignación de la Beca Vocación de Profesor, es requisito que suscribas el pagaré de la beca ante notario y lo entregues en la Institución de Educación."
+						],						
+						"beneficios": [
+							{
+								"sigla":"BVP",
+								"nombre":"Beca Vocación de Profesor",
+								"estado":"",
+								"pasos":"",
+								"urlBeneficio":""
+							}
+						]
+					},
+					"apelacion" : {
+					"mensajeTooltip":"",
+						"mensajeDefinicion": "",			
+						"mensajesGenerales": [
+						],						
+						"mensajesEspeciales": [
+							"Has sido beneficiado con la Beca de Articulación"
+						],
+						"beneficios": [
+							{
+								"sigla":"BVP",
+								"nombre":"Beca Vocación de Profesor",
+								"estado":"",
+								"pasos":"",
+								"urlBeneficio":""
+							}
+						]
+					}
+				}
+			}
+
+		]
+	}
+}
