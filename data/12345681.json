@@ -45,7 +45,7 @@
 				"identificador":"primerano",
 				"nombre":"Primer Año",
 				"etapaActual":"asignacion",
-				"urlApelacion":"http://mineduc.cl",
+				"urlApelacion":"",
 				"mensajeProceso":"",
 				"etapas": {
 					"postulacion" : {
@@ -201,14 +201,13 @@
 				"identificador":"bvp",
 				"nombre":"BVP Pedagogía",
 				"etapaActual":"asignacion",
-				"urlApelacion":"http://mineduc.cl",
+				"urlApelacion":"",
 				"mensajeProceso":"",
 				"etapas": {
 					"postulacion" : {
 						"mensajeTooltip":"",
 						"mensajeDefinicion": "",			
 						"mensajesGenerales": [
-							""
 						],						
 						"mensajesEspeciales": [
 						],
