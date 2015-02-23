@@ -11,7 +11,7 @@
 
       <!-- Monto otorgado -->
       <div class="col-xs-12 col-md-4 col-lg-4">
-       <p class="botorgado">Beneficio Otorgado: <spam style="color:red;">{{(controller.data.misBeneficios.montoOtorgado | currency).slice(0,-3) }}</spam></p> <!-- solucion 1  era para angularjs 1.3 : {{controller.data.misBeneficios.montoOtorgado | currency:fractionSize:0}} -->
+       <p class="botorgado" ng-show="controller.data.misBeneficios.montoOtorgado">Beneficio Otorgado: <spam style="color:red;">{{(controller.data.misBeneficios.montoOtorgado | currency).slice(0,-3) }}</spam></p> <!-- solucion 1  era para angularjs 1.3 : {{controller.data.misBeneficios.montoOtorgado | currency:fractionSize:0}} -->
       </div><!-- Monto otorgado -->
 
       <!--</div> por ahora no es necesario-->

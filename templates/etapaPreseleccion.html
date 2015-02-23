@@ -47,45 +47,53 @@
           <div>{{beneficio.sigla}}</div>      
           <div style="height:20px;">{{beneficio.monto}}</div>
          </div><!-- Fin No cumple en preseleccion-->
+         <!-- por defecto : definir color-->
+        <div class="col-xs-5 col-md-2 col-lg-1 cambiarluegopreseleccionNocumple " id="{{ProcesosBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'" ng-if="beneficio.estado == ''">
+          <div>{{beneficio.sigla}}</div>      
+          <div style="height:20px;">{{beneficio.monto}}</div>
+         </div><!-- Fin No cumple en preseleccion-->
+        <!-- por defecto : definir color-->
         </div> 
-        <div  ng-if="ProcesosBeneficio.nombre != 'Becas complementarias'">
-                  <div class="col-xs-12 col-md-12 col-lg-4">
-                   <div class="col-xs-2 col-md-1 col-lg-2 cambiarluegopreseleccionCumpleSinP">
-                    <div style="height:20px;"></div>
-                   </div>  
-                   <div class="col-xs-8 col-md-6 col-lg-8">
-                    <p><b>Cumple</b> requisitos para este beneficio</p>
+        <div ng-show="ProcesosBeneficio.etapas.preseleccion.beneficios">
+            <div  ng-if="ProcesosBeneficio.nombre != 'Becas complementarias'">
+                      <div class="col-xs-12 col-md-12 col-lg-4">
+                       <div class="col-xs-2 col-md-1 col-lg-2 cambiarluegopreseleccionCumpleSinP">
+                        <div style="height:20px;"></div>
+                       </div>  
+                       <div class="col-xs-8 col-md-6 col-lg-8">
+                        <p><b>Cumple</b> requisitos para este beneficio</p>
 
-                   </div><!-- Fin Cumple en preseleccion-->
-                  </div> 
-                  <div class="col-xs-12 col-md-12 col-lg-4">  
-                   <div class="col-xs-2 col-md-1 col-lg-2 cambiarluegopreseleccionNocumpleSinP">
-                    <div style="height:20px;"></div>
-                   </div>  
-                   <div class="col-xs-8 col-md-6 col-lg-8">
-                    <p><b>No Cumple</b> requisitos para este beneficio</p>
-                   </div> 
-                  </div>
-        </div>
-        <!--solucion propuesta para que cuando hay pocas becas no quede horizontal -->
-        <div  ng-if="ProcesosBeneficio.nombre == 'Becas complementarias'">
-                  <div class="col-xs-12 col-md-12 col-lg-8">
-                   <div class="col-xs-2 col-md-1 col-lg-1 cambiarluegopreseleccionCumpleSinP">
-                    <div style="height:20px;"></div>
-                   </div>  
-                   <div class="col-xs-8 col-md-6 col-lg-8">
-                    <p><b>Cumple</b> requisitos para este beneficio</p>
+                       </div><!-- Fin Cumple en preseleccion-->
+                      </div> 
+                      <div class="col-xs-12 col-md-12 col-lg-4">  
+                       <div class="col-xs-2 col-md-1 col-lg-2 cambiarluegopreseleccionNocumpleSinP">
+                        <div style="height:20px;"></div>
+                       </div>  
+                       <div class="col-xs-8 col-md-6 col-lg-8">
+                        <p><b>No Cumple</b> requisitos para este beneficio</p>
+                       </div> 
+                      </div>
+            </div>
+            <!--solucion propuesta para que cuando hay pocas becas no quede horizontal -->
+            <div  ng-if="ProcesosBeneficio.nombre == 'Becas complementarias'">
+                      <div class="col-xs-12 col-md-12 col-lg-8">
+                       <div class="col-xs-2 col-md-1 col-lg-1 cambiarluegopreseleccionCumpleSinP">
+                        <div style="height:20px;"></div>
+                       </div>  
+                       <div class="col-xs-8 col-md-6 col-lg-8">
+                        <p><b>Cumple</b> requisitos para este beneficio</p>
 
-                   </div><!-- Fin Cumple en preseleccion-->
-                  </div> 
-                  <div class="col-xs-12 col-md-12 col-lg-8">  
-                   <div class="col-xs-2 col-md-1 col-lg-1 cambiarluegopreseleccionNocumpleSinP">
-                    <div style="height:20px;"></div>
-                   </div>  
-                   <div class="col-xs-8 col-md-6 col-lg-8">
-                    <p><b>No Cumple</b> requisitos para este beneficio</p>
-                   </div> 
-                  </div>
+                       </div><!-- Fin Cumple en preseleccion-->
+                      </div> 
+                      <div class="col-xs-12 col-md-12 col-lg-8">  
+                       <div class="col-xs-2 col-md-1 col-lg-1 cambiarluegopreseleccionNocumpleSinP">
+                        <div style="height:20px;"></div>
+                       </div>  
+                       <div class="col-xs-8 col-md-6 col-lg-8">
+                        <p><b>No Cumple</b> requisitos para este beneficio</p>
+                       </div> 
+                      </div>
+            </div>
         </div>
         <!-- Mensajes Especiales preseleccion -->
         <div  class="col-xs-12 col-md-12 col-lg-12 MensajesEspeciales" ng-repeat="mensaje in ProcesosBeneficio.etapas.preseleccion.mensajesEspeciales">

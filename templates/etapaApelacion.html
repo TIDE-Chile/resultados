@@ -35,7 +35,7 @@
             <div ng-if="beneficio.monto > 0">      
                 <div style="height:20px;">{{(beneficio.monto | currency).slice(0,-3) }}</div>
             </div>
-            <div ng-if="beneficio.monto == 0">      
+            <div ng-if="beneficio.monto == 0 || !beneficio.monto">      
                 <div style="height:20px;"></div>
             </div>
           <!-- monto > 0 || = 0 -->
