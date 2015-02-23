@@ -1,6 +1,6 @@
 <div>
 	<div ng-show="beneficio.estado=='asignado'"> 
-		<div>Usted ha sido beneficado(a) con la <b>{{beneficio.nombre}}</b> y ha obtenido el siguiente monto anual:</div>
+		<div>Usted ha sido beneficado(a) con <b>{{beneficio.nombre}}</b> y ha obtenido el siguiente monto anual:</div>
 		<!--style convertir en clase cuando ya sea definitivo-->
 		<div style="text-aling:center;">
 				<div class="MontoPopup"> Monto Obtenido: <b>{{(beneficio.monto | currency).slice(0,-3) }}</b></div>
@@ -17,7 +17,7 @@
 	</div>
 	<div ng-show="beneficio.estado=='noAsignado'"> 
 		
-		<div>Usted <b>no ha sido beneficiado</b> con esta beca. Los motivos son:  </div>
+		<div>Usted <b>no ha sido beneficiado(a)</b> con {{beneficio.nombre}}. Los motivos son:  </div>
 		<div ng-repeat="motivo in beneficio.motivos">
 			<!--<p>{{$index+1}}.- {{motivo.contenido}} </p>-->
 			<p>{{$index+1}}.- <spam ng-bind-html="motivo.contenido"></spam> </p> 
@@ -33,7 +33,7 @@
 		</div>
 	</div>
 	<div ng-show="beneficio.estado=='cumpleRequisitos'"> 
-		Usted <b>cumple con los requisitos</b> para obtener esta beca, conforme a la información que posee el Mineduc.
+		Usted <b>cumple con los requisitos</b> para obtener este beneficio, conforme a la información que posee el Mineduc.
 		<div  ng-show="controller.isUndefined=beneficio.urlBeneficio" style=" text-align: right;"><a href="{{beneficio.urlBeneficio}}" target="_blank"><b>{{beneficio.nombre}}</b></a></div>
 		<div ng-show="beneficio.pasos!=''">
 			<div >
@@ -45,7 +45,7 @@
 		</div>
 	</div>
 	<div ng-show="beneficio.estado=='noCumpleRequisitos'"> 
-		<div>Usted <b>No cumple con los requisitos</b> para obtener esta beca, conforme a la información que posee el Mineduc. Las razones son:</div>
+		<div>Usted <b>No cumple con los requisitos</b> para obtener este beneficio, conforme a la información que posee el Mineduc. Las razones son:</div>
 		<div ng-repeat="motivo in beneficio.motivos">
 			<p>{{$index+1}}.- <spam ng-bind-html="motivo.contenido"></spam> </p> 
 		</div>
@@ -61,7 +61,7 @@
 	</div>
 
 	<div ng-show="beneficio.estado=='cumple'"> 
-		Usted <b>cumple con los requisitos</b> para obtener esta beca, conforme a la información que posee el Mineduc.
+		Usted <b>cumple con los requisitos</b> para obtener este beneficio, conforme a la información que posee el Mineduc.
 		<div  ng-show="controller.isUndefined=beneficio.urlBeneficio" style=" text-align: right;"><a href="{{beneficio.urlBeneficio}}" target="_blank"><b>{{beneficio.nombre}}</b></a></div>
 		<div ng-show="beneficio.pasos!=''">
 			<div >
@@ -74,7 +74,7 @@
 	</div>
 	<div ng-show="beneficio.estado=='noCumple'"> 
 
-		<div>Usted <b>No cumple con los requisitos</b> para obtener esta beca, conforme a la información que posee el Mineduc. Las razones son:</div>
+		<div>Usted <b>No cumple con los requisitos</b> para obtener este beneficio, conforme a la información que posee el Mineduc. Las razones son:</div>
 		<div ng-repeat="motivo in beneficio.motivos">
 			<p>{{$index+1}}.- <spam ng-bind-html="motivo.contenido"></spam> </p> 
 		</div>
