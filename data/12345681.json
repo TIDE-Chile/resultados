@@ -66,41 +66,6 @@
 						"mensajesEspeciales": [
 						],
 						"beneficios": [
-							{
-								"sigla":"PSU",
-								"nombre":"PSU",
-								"estado":"",
-								"pasos":"",
-								"urlBeneficio":""
-							},
-							{
-								"sigla":"BEA",
-								"nombre":"BEA",
-								"estado":"",
-								"pasos":"",
-								"urlBeneficio":""
-							},
-							{
-								"sigla":"BPSU",
-								"nombre":"BPSU",
-								"estado":"",
-								"pasos":"",
-								"urlBeneficio":""
-							},
-							{
-								"sigla":"BNM",
-								"nombre":"BNM",
-								"estado":"",
-								"pasos":"",
-								"urlBeneficio":""
-							},				
-							{
-								"sigla":"FSCC",
-								"nombre":"FSCC",
-								"estado":"",
-								"pasos":"",
-								"urlBeneficio":""
-							}
 						]
 					},
 					"asignacion" : {
