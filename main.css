@@ -34,94 +34,6 @@ body {
   padding-bottom: 19px;
 }
 
-/* Custom page footer */
-.footer {
-  text-align:center;
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-.pie{
-text-align:right;
-
-}
-.logo{
-position:relative;
-top:19px;
-left:12px;
-z-index: 1;
-}
-
-.cursos{
-color:rgba(230, 22, 16, 1);
-margin:15px;
-}
-.colorblue{
-color:rgba(3, 48, 118, 1);
-
-}
-.actualizada
-{
-text-align:right;
-margin-top:15px;
-
-}
-.byc
-{
-  color: rgba(12, 89, 207, 1);
-  font-size: 24px;
-}
-
-.errorMsg{
-  text-align: center;
-  font-size: 22px;
-  padding: 3px;
-}
-.Acerrar{
-  font-size:15px;
-  padding-left:10px;
-  padding-right:10px;
-  cursor: pointer;
-  text-align: right;
-}
-
-.Bienvenidos{
-   font-size:21px;
-   padding: 30px;
-
-}
-.subtitulo
-{
-  
-  color: rgba(3, 48, 118, 1);
-  font-size: 24px;
-}
-.rut
-{
-  font-size: 20px;
-  margin:5px;
-}
-
-.margen{
-   margin-bottom:15px;
-}
-.margen2{
-  
-  text-align:right;
-   margin-bottom:15px;
-}
-.md{
-  background-color: #D5D0D0;
-  border: 2px solid #000000;
-}
-.botorgado
-{
-  margin:5px;
-font-size: 20px;
-color:black;
-text-align:right;
-}
 /* Customize container */
 @media (min-width: 768px) {
   .container {
@@ -149,6 +61,81 @@ text-align:right;
 .marketing p + h4 {
   margin-top: 28px;
 }
+
+/*
+        ENCABEZADO
+*/
+
+/* Imagen del ministerio de Educacion*/
+.logo{
+position:relative;
+top:19px;
+left:12px;
+z-index: 1;
+}
+
+/*Color Beca y creditos subtitulo*/
+.byc
+{
+  color: rgba(12, 89, 207, 1);
+  font-size: 24px;
+}
+
+/* Informacion Actualizada Encabezado*/
+.InfoActualizada
+{
+  text-align:right;
+  margin-top:15px;
+}
+
+/*Color  y tamaño letra Fecha*/
+.ClaseFecha
+{
+  color: rgba(12, 89, 207, 1);
+  font-size: 24px;
+}
+
+/* Color y tamaño letra Rut*/
+.ClaseRut{
+  color: rgba(12, 89, 207, 1);
+  font-size: 24px;
+}
+/* Boton Cerrar*/
+.Acerrar
+{
+  font-size:15px;
+  padding-left:10px;
+  padding-right:10px;
+  cursor: pointer;
+  text-align: right;
+}
+
+/*parabra RUT*/
+.rut
+{
+  font-size: 20px;
+  margin:5px;
+}
+
+
+/*Texto titulo de los Procesos*/
+.subtitulo
+{
+  color: rgba(3, 48, 118, 1);
+  font-size: 24px;
+}
+/*  */
+.cursos{
+color:rgba(230, 22, 16, 1);
+margin:15px;
+}
+
+/*Texto Subtitulo Login*/
+.Bienvenidos{
+   font-size:21px;
+   padding: 30px;
+}
+/*bloques mayores de Procesos: estilo por defecto*/
 .divmayor{
   margin-top:10px;
   margin-bottom:10px;
@@ -156,6 +143,54 @@ text-align:right;
   background-color: rgb(226, 238, 121); 
 
 }
+
+.errorMsg
+{
+  text-align: center;
+  font-size: 22px;
+  padding: 3px;
+}
+
+.margen
+{
+   margin-bottom:15px;
+}
+.margen2
+{
+  
+  text-align:right;
+  margin-bottom:15px;
+}
+
+.md{
+  background-color: #D5D0D0;
+  border: 2px solid #000000;
+}
+/*Palabra Beneficio Otorgado*/
+.botorgado
+{
+  margin:5px;
+  font-size: 20px;
+  color:black;
+  text-align:right;
+}
+
+
+/*
+    BLOQUE PROCESO: INFORMACION DESTACADA
+
+*/
+
+/*color por defecto icono Informacion Destacada*/
+.iconoInfoDest
+{
+color:blue;
+}
+
+/*
+  BLOQUE PROCESO: DATOS POSTULANTE
+*/
+
 /*CLase para puntajes */
 .rectangulo
 {
@@ -177,11 +212,13 @@ background-color: rgb(193, 208, 69);
 {
 background-color: rgb(193, 208, 69);
 }*/
+
+
 #datospostulante.rectangulo
 {
   background-color:rgb(235, 235, 235);
 }
-
+/*informacion evaluacion del postulante*/
 .infoevaluacion
 {
   border:1px solid rgb(146, 146, 146);
@@ -189,18 +226,28 @@ background-color: rgb(193, 208, 69);
   text-align:center;
   border-radius: 5px;
 }
-.infosuperior{
-padding-top: 2px;
-padding-bottom: 7px;
-background-color:rgb(0, 141, 177);color:white;
+
+/*Color por defecto Datos Postulante*/
+.ColorDatosPostulante{
+color:rgba(3, 48, 118, 1);
 }
+
+/*texto superior en minirecuadro de evaluacion*/
+.infosuperior
+{
+  padding-top: 2px;
+  padding-bottom: 7px;
+  background-color:rgb(0, 141, 177);color:white;
+}
+/*texto inferior en minirecuadro de evaluacion*/
 .infoinferior
 {
   background-color:rgb(254, 248, 160);
   color:black;
-font-size: 24px;
-border-radius: 5px;
+  font-size: 24px;
+  border-radius: 5px;
 }
+
 
 .MensajesEspfeciales
 {
@@ -396,15 +443,16 @@ background-color: rgb(226, 238, 121);
     background-clip: padding-box;
   }
 
-  .cerrar{
-text-align: right;
+.cerrar
+{
+  text-align: right;
+}
 
-  }
+.iconoAccordeon
+{
+  color: black;
+}
 
-  .iconoAccordeon
-  {
-    color: black;
-  }
 .MontoPopup
 {
   position:relative;
@@ -452,20 +500,21 @@ r:15px;
  font-size: 20px;
  text-align: center;
 }
-
-.Bienvenidos{
+/* subititulo login small*/
+.Bienvenidos
+{
    font-size:18px;
    padding: 15px;
+}
 
 }
-}
+
 /*linea de tiempo mostrar/ocultar */
 .mostrar-xs{
   display:block;
 }
 .ocultar-xs {
- display:none ;
-
+ display:none;
 }
 
 /*linea de tiempo en dispositivos xs real */
@@ -481,3 +530,21 @@ r:15px;
 
 }
   }
+
+
+/*
+    PIE DE PAGINA
+*/
+
+/* Custom page footer */
+.footer {
+  text-align:center;
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+/*posicion del logo pie de pagina*/
+.pie
+{
+  text-align:right;
+}

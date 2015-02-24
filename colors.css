@@ -1,7 +1,38 @@
+/*
+      COLORES DEL ENCABEZADO
+*/
+
+/*Color Beca y creditos subtitulo*/
+.byc
+{
+  color: rgba(12, 89, 207, 1);
+}
+/*Informacion Actualizada */
+.InfoActualizada
+{
+  color: rgba(0, 0, 0, 1);
+}
+/*Color Fecha*/
+.ClaseFecha{
+  color: rgba(12, 89, 207, 1);
+}
+/* Color Rut*/
+.ClaseRut{
+  color: rgba(12, 89, 207, 1);
+}
+/*Barra del rut bajo titulo*/
 .barraRUT
 {
   background-color:#EE8600;
 }
+
+/*
+      FIN COLORES DEL ENCABEZADO
+*/
+
+/*
+      COLORES BLOQUE DE PROCESOS
+*/
 
 .bloqueInformacion
 {
@@ -25,6 +56,12 @@
   background-color:#82B2D3;
 }
 */
+
+/*Color textos Datos Postulante*/
+.ColorDatosPostulante{
+color:rgba(3, 48, 118, 1);
+}
+
 
 .recuadroProceso
 {
@@ -104,6 +141,7 @@ Colores del Acordeon
 #custom-accord .panel {
 background-color: #82B2D3;
 }
+/*Encabezado del Acordeon*/
 #custom-accord .panel-heading
 {
 color: rgba(3, 48, 118, 1);
@@ -111,7 +149,7 @@ background-color: #82B2D3;
 border-color: rgb(226, 238, 121);
 
 }
-/*accordion*/
+/*Cuerpo Acordeon*/
 #custom-accord .panel-body
 {
  background-color:  #82B2D3;
@@ -182,6 +220,7 @@ Color quiero una beca:MisBeneficios
 
    fill:rgb(0, 0, 0);
 }
+
 /*Linea de tiempo Small */
 @media (max-device-width: 767px) {
 
