@@ -67,11 +67,12 @@ body {
 */
 
 /* Imagen del ministerio de Educacion*/
-.logo{
-position:relative;
-top:19px;
-left:12px;
-z-index: 1;
+.logo
+{
+  position:relative;
+  top:19px;
+  left:12px;
+  z-index: 1;
 }
 
 /*Color Beca y creditos subtitulo*/
@@ -117,7 +118,6 @@ z-index: 1;
   margin:5px;
 }
 
-
 /*Texto titulo de los Procesos*/
 .subtitulo
 {
@@ -135,49 +135,57 @@ margin:15px;
    font-size:21px;
    padding: 30px;
 }
-/*bloques mayores de Procesos: estilo por defecto*/
-.divmayor{
+/*
+     PROCESOS EN GENERAL: Estilo por Defecto
+*/
+
+/* barra naranja header*/
+.BarranaSuperior
+{
+  padding:1px;
+  background-color:rgb(255, 197, 129);
+}
+/*Casos que necesiten un espacio a la derecha*/
+.padding5px
+{
+  padding-left:5px;
+}
+
+/*Estilo Bloques Principales*/
+.BloquesMayores
+{
   margin-top:10px;
   margin-bottom:10px;
   padding: 15px;
+  /*color por defecto bloques*/
   background-color: rgb(226, 238, 121); 
-
 }
-
+/**/
 .errorMsg
 {
   text-align: center;
   font-size: 22px;
   padding: 3px;
 }
-
+/**/
 .margen
 {
-   margin-bottom:15px;
+  margin-bottom:15px;
 }
+/**/
 .margen2
 {
-  
   text-align:right;
   margin-bottom:15px;
 }
-
+/**/
 .md{
   background-color: #D5D0D0;
   border: 2px solid #000000;
 }
-/*Palabra Beneficio Otorgado*/
-.botorgado
-{
-  margin:5px;
-  font-size: 20px;
-  color:black;
-  text-align:right;
-}
-
 
 /*
-    BLOQUE PROCESO: INFORMACION DESTACADA
+    BLOQUE: INFORMACION DESTACADA
 
 */
 
@@ -188,10 +196,10 @@ color:blue;
 }
 
 /*
-  BLOQUE PROCESO: DATOS POSTULANTE
+  BLOQUE: DATOS POSTULANTE
 */
 
-/*CLase para puntajes */
+/*Clase para puntajes */
 .rectangulo
 {
   width: 99%;
@@ -213,7 +221,7 @@ background-color: rgb(193, 208, 69);
 background-color: rgb(193, 208, 69);
 }*/
 
-
+/*color defecto recuadros pequeños de datospostulante*/
 #datospostulante.rectangulo
 {
   background-color:rgb(235, 235, 235);
@@ -226,12 +234,10 @@ background-color: rgb(193, 208, 69);
   text-align:center;
   border-radius: 5px;
 }
-
 /*Color por defecto Datos Postulante*/
 .ColorDatosPostulante{
 color:rgba(3, 48, 118, 1);
 }
-
 /*texto superior en minirecuadro de evaluacion*/
 .infosuperior
 {
@@ -247,12 +253,38 @@ color:rgba(3, 48, 118, 1);
   font-size: 24px;
   border-radius: 5px;
 }
-
-
+/*Estilo en los Mensajes de datospostulante*/
 .MensajesEspfeciales
 {
 padding:15px 15px 0 15px;
 }
+
+/*
+    BLOQUE: MIS BENEFICIOS
+*/
+
+/*Palabra Beneficio Otorgado*/
+.botorgado
+{
+  margin:5px;
+  font-size: 20px;
+  color:black;
+  text-align:right;
+}
+/*Recuadro pequeño de MisBeneficios para identificador no Defecto*/
+.beneficiosrectangulo
+{
+  /*height:65px;*/
+  border:2px solid rgb(146, 146, 146);
+  margin:4px;
+  text-align:center;
+  border-radius: 5px;
+  padding:0 5px 1px 5px;
+  /*color defecto para identificador no definidas*/
+  background-color:rgb(255, 255, 255);
+  cursor:pointer;
+}
+/*Recuadro pequeño de MisBeneficios estolo General*/
 .recuadroBeneficio{
   /*height:65px;*/
   border:2px solid rgb(146, 146, 146);
@@ -262,34 +294,22 @@ padding:15px 15px 0 15px;
   padding:0 5px 1px 5px;
   cursor:pointer;
 }
-
-.beneficiosrectangulo
+/*Estilo Recuadro Pequeño Cumple*/
+.PreseleccionCumple
+{
+   /*height:65px;*/
+  border:2px solid rgb(96, 96, 96);
+  margin:4px;
+  text-align:center;
+  border-radius: 5px;
+  padding:0 5px 1px 5px;
+  background-color: rgb(98, 156, 68);
+  cursor:pointer;
+}
+/*Estilo Recuadro Pequeño no Cumple*/
+.PreseleccionNocumple
 {
   /*height:65px;*/
-  border:2px solid rgb(146, 146, 146);
-  margin:4px;
-  text-align:center;
-  border-radius: 5px;
-  padding:0 5px 1px 5px;
-  /*color defecto para etapas no definidas*/
-  background-color:rgb(255, 255, 255);
-  cursor:pointer;
-}
-
-.cambiarluegopreseleccionCumple{
-   /*height:65px;*/
-  border:2px solid rgb(96, 96, 96);
-  margin:4px;
-  text-align:center;
-  border-radius: 5px;
-  padding:0 5px 1px 5px;
-  background-color: rgb(98, 156, 68);
-  cursor:pointer;
-}
-
-.cambiarluegopreseleccionNocumple{
-
-   /*height:65px;*/
   border:2px solid rgb(96, 96, 96);
   margin:4px;
   text-align:center;
@@ -298,8 +318,10 @@ padding:15px 15px 0 15px;
   background-color: rgb(214, 214, 214);
   cursor:pointer;
 }
-.cambiarluegopreseleccionCumpleSinP{
-   /*height:65px;*/
+/*Estilo Recuadro Pequeño Cumple sin pointer*/
+.PreseleccionCumpleSinP
+{
+  /*height:65px;*/
   border:2px solid rgb(96, 96, 96);
   margin:4px;
   text-align:center;
@@ -308,10 +330,10 @@ padding:15px 15px 0 15px;
   background-color: rgb(98, 156, 68);
 
 }
-
-.cambiarluegopreseleccionNocumpleSinP{
-
-   /*height:65px;*/
+/*Estilo Recuadro Pequeño no Cumple sin pointer*/
+.PreseleccionNocumpleSinP
+{
+  /*height:65px;*/
   border:2px solid rgb(96, 96, 96);
   margin:4px;
   text-align:center;
@@ -320,39 +342,17 @@ padding:15px 15px 0 15px;
   background-color: rgb(214, 214, 214);
 
 }
+/***
+    Pie de Mis Bineficios
+***/
 
-/*#primerano.beneficiosrectangulo
-{
-
-  background-color:rgb(201, 241, 253);
-}
-#complementarias.beneficiosrectangulo
-{
-
-  background-color:rgb(254, 248, 160);
-}
-
-#superiores.beneficiosrectangulo
-{
-
-  background-color:rgb(254, 198, 61);
-}*/
-
-/* barra naranja header*/
-.barranaranja
-{
-  padding:1px;
-  background-color:rgb(255, 197, 129);
-}
-.padding5px
-{
-  padding-left:5px;
-}
+/* palabra Call Center*/
 .callcenter
 {
  font-size: 22px;
  text-align: left;
 }
+/*Estilo recuadro Quiero una beca*/
 .quieroBeca
 {
   background-color:white;
@@ -362,27 +362,31 @@ padding:15px 15px 0 15px;
   text-align:center;
   cursor:pointer;
 }
-/*accordion*/
 
-#custom-accord{
-padding: 10px 0 10px 0;
+/***
+    CSS de Acordeon
+***/
 
+/*espacio el acordeon en general*/
+#custom-accord
+{
+  padding: 10px 0 10px 0;
 }
+/*Color de encabezado y borde del acordeon*/
 #custom-accord .panel-heading
 {
-color: rgba(3, 48, 118, 1);
-background-color: rgb(226, 238, 121);
-border-color:rgb(226, 238, 121);
+  color: rgba(3, 48, 118, 1);
+  background-color: rgb(226, 238, 121);
+  border-color:rgb(226, 238, 121);
 
 }
-/*accordion*/
+/*estilo del cuerpo del acordeon*/
 #custom-accord .panel-body
 {
-padding: 1px;
-margin: 1px;
-background-color: rgb(226, 238, 121); 
+  padding: 1px;
+  margin: 1px;
+  background-color: rgb(226, 238, 121); 
 }
-
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
@@ -403,7 +407,11 @@ background-color: rgb(226, 238, 121);
   }
 }
 
-/***css de popover***/
+/***
+    Css de Efecto PopOver (PopUp)
+***/
+
+/*Estilo popover en general*/
 .popover {
     padding: 3px;
     overflow: hidden;
@@ -416,8 +424,8 @@ background-color: rgb(226, 238, 121);
     -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   }
-
-  .popover-title {
+/*Estilo Titulo popover*/
+.popover-title {
     padding: 8px 14px;
     margin: 0;
     font-size: 14px;
@@ -431,8 +439,8 @@ background-color: rgb(226, 238, 121);
             border-radius: 5px 5px 0 0;
   
   }
-  
-  .popover-content {
+/*Estilo Contenido (cuerpo) popover*/
+.popover-content {
     padding: 9px 14px;
     background-color: #ffffff;
     -webkit-border-radius: 0 0 3px 3px;
@@ -442,17 +450,17 @@ background-color: rgb(226, 238, 121);
     -moz-background-clip: padding-box;
     background-clip: padding-box;
   }
-
+/*x de Cerrar El popover*/
 .cerrar
 {
   text-align: right;
 }
-
+/*EL COLOR de icono > en Acordeon*/
 .iconoAccordeon
 {
   color: black;
 }
-
+/*Cuando tiene monto asigando,dentro popover */
 .MontoPopup
 {
   position:relative;
@@ -464,36 +472,62 @@ background-color: rgb(226, 238, 121);
   font-size:18px;
 }
 
-
+/***
+    Barra Preceso: Efecto progress-bar
+***/
 .progress-bar { 
   transition: width 1s ease-in-out; 
 }
 
-/* línea de tiempo */
+/***
+    Css Línea de Tiempo 
+***/
+
+/*pointer en etapas*/
 .timeline .etapa{
   cursor: pointer;
 }
-
+/*tamaño letra Etapa activa*/
 .timeline .etapa.active {
   font-size: 17px;
 }
-
-.timeline .etapa .cicule{
-r:15px;
+/*linea de tiempo mostrar/ocultar */
+.mostrar-xs{
+  display:block;
+}
+/*linea de tiempo mostrar/ocultar */
+.ocultar-xs {
+ display:none;
 }
 
-/*css Small */
+/*linea de tiempo en dispositivos xs real */
+@media (max-device-width: 500px) {
+/*linea de tiempo mostrar/ocultar */
+.mostrar-xs {
+
+ display:none !important;
+}
+/*linea de tiempo mostrar/ocultar */
+.ocultar-xs {
+ display:block !important;
+
+}
+  }
+
+/***
+    Css para Dispositivos Small 
+***/
 @media (max-width: 767px) {
 /*Linea de tiempo */
+/*texto de las etapas*/
 .timeline .etapa {
   
   font-size: 12px;
 }
-
+/*texto de las etapas seleccionada*/
 .timeline .etapa.active {
   font-size: 14px;
 }
-
 /* pie de Mis beneficios*/
 .callcenter
 {
@@ -508,29 +542,6 @@ r:15px;
 }
 
 }
-
-/*linea de tiempo mostrar/ocultar */
-.mostrar-xs{
-  display:block;
-}
-.ocultar-xs {
- display:none;
-}
-
-/*linea de tiempo en dispositivos xs real */
-@media (max-device-width: 500px) {
-
-.mostrar-xs {
-
- display:none !important;
-}
-
-.ocultar-xs {
- display:block !important;
-
-}
-  }
-
 
 /*
     PIE DE PAGINA

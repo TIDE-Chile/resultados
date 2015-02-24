@@ -18,7 +18,7 @@
         <div  ng-repeat="beneficio in ProcesosBeneficio.etapas.preseleccion.beneficios" > 
          <!-- Recuadro beneficio -->
         <!--Inicio de Cumple en preseleccion-->
-        <div class="col-xs-5 col-md-2 col-lg-1 cambiarluegopreseleccionCumple " id="{{ProcesosBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'" ng-if="beneficio.estado == 'cumpleRequisitos' || beneficio.estado == 'cumple'" ng-show="ProcesosBeneficio.etapas.preseleccion.mensajeTooltip">
+        <div class="col-xs-5 col-md-2 col-lg-1 PreseleccionCumple " id="{{ProcesosBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'" ng-if="beneficio.estado == 'cumpleRequisitos' || beneficio.estado == 'cumple'" ng-show="ProcesosBeneficio.etapas.preseleccion.mensajeTooltip">
           <!--Si esta asignado un icono sino el otro-->
           <div style="text-align:left;">
            <span style='color:green' ng-if="beneficio.estado == 'cumpleRequisitos' || beneficio.estado == 'cumple'">
@@ -34,7 +34,7 @@
         </div><!-- Fin Cumple en preseleccion-->
 
         <!--Inicio de Cumple en preseleccion: mensajeTooltip sin Mensajes-->
-        <div class="col-xs-5 col-md-2 col-lg-1 cambiarluegopreseleccionCumple " id="{{ProcesosBeneficio.identificador}}" ng-if="beneficio.estado == 'cumpleRequisitos' || beneficio.estado == 'cumple'" ng-show="!ProcesosBeneficio.etapas.preseleccion.mensajeTooltip">
+        <div class="col-xs-5 col-md-2 col-lg-1 PreseleccionCumple " id="{{ProcesosBeneficio.identificador}}" ng-if="beneficio.estado == 'cumpleRequisitos' || beneficio.estado == 'cumple'" ng-show="!ProcesosBeneficio.etapas.preseleccion.mensajeTooltip">
           <!--Si esta asignado un icono sino el otro-->
           <div style="text-align:left;">
            <span style='color:green' ng-if="beneficio.estado == 'cumpleRequisitos' || beneficio.estado == 'cumple'">
@@ -49,7 +49,7 @@
         </div><!-- Fin Cumple en preseleccion-->
 
         <!--Inicio de No cumple en preseleccion-->
-        <div class="col-xs-5 col-md-2 col-lg-1 cambiarluegopreseleccionNocumple " id="{{ProcesosBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'" ng-if="beneficio.estado == 'noCumpleRequisitos' || beneficio.estado == 'noCumple'" ng-show="ProcesosBeneficio.etapas.preseleccion.mensajeTooltip">
+        <div class="col-xs-5 col-md-2 col-lg-1 PreseleccionNocumple" id="{{ProcesosBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'" ng-if="beneficio.estado == 'noCumpleRequisitos' || beneficio.estado == 'noCumple'" ng-show="ProcesosBeneficio.etapas.preseleccion.mensajeTooltip">
           <!--Si esta asignado un icono sino el otro-->
           <div style="text-align:left;">
            <span style='color:green' ng-if="beneficio.estado == 'cumpleRequisitos' || beneficio.estado == 'cumple'">
@@ -65,7 +65,7 @@
         </div><!-- Fin No cumple en preseleccion-->
 
         <!--Inicio de No cumple en preseleccion: mensajeTooltip sin Mensajes -->
-        <div class="col-xs-5 col-md-2 col-lg-1 cambiarluegopreseleccionNocumple " id="{{ProcesosBeneficio.identificador}}" ng-if="beneficio.estado == 'noCumpleRequisitos' || beneficio.estado == 'noCumple'" ng-show="!ProcesosBeneficio.etapas.preseleccion.mensajeTooltip">
+        <div class="col-xs-5 col-md-2 col-lg-1 PreseleccionNocumple" id="{{ProcesosBeneficio.identificador}}" ng-if="beneficio.estado == 'noCumpleRequisitos' || beneficio.estado == 'noCumple'" ng-show="!ProcesosBeneficio.etapas.preseleccion.mensajeTooltip">
           <!--Si esta asignado un icono sino el otro-->
           <div style="text-align:left;">
            <span style='color:green' ng-if="beneficio.estado == 'cumpleRequisitos' || beneficio.estado == 'cumple'">
@@ -96,7 +96,7 @@
         <div ng-show="ProcesosBeneficio.etapas.preseleccion.beneficios">
             <div  ng-if="ProcesosBeneficio.nombre != 'Becas complementarias'">
                       <div class="col-xs-12 col-md-12 col-lg-4">
-                       <div class="col-xs-2 col-md-1 col-lg-2 cambiarluegopreseleccionCumpleSinP">
+                       <div class="col-xs-2 col-md-1 col-lg-2 PreseleccionCumpleSinP">
                         <div style="height:20px;"></div>
                        </div>  
                        <div class="col-xs-8 col-md-6 col-lg-8">
@@ -105,7 +105,7 @@
                        </div><!-- Fin Cumple en preseleccion-->
                       </div> 
                       <div class="col-xs-12 col-md-12 col-lg-4">  
-                       <div class="col-xs-2 col-md-1 col-lg-2 cambiarluegopreseleccionNocumpleSinP">
+                       <div class="col-xs-2 col-md-1 col-lg-2 PreseleccionNocumpleSinP">
                         <div style="height:20px;"></div>
                        </div>  
                        <div class="col-xs-8 col-md-6 col-lg-8">
@@ -116,7 +116,7 @@
             <!--solucion propuesta para que cuando hay pocas becas no quede horizontal -->
             <div  ng-if="ProcesosBeneficio.nombre == 'Becas complementarias'">
                       <div class="col-xs-12 col-md-12 col-lg-8">
-                       <div class="col-xs-2 col-md-1 col-lg-1 cambiarluegopreseleccionCumpleSinP">
+                       <div class="col-xs-2 col-md-1 col-lg-1 PreseleccionCumpleSinP">
                         <div style="height:20px;"></div>
                        </div>  
                        <div class="col-xs-8 col-md-6 col-lg-8">
@@ -125,7 +125,7 @@
                        </div><!-- Fin Cumple en preseleccion-->
                       </div> 
                       <div class="col-xs-12 col-md-12 col-lg-8">  
-                       <div class="col-xs-2 col-md-1 col-lg-1 cambiarluegopreseleccionNocumpleSinP">
+                       <div class="col-xs-2 col-md-1 col-lg-1 PreseleccionNocumpleSinP">
                         <div style="height:20px;"></div>
                        </div>  
                        <div class="col-xs-8 col-md-6 col-lg-8">

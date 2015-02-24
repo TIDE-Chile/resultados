@@ -2,110 +2,84 @@
       COLORES DEL ENCABEZADO
 */
 
-/*Color Beca y creditos subtitulo*/
-.byc
-{
-  color: rgba(12, 89, 207, 1);
-}
-/*Informacion Actualizada */
-.InfoActualizada
-{
-  color: rgba(0, 0, 0, 1);
-}
-/*Color Fecha*/
-.ClaseFecha{
-  color: rgba(12, 89, 207, 1);
-}
-/* Color Rut*/
-.ClaseRut{
-  color: rgba(12, 89, 207, 1);
-}
-/*Barra del rut bajo titulo*/
-.barraRUT
-{
-  background-color:#EE8600;
-}
-
+      /*Color Beca y creditos subtitulo*/
+      .byc
+      {
+        color: rgba(12, 89, 207, 1);
+      }
+      /*Informacion Actualizada */
+      .InfoActualizada
+      {
+        color: rgba(0, 0, 0, 1);
+      }
+      /*Color Fecha*/
+      .ClaseFecha{
+        color: rgba(12, 89, 207, 1);
+      }
+      /* Color Rut*/
+      .ClaseRut{
+        color: rgba(12, 89, 207, 1);
+      }
+      /*Barra del rut bajo titulo*/
+      .barraRUT
+      {
+        background-color:#EE8600;
+      }
 /*
       FIN COLORES DEL ENCABEZADO
 */
 
 /*
-      COLORES BLOQUE DE PROCESOS
+      COLORES BLOQUES PRINCIPALES
 */
+    /*bloque de infromacion mayor*/
+    .bloqueInformacion
+    {
+      background-color:#82B2D3;
+    }
 
-.bloqueInformacion
-{
-  background-color:#82B2D3;
-}
+    /*Color textos Datos Postulante*/
+    .ColorDatosPostulante{
+    color:rgba(3, 48, 118, 1);
+    }
+    /*colores recuadros Medianos en general*/
+    .recuadroProceso
+    {
+      background-color:#EBEBEB;
+    }
+    /*colores recuadros Medianos especificos*/
 
-/* Definir si se quiere especificar color del bloque de Información */
-/*
-.bloqueInformacion.informacionDestacada
-{
-  background-color:#82B2D3;
-}
+        #primerano.recuadroProceso
+        {
+          background-color:#EBEBEB;
+        }
 
-.bloqueInformacion.datosPostulante
-{
-  background-color:#82B2D3;
-}
+        #complementarias.recuadroProceso
+        {
+          background-color:#EBEBEB;
+        }
 
-.bloqueInformacion.misBeneficios
-{
-  background-color:#82B2D3;
-}
-*/
+        #superiores.recuadroProceso
+        {
+          background-color:#EBEBEB;
+        }
 
-/*Color textos Datos Postulante*/
-.ColorDatosPostulante{
-color:rgba(3, 48, 118, 1);
-}
+    /*colores recuadros pequeños especificos*/
+        #primerano.recuadroBeneficio
+        {
+           background-color:#EE8600;
+        }
+        #complementarias.recuadroBeneficio
+        {
+          background-color:#EE8600;
+        }
 
+        #superiores.recuadroBeneficio
+        {
+           background-color:#EE8600;
+        }
 
-.recuadroProceso
-{
-  background-color:#EBEBEB;
-}
-
- 
-/*Definir si se quiere especificar color del bloque de Información */
-
-#primerano.recuadroProceso
-{
-  background-color:#EBEBEB;
-}
-
-#complementarias.recuadroProceso
-{
-  background-color:#EBEBEB;
-}
-
-#superiores.recuadroProceso
-{
-  background-color:#EBEBEB;
-}
-
-
-/* recueado de beneficios segun si es primer año, complementaria o superior */
-
-#primerano.recuadroBeneficio
-{
-
-   background-color:#EE8600;
-}
-#complementarias.recuadroBeneficio
-{
-
-  background-color:#EE8600;
-}
-
-#superiores.recuadroBeneficio
-{
-
-   background-color:#EE8600;
-}
-/* definir lo siguiente ...
+/* definir en caso de querer cambiar colores
 .recuadroBeneficio.asignado
 {
   background-color:#EBEBEB;
@@ -126,35 +100,40 @@ color:rgba(3, 48, 118, 1);
   background-color:#EBEBEB;
 }
 */
+
 /*
 Color de Los nombre de la Proceso/Cladificacion mis Beneficios ej (Primer Año, Becas Complementarias)
 */
-.NombreProcesoBeneficios
-{
-color:rgba(230, 22, 16, 1);
+    .NombreProcesoBeneficios
+    {
+    color:rgba(230, 22, 16, 1);
 
-}
-
+    }
 /*
 Colores del Acordeon
 */
-#custom-accord .panel {
-background-color: #82B2D3;
-}
-/*Encabezado del Acordeon*/
-#custom-accord .panel-heading
-{
-color: rgba(3, 48, 118, 1);
-background-color: #82B2D3;
-border-color: rgb(226, 238, 121);
+      #custom-accord .panel {
+      background-color: #82B2D3;
+      }
+      /*Encabezado del Acordeon*/
+      #custom-accord .panel-heading
+      {
+      color: rgba(3, 48, 118, 1);
+      background-color: #82B2D3;
+      border-color: rgb(226, 238, 121);
 
-}
-/*Cuerpo Acordeon*/
-#custom-accord .panel-body
-{
- background-color:  #82B2D3;
+      }
+      /*Cuerpo Acordeon*/
+      #custom-accord .panel-body
+      {
+       background-color:  #82B2D3;
 
-}
+      }
+      /* color de icono > en Acordeon especifico*/
+      .iconoAccordeon
+      {
+        color: black;
+      }
 
 /*
 Colores de Tooltip 
