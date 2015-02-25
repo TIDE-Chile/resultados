@@ -59,30 +59,49 @@
   <div class="row">
     <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2"></div>
     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-        <div class="panel panel-default">
+        <div class="panel panel-default" >
             <div class="panel-heading">
-              <form class="form-horizontal" role="form">
+              <form class="form-horizontal" name="FormLogin" ng-submit="submitForm()" novalidate>
                  <!-- <div class="form-group">
                     <label for="rut">RUT</label>
-                    <input type="text" class="form-control" id="rut" placeholder="Ingrese RUT (sin guión)" ng-model="controller.rut" ng-show2="controller.captchaId">
+                    <input type="text" class="form-control" id="rut" ng-model="controller.rut" ng-show="controller.captchaId">
                   </div>-->
                   <div class="form-group">
                       <label for="rut" class="col-xs-12 col-sm-1 col-md-2 col-lg-1 control-label">RUT:</label>
                       <div class="col-xs-12 col-sm-11 col-md-10 col-lg-11">
-                        <input type="text" class="form-control" id="rut" placeholder="Ingrese RUT (sin guión)" ng-model="controller.rut" required>
+                        <input 
+                              type="text"
+                              class="form-control"
+                              id="rut"
+                              name="rut" 
+                              placeholder="Ingrese RUT (sin guión)" 
+                              ng-model="controller.rut" 
+                              ng-class="{ 'errorLogin' : FormLogin.rut.$invalid && !FormLogin.rut.$pristine }"
+                              ng-minlength=9 
+                              ng-maxlength=10 
+                              required autofocus  /> 
+                        <small class="errorLogin" ng-show="FormLogin.rut.$error.required">Debe Ingresar su RUT</small>
+                        <small class="errorLogin" ng-show="FormLogin.rut.$error.minlength"><b>RUT no Valido</b>, faltan caracteres</small>
+                        <small class="errorLogin" ng-show="FormLogin.rut.$error.maxlength"><b>RUT no Valido</b>, demaciados caracteres</small>
                       </div>
                   </div>
                   <div class="form-group">
                     <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-                  </div>
+                   </div>
                     <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10" style="padding:5px; text-align:center">
-                        <div 
+                        <div
                         vc-recaptcha
                         key="'6LfbKQITAAAAADKac1bqRhJpAJxciMwtmIzkx9ps'"
                         on-create="controller.onCreate(widgetId)"
                         on-success="controller.onSuccess(response)"
                         ></div>
                     </div>
+                  </div>
+                   <!-- boton entrar -->
+                   <div class="form-group">
+                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                     <button type="submit" class="btn btn-primary" ng-disabled="FormLogin.$invalid">Entrar</button>
+                   </div>
                   </div>
               </form>
         </div>
@@ -130,6 +149,8 @@
   <script src="./bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
   <script src="./bower_components/angular-recaptcha/release/angular-recaptcha.min.js"></script>
 
+ <!-- <script src="ValidacionLogin.js"></script>-->
+
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -142,15 +163,26 @@
     .controller('AppController', ['$scope',function ($scope) 
     {
       var myself = this;
-      this.onCreate = function(id) {
-        myself.captchaId=id;
-      }
+      //funcion valida luego submit           
+      this.submitForm = function() {
 
-      this.onSuccess = function(response) {
-        window.location.assign("./index.html?rut="+myself.rut+"&token="+response)
-      }
+            // ver si es valido
+            if ($this.FormLogin.$valid) {
+                alert('funcionando');
 
+                window.location.assign("./index.html?rut="+myself.rut+"&token="+response)
 
+            }
+
+      };
+            /*    this.onCreate = function(id) {
+                myself.captchaId=id;
+                }  
+
+                this.onSuccess = function(response) {
+                window.location.assign("./index.html?rut="+myself.rut+"&token="+response)
+              }      
+    */
     }]);
 
   </script>
