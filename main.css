@@ -193,7 +193,7 @@ color: #F51937;
 }
 
 /*
-    BLOQUE: INFORMACION DESTACADA
+    PRIMER BLOQUE PRINCIPAL: INFORMACION DESTACADA
 
 */
 
@@ -204,7 +204,7 @@ color:blue;
 }
 
 /*
-  BLOQUE: DATOS POSTULANTE
+    SEGUNDO BLOQUE PRINCIPAL: DATOS POSTULANTE
 */
 
 /*Clase para puntajes */
@@ -268,7 +268,7 @@ padding:15px 15px 0 15px;
 }
 
 /*
-    BLOQUE: MIS BENEFICIOS
+    TERCER BLOQUE PRINCIPAL: MIS BENEFICIOS
 */
 
 /*Palabra Beneficio Otorgado*/
