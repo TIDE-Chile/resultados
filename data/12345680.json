@@ -1,5 +1,7 @@
 {
-	"rut": "12345679-0",
+	"titulo":"Portal de Resultados Año 2015",
+	"subtitulo": "Becas y Créditos para la Educación Superior",
+	"rut": "12345680-0",
 	"fechaActualizacion":"05/03/2015",
 	"mensajesDestacados" : [
 			"Los resultados consideran el <strong>puntaje promedio</strong> PSU (lenguaje y comunicación y matemáticas) con el cual se ingresa a la carrera, el que es informado por la institución de educación superior al Mineduc.",
