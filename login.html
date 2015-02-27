@@ -61,7 +61,7 @@
     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
         <div class="panel panel-default" >
             <div class="panel-heading">
-              <form class="form-horizontal" name="FormLogin" ng-submit="submitForm()" novalidate>
+              <form class="form-horizontal" name="FormLogin" ng-submit="submitForm(FormLogin.$valid)" novalidate>
                  <!-- <div class="form-group">
                     <label for="rut">RUT</label>
                     <input type="text" class="form-control" id="rut" ng-model="controller.rut" ng-show="controller.captchaId">
@@ -74,11 +74,11 @@
                               class="form-control"
                               id="rut"
                               name="rut" 
-                              placeholder="Ingrese RUT (sin guión)" 
-                              ng-model="controller.rut" 
+                              placeholder="12345678" 
+                              ng-model="rut" 
                               ng-class="{ 'errorLogin' : FormLogin.rut.$invalid && !FormLogin.rut.$pristine }"
                               ng-minlength=9 
-                              ng-maxlength=10 
+                              ng-maxlength=12
                               required autofocus  /> 
                         <small class="errorLogin" ng-show="FormLogin.rut.$error.required">Debe Ingresar su RUT</small>
                         <small class="errorLogin" ng-show="FormLogin.rut.$error.minlength"><b>RUT no Valido</b>, faltan caracteres</small>
@@ -92,8 +92,8 @@
                         <div
                         vc-recaptcha
                         key="'6LfbKQITAAAAADKac1bqRhJpAJxciMwtmIzkx9ps'"
-                        on-create="controller.onCreate(widgetId)"
-                        on-success="controller.onSuccess(response)"
+                        on-create="onCreate(widgetId)"
+                        on-success="onSuccess(response)"
                         ></div>
                     </div>
                   </div>
@@ -109,9 +109,6 @@
     </div>
     <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2"></div>
 </div>
-
-
-  
 
 <!-- Pie de página -->
 <div class="footer">
@@ -155,35 +152,63 @@
   <!-- endbuild -->
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
   <script type="text/javascript">
-    angular
-    .module('tideApp', [
-     'ui.bootstrap',
-     'vcRecaptcha'
-    ])
-    .controller('AppController', ['$scope',function ($scope) 
-    {
-      var myself = this;
-      //funcion valida luego submit           
-      this.submitForm = function() {
+  // create angular app
+  angular
+  .module('tideApp', ['ui.bootstrap','vcRecaptcha'])
+  .controller('AppController', function($scope) {
+  $scope.response = null;
+  $scope.widgetId = null;
+  $scope.rut      = null;
 
-            // ver si es valido
-            if ($this.FormLogin.$valid) {
-                alert('funcionando');
+  $scope.onSuccess = function (response) {
+      $scope.response = response;
+    };
+  $scope.onCreate = function (widgetId) {
+        $scope.widgetId = widgetId;
+    };
+  $scope.ValidaRut = function (rut) {
+    /*primera opcion
+    for (i = 0; i < rut.length; i++) {
+      //
+      if (rut.charAt(i)=='.'){
+          //rut=rut.split('');
+          rut=rut.replace('.', '');
+      }
+      if (rut.charAt(i)=='-'){
+          rut=rut.replace('-', '');
+      }
+    console.log(rut);
+    }*/
+    //Segunda opcion: Mas optima
+    //auxiliar, que tendra solo los caracteres apropiados
+    var aux='';
+    //recorremos el rut completo caracter por caracter
+    for (i = 0; i < rut.length; i++) {
+      //if para descartar los '.' y '-'
+      if (rut.charAt(i)!='.' && rut.charAt(i)!='-'){
+          aux=aux+rut.charAt(i);
+      }
+    }
+    //rut ahora esta sin '.' y '-'
+    rut=aux;
+    //console.log(rut);
+    //final de las dos opciones igualamos los rut
+    $scope.rut=rut;
+  };
+    // function to submit the form after all validation has occurred            
+    $scope.submitForm = function(isValid) {
 
-                window.location.assign("./index.html?rut="+myself.rut+"&token="+response)
+        // Chequea form, si es valido pasa a index
+        if (isValid) { 
+          //funcion que valide rut
+          $scope.ValidaRut($scope.rut);
+          window.location.assign("./index.html?rut="+$scope.rut+"&token="+$scope.response)
 
-            }
+        }
 
-      };
-            /*    this.onCreate = function(id) {
-                myself.captchaId=id;
-                }  
+    };
 
-                this.onSuccess = function(response) {
-                window.location.assign("./index.html?rut="+myself.rut+"&token="+response)
-              }      
-    */
-    }]);
+});
 
   </script>
   <script src="https://www.google.com/recaptcha/api.js?onload=vcRecapthaApiLoaded&render=explicit" async defer></script>
