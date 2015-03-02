@@ -77,7 +77,7 @@
                               placeholder="12345678" 
                               ng-model="rut" 
                               ng-class="{ 'errorLogin' : FormLogin.rut.$invalid && !FormLogin.rut.$pristine }"
-                              ng-minlength=9 
+                              ng-minlength=8 
                               ng-maxlength=12
                               required autofocus  /> 
                         <small class="errorLogin" ng-show="FormLogin.rut.$error.required">Debe Ingresar su RUT</small>
@@ -188,10 +188,14 @@
       if (rut.charAt(i)!='.' && rut.charAt(i)!='-'){
           aux=aux+rut.charAt(i);
       }
+      if (rut.charAt(i)=='-'){
+        i=rut.length;
+      }
     }
+    //aux=aux.slice(0,aux.length-1);
     //rut ahora esta sin '.' y '-'
     rut=aux;
-    //console.log(rut);
+    console.log(rut);
     //final de las dos opciones igualamos los rut
     $scope.rut=rut;
   };

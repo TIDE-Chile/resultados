@@ -24,6 +24,7 @@
   <!-- endbuild -->
   <script src="./bower_components/modernizr/modernizr.js"></script>
  </head>
+  <!-- ng-app directiva de Angularjs  para auto-arranque de una aplicación Angularjs-->
  <body ng-app="tideApp">
   <!--[if lt IE 7]>
    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -40,13 +41,22 @@
     <div class="head">
      <div class="row"  ng-cloak>
       <div class="col-xs-6 col-md-2 col-lg-2">
-       <img width="116" height="104" explicit-width="100%" explicit-height="100%" min-width="16" min-height="16" src="./imagen/logo.png" class="logo" />
+       <img width="116" height="104" explicit-width="100%" explicit-height="100%" min-width="16" min-height="16" 
+       src="./imagen/logo.png" class="logo" />
       </div>
       <div class=" col-xs-12 col-md-7 col-lg-7" > 
-          <!-- Titulo Superior AUN no desde el json-->
-       <h1>Portal de Resultados Año 2015</h1>
-          <!-- Subtitulo mayor AUN no desde json-->
-       <p class="byc">Becas y Créditos para la Educación Superior</p>
+          <!-- Titulo Superior desde el json-->
+      <div ng-show="controller.data.titulo">
+          <h1 ng-bind-html="controller.data.titulo"></h1>
+          <!-- Subtitulo mayor desde json-->
+         <p class="byc" ng-bind-html="controller.data.subtitulo"></p>
+      </div>
+       <div ng-show="!controller.data.titulo">
+         <!-- Titulo Superior desde el json-->
+        <h1 ng-bind-html="controller.titulo"></h1>
+          <!-- Subtitulo mayordesde json-->
+        <p class="byc" ng-bind-html="controller.subtitulo"></p>
+       </div>
       </div>
       <div class=" col-xs-12 col-md-3 col-lg-3"> 
        <div class="InfoActualizada" ng-show="!controller.loading && !controller.errorMsg">
@@ -77,8 +87,8 @@
       <div id="custom-accord">
        <div>
     <accordion close-others="true">
+          <!-- Directiva ng-include de Angularjs carga/trae trozos de codigo HTML contenidos en otros documentos, se le pasa la ruta correspondiente al archivo deseado -->
         <!--Accordion: Informacion Destacada-->
-              <!-- Directiva ng-include de Angularjs carga/trae trozos de codigo HTML contenidos en otros documentos, se le pasa la ruta correspondiente al archivo deseado -->
           <div ng-include="'templates/bloqueInformacionDestacada.html'"></div>
         <!--Accordion: Informacion Destacada-->
         <!--Accordion: Datos Postulante-->
@@ -87,7 +97,7 @@
         <!--Accordion: Mis Beneficios-->
           <div ng-include="'templates/bloqueMisBeneficios.html'"></div>
         <!--Accordion: Mis Beneficios-->
-</accordion>
+    </accordion>
  </div>
 </div> <!--PARA COLORES DE ACCORDEON-->    
 </div><!-- col-xs-12 col-sm-12 col-md-12 col-lg-12 -->

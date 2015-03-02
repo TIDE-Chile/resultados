@@ -115,4 +115,6 @@ var isUndefined = function(val) {
 return false;
 };
 
+this.titulo="Portal de Resultados";
+this.subtitulo="Becas y Creditos para la Educacion Superior";
 }]);
