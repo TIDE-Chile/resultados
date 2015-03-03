@@ -118,6 +118,12 @@ body {
   margin:5px;
 }
 
+/* barra naranja header*/
+.BarranaSuperior
+{
+  padding:1px;
+  background-color:rgb(255, 197, 129);
+}
 /*Texto titulo de los Procesos*/
 .subtitulo
 {
@@ -147,13 +153,8 @@ color: #F51937;
 /*
      PROCESOS EN GENERAL: Estilo por Defecto
 */
-/* barra naranja header*/
-.BarranaSuperior
-{
-  padding:1px;
-  background-color:rgb(255, 197, 129);
-}
-/*Casos que necesiten un espacio a la derecha*/
+
+/*Casos que necesiten un espacio a la izquierda*/
 .padding5px
 {
   padding-left:5px;
@@ -261,11 +262,6 @@ color:rgba(3, 48, 118, 1);
   font-size: 24px;
   border-radius: 5px;
 }
-/*Estilo en los Mensajes de datospostulante*/
-.MensajesEspfeciales
-{
-padding:15px 15px 0 15px;
-}
 
 /*
     TERCER BLOQUE PRINCIPAL: MIS BENEFICIOS
@@ -279,7 +275,7 @@ padding:15px 15px 0 15px;
   color:black;
   text-align:right;
 }
-/*Recuadro pequeño de MisBeneficios para identificador no Defecto*/
+/*Recuadro pequeño de MisBeneficios para identificador no por Defecto*/
 .beneficiosrectangulo
 {
   /*height:65px;*/
@@ -288,11 +284,11 @@ padding:15px 15px 0 15px;
   text-align:center;
   border-radius: 5px;
   padding:0 5px 1px 5px;
-  /*color defecto para identificador no definidas*/
+  /*color defecto para identificador no definidos*/
   background-color:rgb(255, 255, 255);
   cursor:pointer;
 }
-/*Recuadro pequeño de MisBeneficios estolo General*/
+/*Recuadro pequeño de MisBeneficios estilo General*/
 .recuadroBeneficio{
   /*height:65px;*/
   border:2px solid rgb(146, 146, 146);
@@ -349,6 +345,11 @@ padding:15px 15px 0 15px;
   padding:0 5px 1px 5px;
   background-color: rgb(214, 214, 214);
 
+}
+/*Estilo en los Mensajes de Mis Beneficios*/
+.MensajesEspeciales
+{
+padding:15px 15px 0 15px;
 }
 /***
     Pie de Mis Bineficios
