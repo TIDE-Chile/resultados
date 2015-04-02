@@ -12,7 +12,12 @@
 body {
   padding-top: 0px;
   padding-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
 }
+a:link   
+{   
+ text-decoration:none;   
+}  
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -24,8 +29,12 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5; 
 }
+.head {height: 130px; padding:0 10px;}
+.head h1 {font-family: 'Open Sans Condensed', sans-serif; font-weight: bold; margin-bottom:0;}
+.head p {font-family: 'Open Sans Condensed', sans-serif; font-weight: bold;}
+
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
   margin-top: 0;
@@ -69,10 +78,10 @@ body {
 /* Imagen del ministerio de Educacion*/
 .logo
 {
-  position:relative;
+  /*position:relative;
   top:19px;
-  left:12px;
-  z-index: 1;
+  left:12px;*/
+  z-index: 1; margin-top:10px;
 }
 
 /*Color Beca y creditos subtitulo*/
@@ -98,8 +107,8 @@ body {
 
 /* Color y tamaño letra Rut*/
 .ClaseRut{
-  color: rgba(12, 89, 207, 1);
-  font-size: 24px;
+  color: #fff;
+  font-size: 16px;
 }
 /* Boton Cerrar*/
 .Acerrar
@@ -114,7 +123,7 @@ body {
 /*parabra RUT*/
 .rut
 {
-  font-size: 20px;
+  font-size: 16px;
   margin:5px;
 }
 
@@ -127,13 +136,17 @@ body {
 /*Texto titulo de los Procesos*/
 .subtitulo
 {
-  color: rgba(3, 48, 118, 1);
-  font-size: 24px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: lighter;
+  font-family:'Open Sans', sans-serif; margin-bottom: 5px;
 }
+
 /*  */
 .cursos{
-color:rgba(230, 22, 16, 1);
-margin:15px;
+color: #88ac17;
+  margin: 15px;
+  font-weight: bold;
 }
 
 /*Texto Subtitulo Login*/
@@ -189,10 +202,12 @@ color: #F51937;
 }
 /**/
 .md{
-  background-color: #D5D0D0;
-  border: 2px solid #000000;
+  background-color: #88ac17;color: #fff; padding:8px 12px;text-transform: uppercase;
+  font-weight: lighter;border:none;
 }
-
+.md:hover{
+  background-color: #abcb44;
+}
 /*
     PRIMER BLOQUE PRINCIPAL: INFORMACION DESTACADA
 
@@ -201,7 +216,8 @@ color: #F51937;
 /*color por defecto icono Informacion Destacada*/
 .iconoInfoDest
 {
-color:blue;
+  color: white;
+  margin-left: 10px;
 }
 
 /*
@@ -212,7 +228,7 @@ color:blue;
 .rectangulo
 {
   width: 99%;
-  border:1px solid rgb(146, 146, 146); 
+  /*border:1px solid rgb(146, 146, 146); */
   padding:5px;
   margin: 5px;
 }
@@ -233,15 +249,15 @@ background-color: rgb(193, 208, 69);
 /*color defecto recuadros pequeños de datospostulante*/
 #datospostulante.rectangulo
 {
-  background-color:rgb(235, 235, 235);
+  background-color:#f1f1f1;
 }
 /*informacion evaluacion del postulante*/
 .infoevaluacion
 {
-  border:1px solid rgb(146, 146, 146);
+  border:1px solid #fff;
   margin:2px;
   text-align:center;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 /*Color por defecto Datos Postulante*/
 .ColorDatosPostulante{
@@ -252,15 +268,26 @@ color:rgba(3, 48, 118, 1);
 {
   padding-top: 2px;
   padding-bottom: 7px;
-  background-color:rgb(0, 141, 177);color:white;
+  background-color:#82b2d3;;color:white;
+  -webkit-border-top-left-radius: 5px;
+-webkit-border-top-right-radius: 5px;
+-moz-border-radius-topleft: 5px;
+-moz-border-radius-topright: 5px;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
 }
 /*texto inferior en minirecuadro de evaluacion*/
 .infoinferior
 {
-  background-color:rgb(254, 248, 160);
+  background-color:#fff;
   color:black;
   font-size: 24px;
-  border-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+-webkit-border-bottom-left-radius: 5px;
+-moz-border-radius-bottomright: 5px;
+-moz-border-radius-bottomleft: 5px;
+border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
 }
 
 /*
@@ -271,10 +298,14 @@ color:rgba(3, 48, 118, 1);
 .botorgado
 {
   margin:5px;
-  font-size: 20px;
-  color:black;
-  text-align:right;
+  font-size: 14px;
+  color: #fff;
+  text-align: right;
+  font-weight: normal;
+  text-transform: uppercase;
 }
+
+.botorgado span {color:#fff; font-weight: bold;}
 /*Recuadro pequeño de MisBeneficios para identificador no por Defecto*/
 .beneficiosrectangulo
 {
@@ -291,59 +322,70 @@ color:rgba(3, 48, 118, 1);
 /*Recuadro pequeño de MisBeneficios estilo General*/
 .recuadroBeneficio{
   /*height:65px;*/
-  border:2px solid rgb(146, 146, 146);
+  border:1px solid #aaa;
   margin:4px;
   text-align:center;
   border-radius: 5px;
   padding:0 5px 1px 5px;
   cursor:pointer;
 }
+/*poner un asignado no asignado por defecto para todos los procesos aunq no esten # defnidos.*/
+
+.recuadroBeneficio.asignado
+        {
+          background-color:#88ac17;
+        }
+
+.recuadroBeneficio.noAsignado
+        {
+          background-color:#ddd;
+        }
 /*Estilo Recuadro Pequeño Cumple*/
 .PreseleccionCumple
 {
    /*height:65px;*/
-  border:2px solid rgb(96, 96, 96);
+  border:1px solid #aaa;
   margin:4px;
   text-align:center;
   border-radius: 5px;
   padding:0 5px 1px 5px;
-  background-color: rgb(98, 156, 68);
+  background-color: #88ac17;
   cursor:pointer;
 }
 /*Estilo Recuadro Pequeño no Cumple*/
 .PreseleccionNocumple
 {
   /*height:65px;*/
-  border:2px solid rgb(96, 96, 96);
+  border:1px solid #aaa;
   margin:4px;
   text-align:center;
   border-radius: 5px;
   padding:0 5px 1px 5px;
-  background-color: rgb(214, 214, 214);
+  background-color: #ddd;
   cursor:pointer;
 }
 /*Estilo Recuadro Pequeño Cumple sin pointer*/
 .PreseleccionCumpleSinP
 {
   /*height:65px;*/
-  border:2px solid rgb(96, 96, 96);
+  border:1px solid #aaa;
   margin:4px;
   text-align:center;
   border-radius: 5px;
   padding:0 5px 1px 5px;
-  background-color: rgb(98, 156, 68);
+  background-color: #88ac17;
 
 }
 /*Estilo Recuadro Pequeño no Cumple sin pointer*/
 .PreseleccionNocumpleSinP
 {
   /*height:65px;*/
-  border:2px solid rgb(96, 96, 96);
+  border:1px solid #aaa;
   margin:4px;
   text-align:center;
   border-radius: 5px;
   padding:0 5px 1px 5px;
-  background-color: rgb(214, 214, 214);
+  background-color: #ddd;
 
 }
 /*Estilo en los Mensajes de Mis Beneficios*/
@@ -387,16 +429,21 @@ padding:15px 15px 0 15px;
   color: rgba(3, 48, 118, 1);
   background-color: rgb(226, 238, 121);
   border-color:rgb(226, 238, 121);
+    padding: 5px 10px;
 
 }
 /*estilo del cuerpo del acordeon*/
 #custom-accord .panel-body
 {
   padding: 1px;
-  margin: 1px;
   background-color: rgb(226, 238, 121); 
 }
 
+/*EL COLOR de icono > en Acordeon*/
+.iconoAccordeon
+{
+  color: black;
+}
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   /* Remove the padding we set earlier */
@@ -464,11 +511,7 @@ padding:15px 15px 0 15px;
 {
   text-align: right;
 }
-/*EL COLOR de icono > en Acordeon*/
-.iconoAccordeon
-{
-  color: black;
-}
+
 /*Cuando tiene monto asigando,dentro popover */
 .MontoPopup
 {
@@ -479,6 +522,13 @@ padding:15px 15px 0 15px;
   width:60%;
   margin:15px;
   font-size:18px;
+}
+
+.verpasos
+{
+  margin:10px;
+  height: 100px;
+   overflow-y: auto;
 }
 
 /***

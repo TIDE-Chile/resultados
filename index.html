@@ -21,6 +21,7 @@
   <!-- build:css({.tmp,app}) styles/main.css -->
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="colors.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
   <!-- endbuild -->
   <script src="./bower_components/modernizr/modernizr.js"></script>
  </head>
@@ -37,48 +38,11 @@
   <!-- Contenedor principal -->
      <!-- controller.data es la variable que tiene los datos del json -->
   <div class="container" ng-controller="AppController as controller">
-    <!-- Encabezado -->
-    <div class="head">
-     <div class="row"  ng-cloak>
-      <div class="col-xs-6 col-md-2 col-lg-2">
-       <img width="116" height="104" explicit-width="100%" explicit-height="100%" min-width="16" min-height="16" 
-       src="./imagen/logo.png" class="logo" />
-      </div>
-      <div class=" col-xs-12 col-md-7 col-lg-7" > 
-          <!-- Titulo Superior desde el json-->
-      <div ng-show="controller.data.titulo">
-          <h1 ng-bind-html="controller.data.titulo"></h1>
-          <!-- Subtitulo mayor desde json-->
-         <p class="byc" ng-bind-html="controller.data.subtitulo"></p>
-      </div>
-       <div ng-show="!controller.data.titulo">
-         <!-- Titulo Superior desde el json-->
-        <h1 ng-bind-html="controller.titulo"></h1>
-          <!-- Subtitulo mayordesde json-->
-        <p class="byc" ng-bind-html="controller.subtitulo"></p>
-       </div>
-      </div>
-      <div class=" col-xs-12 col-md-3 col-lg-3"> 
-       <div class="InfoActualizada" ng-show="!controller.loading && !controller.errorMsg">
-        <h5>Información Actualizada a:</h5> 
-            <!-- Se toma la fecha de actualizacion que esta en el json con su nombre correspondiente -->
-        <p class="ClaseFecha">{{controller.data.fechaActualizacion}}</p>
-       </div>
-      </div>
-     </div>
-    </div><!-- Encabezado -->
-
     <!-- Bloques de información -->
-        <!-- Directiva ng-cloak de Angularjs hace que inicialmente el elemento HTML no sea visible hasta que no se haya ejecutado el controlador y AngularJS calcule si en función de ng-show o ng-hide debe verse el elemento -->
+    <!-- Directiva ng-cloak de Angularjs hace que inicialmente el elemento HTML no sea visible hasta que no se haya ejecutado el controlador y AngularJS calcule si en función de ng-show o ng-hide debe verse el elemento -->
     <div class="row"  ng-cloak>
-
-     <!-- Identificación del estudiante (RUT) -->
-     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align:right;">
-      <div class="BarranaSuperior barraRUT">
-       <div class="errorMsg" ng-show="controller.errorMsg">{{controller.errorMsg}} <a class="Acerrar" href="login.html">Cerrar</a></div>
-       <p class="rut"  ng-show="!controller.errorMsg">RUT: <span class="ClaseRut">{{controller.data.rut}}</span> <a class="Acerrar" href="login.html">Cerrar</a></p>
-      </div>
-     </div><!-- Identificación del estudiante (RUT) -->
+      <!-- Encabezado -->
+      <div ng-include="'templates/encabezado.html'"></div> 
         <!-- Directiva ng-show de Angularjs muestra u oculta el elemento HTML,según expresión que se evalua devolviendo TRUE/FALSE -->
         <!-- controller.loading variable del controller (TRUE/FALSE) para saber si se esta cargado aun la pagina o no -->
         <!-- controller.errorMsg variable del controller vacio en caso de no haber errores o con el respectivo error  -->

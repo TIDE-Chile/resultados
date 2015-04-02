@@ -11,7 +11,7 @@
 
       <!-- Monto otorgado -->
       <div class="col-xs-12 col-md-4 col-lg-4">
-       <p class="botorgado" ng-show="controller.data.misBeneficios.montoOtorgado">Beneficio Otorgado: <spam style="color:red;">{{(controller.data.misBeneficios.montoOtorgado | currency).slice(0,-3) }}</spam></p> <!-- solucion 1  era para angularjs 1.3 : {{controller.data.misBeneficios.montoOtorgado | currency:fractionSize:0}} -->
+       <p class="botorgado" ng-show="controller.data.misBeneficios.montoOtorgado">Beneficio Otorgado: <spam class="montotoalMB">{{(controller.data.misBeneficios.montoOtorgado | currency).slice(0,-3) }}</spam></p> <!-- solucion 1  era para angularjs 1.3 : {{controller.data.misBeneficios.montoOtorgado | currency:fractionSize:0}} -->
       </div><!-- Monto otorgado -->
 
       <!--</div> por ahora no es necesario-->
@@ -27,13 +27,13 @@
         </div>
       </div>
     </div><!-- Mensaje -->
-     <!-- Mis Beneficios - etapas                      procesos antes categorias-->
+     <!-- Mis Beneficios : procesos -->
     <div ng-repeat="ProcesosBeneficio in controller.data.misBeneficios.procesos" class="rectangulo recuadroProceso" id="{{ProcesosBeneficio.identificador}}"> 
 
       <div class="row">
        <div class="col-xs-12 col-md-12 col-lg-12 margen">
 
-        <!-- Nombre categoría -->     
+        <!-- Nombre Procesos -->     
         <div class="col-xs-12 col-md-4 col-lg-2">
          <b class="cursos NombreProcesoBeneficios">{{ProcesosBeneficio.nombre}}</b>
         </div>
@@ -88,7 +88,7 @@
 
       </div><!--row-->
 
-    </div><!-- Mis Beneficios - Categorías -->
+    </div><!-- Mis Beneficios - Procesos -->
     <div class="row">
       <div class="col-xs-12 col-md-5 col-lg-4">
         <div class="padding5px">
@@ -97,15 +97,34 @@
       </div>
       <div class="col-xs-12 col-md-4 col-lg-3">
         <div class="quieroBeca">
-           <img src="imagen/face.png" height="20" width="20"></img> Quiero una Beca
+          <a style="text-decoration: blink" href="http://www.facebook.com/quierounabeca" 
+            target="_blank"> <img src="imagen/face.png" height="20" width="20"></img> Quiero una Beca</a>
         </div>
       </div>
       <div class="col-xs-12 col-md-3 col-lg-5" style="text-align:right;">
         <div style="margin-top:2px;">
            <div class="col-xs-3 col-md-3 col-lg-6" >
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.0";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+            <script type="text/javascript">
+                function popUp(URL) {
+                    window.open(URL, 'Nombre de la ventana', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=1,width=500,height=400,left = 390,top = 50');
+                }
+
+    </script>
            </div>
           <div class="col-xs-2 col-md-3 col-lg-2" >
-              <img src="imagen/face.png" height="32" width="32"></img>
+           <!--- <div style="height:32; width:32;" class="fb-share-button" data-href="http://publicacion2015.sistemas.tide.cl/resultados/index.html" data-type="icon"></div>-->
+
+            <a href="javascript:popUp('https://www.facebook.com/sharer/sharer.php?app_id=309437425817038&sdk=joey&u=http%3A%2F%2Fpublicacion2015.sistemas.tide.cl%2Fresultados%2Findex.html&display=popup&ref=plugin&src=share_button')" target="_blank"><img src="imagen/face.png" height="32" width="32"></img></a> 
+              <!--<img src="imagen/face.png" height="32" width="32"></img>-->
+               <!--<a popupface ng-model="beneficio"><img src="imagen/face.png" height="32" width="32"></img></a>--> 
           </div>
           <div class="col-xs-2 col-md-3 col-lg-2">
               <img src="imagen/twitter.png" height="32" width="24"></img>

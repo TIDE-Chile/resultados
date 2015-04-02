@@ -19,7 +19,7 @@
         <div  ng-repeat="beneficio in ProcesosBeneficio.etapas.asignacion.beneficios" > 
 
         <!-- Recuadro beneficio -->
-        <div class="col-xs-5 col-md-2 col-lg-1 beneficiosrectangulo recuadroBeneficio" id="{{ProcesosBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'" ng-show="ProcesosBeneficio.etapas.apelacion.mensajeTooltip">
+        <div class="col-xs-5 col-md-2 col-lg-1 beneficiosrectangulo recuadroBeneficio asignado" id="{{ProcesosBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'" ng-if="beneficio.estado == 'asignado'" ng-show="ProcesosBeneficio.etapas.apelacion.mensajeTooltip">
           <!--Si esta asignado un icono sino el otro-->
           <div style="text-align:left;">
            <span style='color:green' ng-if="beneficio.estado == 'asignado'">
@@ -42,7 +42,7 @@
         </div><!-- Recuadro beneficio -->
 
         <!-- Recuadro beneficio: mensajeTooltip sin Mensajes -->
-        <div class="col-xs-5 col-md-2 col-lg-1 beneficiosrectangulo recuadroBeneficio" id="{{ProcesosBeneficio.identificador}}" ng-show="!ProcesosBeneficio.etapas.apelacion.mensajeTooltip">
+        <div class="col-xs-5 col-md-2 col-lg-1 beneficiosrectangulo recuadroBeneficio asignado" id="{{ProcesosBeneficio.identificador}}" ng-if="beneficio.estado == 'asignado'" ng-show="!ProcesosBeneficio.etapas.apelacion.mensajeTooltip">
           <!--Si esta asignado un icono sino el otro-->
           <div style="text-align:left;">
            <span style='color:green' ng-if="beneficio.estado == 'asignado'">
@@ -63,8 +63,103 @@
             </div>
           <!-- monto > 0 || = 0 -->
         </div><!-- Recuadro beneficio -->
+        <!--recuadros de beneficios no asignados-->
+              <!-- Recuadro beneficio -->
+              <div class="col-xs-5 col-md-2 col-lg-1 beneficiosrectangulo recuadroBeneficio noAsignado" id="{{ProcesosBeneficio.identificador}}" popup-beneficio ng-model="beneficio" td-template-url="'./templates/beneficio.html'" ng-if="beneficio.estado == 'noAsignado'" ng-show="ProcesosBeneficio.etapas.apelacion.mensajeTooltip">
+
+                <!--Si esta asignado un icono sino el otro-->
+                <div style="text-align:left;">
+                 <span style='color:green' ng-if="beneficio.estado == 'asignado'">
+                  <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
+                 </span>
+                 <span style='color:red' ng-if="beneficio.estado == 'noAsignado'">
+                  <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
+                 </span>
+                </div>
+
+                <div>{{beneficio.sigla}}</div>
+                <!-- monto > 0 || = 0 -->
+                  <div ng-if="beneficio.monto > 0">      
+                      <div style="height:20px;">{{(beneficio.monto | currency).slice(0,-3) }}</div>
+                  </div>
+                  <div ng-if="beneficio.monto == 0 || !beneficio.monto">      
+                      <div style="height:20px;"></div>
+                  </div>
+                <!-- monto > 0 || = 0 -->
+              </div><!-- Recuadro beneficio -->
+
+              <!-- Recuadro beneficio: mensajeTooltip sin Mensajes -->
+              <div class="col-xs-5 col-md-2 col-lg-1 beneficiosrectangulo recuadroBeneficio noAsignado" id="{{ProcesosBeneficio.identificador}}" ng-if="beneficio.estado == 'noAsignado'" ng-show="!ProcesosBeneficio.etapas.apelacion.mensajeTooltip">
+
+                <!--Si esta asignado un icono sino el otro-->
+                <div style="text-align:left;">
+                 <span style='color:green' ng-if="beneficio.estado == 'asignado'">
+                  <i class='glyphicon glyphicon-ok-circle' title='Pendiente'></i>
+                 </span>
+                 <span style='color:red' ng-if="beneficio.estado == 'noAsignado'">
+                  <i class='glyphicon glyphicon-remove-circle' title='Pendiente'></i>
+                 </span>
+                </div>
+
+                <div>{{beneficio.sigla}}</div>
+                <!-- monto > 0 || = 0 -->
+                  <div ng-if="beneficio.monto > 0">      
+                      <div style="height:20px;">{{(beneficio.monto | currency).slice(0,-3) }}</div>
+                  </div>
+                  <div ng-if="beneficio.monto == 0 || !beneficio.monto">      
+                      <div style="height:20px;"></div>
+                  </div>
+                <!-- monto > 0 || = 0 -->
+              </div><!-- Recuadro beneficio no asignados -->
 
         </div>
+                      <!--leyenda colores-->
+                      <!-- idea variable controller, cunete cantidad de beneficios multiplico por cuadricula usadas y veo cuanto sobra
+                      para las 12 si caen las leyendas a un costado o abajo-->
+                      <div ng-show="ProcesosBeneficio.etapas.apelacion.beneficios" >
+
+                        <div  ng-if="ProcesosBeneficio.nombre != 'Becas complementarias'">
+                            <div class="col-xs-12 col-md-12 col-lg-4">
+                             <div class="col-xs-2 col-md-1 col-lg-2 recuadroBeneficio asignado" id="{{ProcesosBeneficio.identificador}}">
+                              <div style="height:20px;"></div>
+                             </div>  
+                             <div class="col-xs-8 col-md-6 col-lg-8" style="height:50px;">
+                              <p><b>Asignado</b> el beneficio</p>
+
+                             </div><!-- Fin Cumple en preseleccion-->
+                            </div> 
+
+                            <div class="col-xs-12 col-md-12 col-lg-4">  
+                             <div class="col-xs-2 col-md-1 col-lg-2 recuadroBeneficio noAsignado" id="{{ProcesosBeneficio.identificador}}">
+                              <div style="height:20px;"></div>
+                             </div>  
+                             <div class="col-xs-8 col-md-6 col-lg-8" style="height:50px;">
+                              <p><b>No Asignado</b> el beneficio</p>
+                             </div> 
+                            </div>
+                        </div>
+                      <!--solucion propuesta para que cuando hay pocas becas no quede horizontal -->
+                      <div  ng-if="ProcesosBeneficio.nombre == 'Becas complementarias'">
+                                <div class="col-xs-12 col-md-12 col-lg-8">
+                                 <div class="col-xs-2 col-md-1 col-lg-1 recuadroBeneficio asignado" id="{{ProcesosBeneficio.identificador}}">
+                                  <div style="height:20px;"></div>
+                                 </div>  
+                                 <div class="col-xs-8 col-md-6 col-lg-8" style="height:50px;">
+                                  <p><b>Cumple</b> requisitos para este beneficio</p>
+
+                                 </div><!-- Fin Cumple en preseleccion-->
+                                </div> 
+                                <div class="col-xs-12 col-md-12 col-lg-8" style="height:50px;">  
+                                 <div class="col-xs-2 col-md-1 col-lg-1 recuadroBeneficio noAsignado" id="{{ProcesosBeneficio.identificador}}">
+                                  <div style="height:20px;"></div>
+                                 </div>  
+                                 <div class="col-xs-8 col-md-6 col-lg-8">
+                                  <p><b>No Cumple</b> requisitos para este beneficio</p>
+                                 </div> 
+                                </div>
+                      </div>
+
+                      </div>        
         <!-- Mensajes Especiales Apelacion -->
         <div  class="col-xs-12 col-md-12 col-lg-12 MensajesEspeciales" ng-repeat="mensaje in ProcesosBeneficio.etapas.apelacion.mensajesEspeciales" ng-show="ProcesosBeneficio.etapas.apelacion.mensajesEspeciales">
           <div class="col-xs-2 col-md-1 col-lg-1" style="text-align:right;">

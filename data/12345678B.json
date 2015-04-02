@@ -1,6 +1,4 @@
 {
-	"titulo":"Portal de Resultados Año 2015",
-	"subtitulo": "Becas y Créditos para la Educación Superior",
 	"rut": "12345678-9",
 	"fechaActualizacion":"05/03/2015",
 	"mensajesDestacados" : [
@@ -16,26 +14,6 @@
 			"acreditadoEn":"UNIVERSIDAD DE LA FRONTERA",
 			"fechaAcreditacion":"21-04-2014",
 			"datosEvaluacion" : [
-				{
-					"etiqueta":"PSU (Leng)",
-					"valor":"640"
-				},
-				{
-					"etiqueta":"PSU (Mat)",
-					"valor":"701"
-				},
-				{
-					"etiqueta":"PSU (Cs)",
-					"valor":"597"
-				},
-				{
-					"etiqueta":"Ranking",
-					"valor":"12"
-				},
-				{
-					"etiqueta":"NEM",
-					"valor":"6,1"
-				}
 			]
 		},
 		{

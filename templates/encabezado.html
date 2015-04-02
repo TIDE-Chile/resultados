@@ -1,0 +1,40 @@
+    <!-- Encabezado -->
+
+     <div class="col-xs-12 col-md-12 col-lg-12">
+      <div class="head">
+      <div class="row">
+      <div class="col-xs-6 col-md-2 col-lg-2">
+       <img width="116" height="104" explicit-width="100%" explicit-height="100%" min-width="16" min-height="16" 
+       src="./imagen/logo.png" class="logo" />
+      </div>
+      <div class=" col-xs-12 col-md-7 col-lg-7" > 
+          <!-- Titulo Superior desde el json-->
+      <div ng-show="controller.data.titulo">
+          <h1 ng-bind-html="controller.data.titulo"></h1>
+          <!-- Subtitulo mayor desde json-->
+         <p class="byc" ng-bind-html="controller.data.subtitulo"></p>
+      </div>
+       <div ng-show="!controller.data.titulo">
+         <!-- Titulo Superior desde el json-->
+        <h1 ng-bind-html="controller.titulo"></h1>
+          <!-- Subtitulo mayordesde json-->
+        <p class="byc" ng-bind-html="controller.subtitulo"></p>
+       </div>
+      </div>
+      <div class=" col-xs-12 col-md-3 col-lg-3"> 
+       <div class="InfoActualizada" ng-show="!controller.loading && !controller.errorMsg">
+        <h5>Información Actualizada a:</h5> 
+            <!-- Se toma la fecha de actualizacion que esta en el json con su nombre correspondiente -->
+        <p class="ClaseFecha" ng-show="!controller.loading && !controller.errorMsg">{{controller.data.fechaActualizacion}}</p>
+       </div>
+      </div>
+     </div>
+     </div>
+    </div><!-- Encabezado -->
+         <!-- Identificación del estudiante (RUT) -->
+     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align:right;">
+      <div class="BarranaSuperior barraRUT">
+       <div class="errorMsg" ng-show="controller.errorMsg">{{controller.errorMsg}} <a class="Acerrar" href="login.html">Cerrar</a></div>
+       <p class="rut"  ng-show="!controller.loading &&  !controller.errorMsg">RUT: <span class="ClaseRut">{{controller.data.rut}}</span> <a class="Acerrar" href="login.html">Cerrar</a></p>
+      </div>
+     </div><!-- Identificación del estudiante (RUT) -->

@@ -1,17 +1,31 @@
 <div>
 	<div ng-show="beneficio.estado=='asignado'"> 
-		<div>Usted ha sido beneficado(a) con <b>{{beneficio.nombre}}</b> y ha obtenido el siguiente monto anual:</div>
+		<div>Usted ha sido beneficado(a) con <b>{{beneficio.nombre}}</b> 
+			y ha obtenido el siguiente monto anual:</div>
 		<!--style convertir en clase cuando ya sea definitivo-->
 		<div style="text-aling:center;">
-				<div class="MontoPopup"> Monto Obtenido: <b>{{(beneficio.monto | currency).slice(0,-3) }}</b></div>
+				<div class="MontoPopup"> Monto Obtenido:
+				 <b>{{(beneficio.monto | currency).slice(0,-3) }}</b>
+				</div>
 		</div>
-		<div  ng-show="controller.isUndefined=beneficio.urlBeneficio" style=" text-align: right;"><a href="{{beneficio.urlBeneficio}}" target="_blank"><b>{{beneficio.nombre}}</b></a></div>
+		<div  ng-show="controller.isUndefined=beneficio.urlBeneficio" 
+			style=" text-align: right;"><a href="{{beneficio.urlBeneficio}}" 
+			target="_blank"><b>{{beneficio.nombre}}</b></a>
+		</div>
 		<div ng-show="beneficio.pasos!=''">
 			<div >
-				<div style="cursor:pointer;" ng-click='controller.pasos.show=!controller.pasos.show'><i class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': controller.pasos.show, 'glyphicon-chevron-right': !controller.pasos.show}"></i> Pincha aquí para ver los pasos a seguir</div>
+				<div style="cursor:pointer;" ng-click='controller.pasos.show=!controller.pasos.show'>
+
+					<spam style="color:red;">					
+					 	<i class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': controller.pasos.show,
+					 	'glyphicon-chevron-right': !controller.pasos.show}">
+						</i>
+						Pincha aquí para ver los pasos a seguir
+					</spam>
+				</div>
 			</div>
-			<div ng-show="controller.pasos.show" style="margin:10px;">
-				<p ng-bind-html="beneficio.pasos"></p>
+			<div ng-show="controller.pasos.show"  class="verpasos">
+				<p ng-bind-html="beneficio.pasos"></p><p ng-bind-html="beneficio.pasos"></p>
 			</div>
 		</div>
 	</div>
@@ -25,36 +39,64 @@
 		<div  ng-show="controller.isUndefined=beneficio.urlBeneficio" style=" text-align: right;"><a href="{{beneficio.urlBeneficio}}" target="_blank"><b>{{beneficio.nombre}}</b></a></div>
 		<div ng-show="beneficio.pasos!=''">
 			<div >
-				<div style="cursor:pointer;" ng-click='controller.pasos.show=!controller.pasos.show'><i class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': controller.pasos.show, 'glyphicon-chevron-right': !controller.pasos.show}"></i> Pincha aquí para ver los pasos a seguir</div>
+				<div style="cursor:pointer;" ng-click='controller.pasos.show=!controller.pasos.show'>
+					<spam style="color:red;">					
+					 	<i class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': controller.pasos.show,
+					 	'glyphicon-chevron-right': !controller.pasos.show}">
+						</i>
+						Pincha aquí para ver los pasos a seguir
+					</spam>					
+				</div>
 			</div>
-			<div ng-show="controller.pasos.show" style="margin:10px;">
+			<div ng-show="controller.pasos.show"  class="verpasos">
 				<p ng-bind-html="beneficio.pasos"></p>
 			</div>
 		</div>
 	</div>
 	<div ng-show="beneficio.estado=='cumpleRequisitos'"> 
-		Usted <b>cumple con los requisitos</b> para obtener este beneficio, conforme a la información que posee el Mineduc.
-		<div  ng-show="controller.isUndefined=beneficio.urlBeneficio" style=" text-align: right;"><a href="{{beneficio.urlBeneficio}}" target="_blank"><b>{{beneficio.nombre}}</b></a></div>
+		Usted <b>cumple con los requisitos</b> para obtener este beneficio, conforme a la 
+		información que posee el Mineduc.
+		<div  ng-show="controller.isUndefined=beneficio.urlBeneficio" style=" text-align: right;">
+			<a href="{{beneficio.urlBeneficio}}" target="_blank"><b>{{beneficio.nombre}}</b></a>
+		</div>
 		<div ng-show="beneficio.pasos!=''">
 			<div >
-				<div style="cursor:pointer;" ng-click='controller.pasos.show=!controller.pasos.show'><i class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': controller.pasos.show, 'glyphicon-chevron-right': !controller.pasos.show}"></i> Pincha aquí para ver los pasos a seguir</div>
+				<div style="cursor:pointer;" ng-click='controller.pasos.show=!controller.pasos.show'>
+					<spam style="color:red;">					
+					 	<i class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': controller.pasos.show,
+					 	'glyphicon-chevron-right': !controller.pasos.show}">
+						</i>
+						Pincha aquí para ver los pasos a seguir
+					</spam>
+				</div>
 			</div>
-			<div ng-show="controller.pasos.show" style="margin:10px;">
+			<div ng-show="controller.pasos.show"  class="verpasos">
 				<p ng-bind-html="beneficio.pasos"></p>
 			</div>
 		</div>
 	</div>
 	<div ng-show="beneficio.estado=='noCumpleRequisitos'"> 
-		<div>Usted <b>No cumple con los requisitos</b> para obtener este beneficio, conforme a la información que posee el Mineduc. Las razones son:</div>
+		<div>Usted <b>No cumple con los requisitos</b> para obtener este beneficio, conforme a la
+		 información que posee el Mineduc. Las razones son:
+		</div>
 		<div ng-repeat="motivo in beneficio.motivos">
 			<p>{{$index+1}}.- <spam ng-bind-html="motivo.contenido"></spam> </p> 
 		</div>
-		<div  ng-show="controller.isUndefined=beneficio.urlBeneficio" style=" text-align: right;"><a href="{{beneficio.urlBeneficio}}" target="_blank"><b>{{beneficio.nombre}}</b></a></div>
+		<div  ng-show="controller.isUndefined=beneficio.urlBeneficio" style=" text-align: right;">
+			<a href="{{beneficio.urlBeneficio}}" target="_blank"><b>{{beneficio.nombre}}</b></a>
+		</div>
 		<div ng-show="beneficio.pasos!=''">
 			<div >
-				<div style="cursor:pointer;" ng-click='controller.pasos.show=!controller.pasos.show'><i class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': controller.pasos.show, 'glyphicon-chevron-right': !controller.pasos.show}"></i> Pincha aquí para ver los pasos a seguir</div>
+				<div style="cursor:pointer;" ng-click='controller.pasos.show=!controller.pasos.show'>
+					<spam style="color:red;">					
+					 	<i class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': controller.pasos.show,
+					 	'glyphicon-chevron-right': !controller.pasos.show}">
+						</i>
+						Pincha aquí para ver los pasos a seguir
+					</spam>
+				</div>
 			</div>
-			<div ng-show="controller.pasos.show" style="margin:10px;">
+			<div ng-show="controller.pasos.show"  class="verpasos">
 				<p ng-bind-html="beneficio.pasos"></p>
 			</div>
 		</div>
@@ -65,9 +107,16 @@
 		<div  ng-show="controller.isUndefined=beneficio.urlBeneficio" style=" text-align: right;"><a href="{{beneficio.urlBeneficio}}" target="_blank"><b>{{beneficio.nombre}}</b></a></div>
 		<div ng-show="beneficio.pasos!=''">
 			<div >
-				<div style="cursor:pointer;" ng-click='controller.pasos.show=!controller.pasos.show'><i class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': controller.pasos.show, 'glyphicon-chevron-right': !controller.pasos.show}"></i> Pincha aquí para ver los pasos a seguir</div>
+				<div style="cursor:pointer;" ng-click='controller.pasos.show=!controller.pasos.show'>
+					<spam style="color:red;">		
+						<i class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': controller.pasos.show, 'glyphicon-chevron-right': !controller.pasos.show}">
+						</i> 
+
+						Pincha aquí para ver los pasos a seguir
+					</spam>
+				</div>
 			</div>
-			<div ng-show="controller.pasos.show" style="margin:10px;">
+			<div ng-show="controller.pasos.show"  class="verpasos">
 				<p ng-bind-html="beneficio.pasos"></p>
 			</div>
 		</div>
@@ -81,9 +130,16 @@
 		<div  ng-show="controller.isUndefined=beneficio.urlBeneficio" style=" text-align: right;"><a href="{{beneficio.urlBeneficio}}" target="_blank"><b>{{beneficio.nombre}}</b></a></div>
 		<div ng-show="beneficio.pasos!=''">
 			<div >
-				<div style="cursor:pointer;" ng-click='controller.pasos.show=!controller.pasos.show'><i class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': controller.pasos.show, 'glyphicon-chevron-right': !controller.pasos.show}"></i> Pincha aquí para ver los pasos a seguir</div>
+				<div style="cursor:pointer;" ng-click='controller.pasos.show=!controller.pasos.show'>
+					<spam style="color:red;">					
+					 	<i class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': controller.pasos.show,
+					 	'glyphicon-chevron-right': !controller.pasos.show}">
+						</i>
+						Pincha aquí para ver los pasos a seguir
+					</spam>					
+				</div>
 			</div>
-			<div ng-show="controller.pasos.show" style="margin:10px;">
+			<div ng-show="controller.pasos.show"  class="verpasos">
 				<p ng-bind-html="beneficio.pasos"></p>
 			</div>
 		</div>
